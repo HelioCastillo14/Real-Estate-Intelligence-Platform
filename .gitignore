@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# REIP — Datos (regenerables, no se versionan)
+pipeline/data/raw/*
+pipeline/data/processed/*
+pipeline/data/synthetic/*
+
+# Mantener los placeholders de carpetas
+!pipeline/data/raw/.gitkeep
+!pipeline/data/processed/.gitkeep
+!pipeline/data/synthetic/.gitkeep
+
+# Modelos serializados
+*.pkl
+
+# Variables de entorno
+.env
