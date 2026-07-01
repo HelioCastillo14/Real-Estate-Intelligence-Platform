@@ -232,3 +232,8 @@ pipeline/data/synthetic/*
 
 # Variables de entorno
 .env
+
+
+# Excepcion: datos de prueba del scraper, evidencia para revision
+!pipeline/data/raw/*.csv
+!pipeline/data/raw/*.json

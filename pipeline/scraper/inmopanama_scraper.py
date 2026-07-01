@@ -13,12 +13,22 @@ CONTEXTO LEGAL (verificado 2026):
   - Usa rate-limiting respetuoso (este script lo hace por defecto). No martilles el sitio.
 
 DECISION DE DISEÑO -- ZONA (registrar en decision log, sesion REIP):
-  El campo "zone" se asigna por la URL/pagina scrapeada (autoridad de pagina), NO por
-  el texto individual de cada listing. Se confirmo con muestra real (n=10, Bella Vista)
-  que 5/10 registros traen "zone_raw" distinto de la zona de la pagina. Se decide GUARDAR
-  zone_raw sin usarlo aun para resegmentar -- la resegmentacion real se hace como parte
-  de 1.2.7 (validacion de calidad del catalogo), ANTES de que el catalogo alimente
-  1.4 (Zone Health Index) y 3.1 (KNN comparables).
+  El campo "zone" se asigna por la URL/pagina scrapeada (autoridad de pagina) SOLO
+  cuando zone_raw (etiqueta propia del listing) no coincide con nada conocido.
+  Se confirmo con muestra real que las paginas de categoria de inmopanama NO filtran
+  estrictamente por corregimiento -- agrupan barrios y corredores vecinos. Por eso
+  se prioriza zone_raw como fuente de verdad (ver BARRIOS_A_COREGIMIENTO / 
+  COREGIMIENTOS_OFICIALES), y solo se cae a la zona de pagina cuando zone_raw no
+  es reconocible -- nunca se inventa un corregimiento. Campo zone_source deja
+  trazabilidad completa. Resegmentacion final pendiente en 1.2.7.
+
+DECISION DE DISEÑO -- TIPO DE INMUEBLE (registrar en decision log, sesion REIP):
+  Las paginas "venta-propiedades-{zona}" (a diferencia de "venta-apartamentos-{zona}")
+  mezclan tipos de inmueble (bodegas, locales, oficinas, terrenos junto a apartamentos).
+  Filtro heuristico temporal por palabras clave en el titulo (TIPOS_EXCLUIDOS_KEYWORDS)
+  descarta tipos no residenciales antes de que contaminen KNN/KMeans de Modulo 2.
+  Pendiente para 1.2.7: extraer tipo_inmueble como campo estructurado real desde el
+  HTML en vez de heuristica por texto.
 
 ESTADO DE SELECTORES (confirmados por inspeccion manual de HTML real, sesion REIP):
     - Titulo y link:  a.ib-prop-title (dentro de div.content-area)
@@ -35,12 +45,14 @@ ESTADO DE SELECTORES (confirmados por inspeccion manual de HTML real, sesion REI
   1. --headless=new produce TimeoutException instantaneo. Fix: page_load_strategy="eager"
      + flag --remote-allow-origins=*.
   2. Race condition al arrancar: chromedriver devuelve control antes de que el proceso
-     Chrome este listo para recibir comandos DevTools -- el primer driver.get() falla con
-     "Timed out receiving message from renderer: -0.00X" (tiempo NEGATIVO = fallo casi
-     instantaneo, no timeout real de 45s). Sintoma visible: la ventana de Chrome abre en
-     blanco mostrando "data:" (pagina inicial por defecto) y nunca navega. Fix: sleep(2)
-     tras crear el driver, antes del primer comando. Ademas: retry_get() con reinicio
-     completo de driver como red de seguridad si el sleep no es suficiente (ver mas abajo).
+     Chrome este listo para recibir comandos DevTools. Fix: sleep(2) tras crear el driver
+     + retry_get() con reinicio completo de driver (red de seguridad).
+
+CONOCIDO -- PENDIENTE (documentado, no bloqueante para el MVP de hoy):
+  - Outliers de precio (ej. price_usd extremadamente bajo por fallo de extraccion)
+    no se filtran aun. Pendiente definir umbral minimo en 1.2.7.
+  - Paginacion (go_next_page) probada solo con paginas unicas (~20 tarjetas). Falta
+    validar con --max alto en un corregimiento de volumen (ej. Costa del Este).
 
 DEPENDENCIAS:
   pip install selenium webdriver-manager
@@ -49,6 +61,7 @@ DEPENDENCIAS:
 import argparse
 import csv
 import json
+import os
 import re
 import time
 from collections import Counter
@@ -73,16 +86,20 @@ from webdriver_manager.chrome import ChromeDriverManager
 # ----------------------------------------------------------------------------
 BASE_URL = "https://www.inmopanama.com"
 
+# Slugs de URL confirmados por verificacion manual en el navegador, sesion REIP.
+# NOTA: el patron NO es uniforme -- bella-vista/san-francisco/obarrio usan
+# "venta-apartamentos-{slug}"; el resto usa "venta-propiedades-{slug}" (y estas
+# paginas mezclan tipos de inmueble, ver TIPOS_EXCLUIDOS_KEYWORDS mas abajo).
 COREGIMIENTOS = {
-    "bella-vista":     "venta-apartamentos-bella-vista",       # CONFIRMADO
-    "san-francisco":   "venta-apartamentos-san-francisco",     # <- VERIFICAR ANTES DE USAR
-    "parque-lefevre":  "venta-apartamentos-parque-lefevre",    # <- VERIFICAR ANTES DE USAR
-    "betania":         "venta-apartamentos-betania",           # <- VERIFICAR ANTES DE USAR
-    "pedregal":        "venta-apartamentos-pedregal",          # <- VERIFICAR ANTES DE USAR
-    "el-cangrejo":     "venta-apartamentos-el-cangrejo",       # <- VERIFICAR ANTES DE USAR
-    "marbella":        "venta-apartamentos-marbella",          # <- VERIFICAR ANTES DE USAR
-    "costa-del-este":  "venta-apartamentos-costa-del-este",    # <- VERIFICAR ANTES DE USAR
-    "obarrio":         "venta-apartamentos-obarrio",           # <- VERIFICAR ANTES DE USAR
+    "bella-vista":     "venta-apartamentos-bella-vista",
+    "san-francisco":   "venta-apartamentos-san-francisco",
+    "obarrio":         "venta-apartamentos-obarrio",
+    "parque-lefevre":  "venta-propiedades-parque-lefevre",
+    "betania":         "venta-propiedades-betania",
+    "pedregal":        "venta-propiedades-pedregal",
+    "el-cangrejo":     "venta-propiedades-el-cangrejo",
+    "marbella":        "venta-propiedades-marbella",
+    "costa-del-este":  "venta-propiedades-costa-del-este",
 }
 
 REQUEST_DELAY = 2.5          # segundos entre paginas (cortesia, evita rate-limit)
@@ -101,25 +118,43 @@ SELECTORS = {
     "link":     "a.ib-prop-title",
 }
 
+LISTING_ID_RE = re.compile(r"_p-(\d+)\.htm")
+
+PAGINATION_MODE = "button"
+NEXT_BUTTON_SELECTOR = "a.next, a[rel='next'], .pagination a:last-child"
+
+# Corregimientos oficiales en alcance -- si zone_raw coincide exacto, se usa tal cual.
 COREGIMIENTOS_OFICIALES = {
     "bella vista", "san francisco", "parque lefevre", "betania",
     "pedregal", "el cangrejo", "marbella", "costa del este", "obarrio",
 }
-# Barrios reconocidos DENTRO de un corregimiento oficial -- mapeo explícito,
-# no adivinanza. "El Carmen" es un barrio de Bella Vista, no un corregimiento propio.
+
+# Barrios reconocidos DENTRO de un corregimiento oficial -- mapeo explicito,
+# no adivinanza. Crece a medida que se descubren barrios nuevos por corregimiento.
 BARRIOS_A_COREGIMIENTO = {
     "el carmen": "Bella Vista",
     "punta paitilla": "San Francisco",
     "punta pacifica": "San Francisco",
     "coco del mar": "San Francisco",
-    
+    "carrasquilla": "Parque Lefevre",
+    "panama viejo": "Parque Lefevre",
+    "tumba muerto": "Betania",
+    "villa de las fuentes": "Betania",
+    "edison park": "Betania",
 }
 
+# Palabras clave que indican tipo de inmueble NO residencial/apartamento.
+# Filtro heuristico por titulo -- temporal, hasta extraer tipo_inmueble real (1.2.7).
+TIPOS_EXCLUIDOS_KEYWORDS = [
+    "bodega", "local comercial", "oficina", "terreno", "finca",
+    "galera", "nave industrial", "lote",
+]
 
-LISTING_ID_RE = re.compile(r"_p-(\d+)\.htm")
 
-PAGINATION_MODE = "button"
-NEXT_BUTTON_SELECTOR = "a.next, a[rel='next'], .pagination a:last-child"
+def es_tipo_excluido(title):
+    """True si el titulo contiene alguna palabra clave de tipo de inmueble excluido."""
+    title_lower = (title or "").lower()
+    return any(kw in title_lower for kw in TIPOS_EXCLUIDOS_KEYWORDS)
 
 
 # ----------------------------------------------------------------------------
@@ -153,8 +188,7 @@ def setup_driver(headless: bool = True) -> webdriver.Chrome:
     )
 
     # Fix de race condition: el proceso Chrome puede no estar listo para recibir
-    # comandos DevTools justo al terminar webdriver.Chrome(). Sin esto, el primer
-    # driver.get() puede fallar con TimeoutException casi instantaneo (tiempo negativo).
+    # comandos DevTools justo al terminar webdriver.Chrome().
     time.sleep(DRIVER_STARTUP_DELAY)
 
     return driver
@@ -179,9 +213,9 @@ class DriverHolder:
 def retry_get(holder: DriverHolder, url: str, max_retries: int = MAX_GET_RETRIES):
     """
     Intenta holder.driver.get(url). Si falla por TimeoutException/WebDriverException,
-    reinicia el driver completo (proceso Chrome nuevo) y reintenta. Es la red de
-    seguridad final ante la condicion de carrera de arranque -- necesaria porque el
-    sleep() en setup_driver reduce la probabilidad de fallo pero no la elimina al 100%.
+    reinicia el driver completo y reintenta. Red de seguridad ante la condicion
+    de carrera de arranque -- el sleep() en setup_driver reduce la probabilidad
+    de fallo pero no la elimina al 100%.
     """
     last_error = None
     for attempt in range(1, max_retries + 1):
@@ -258,6 +292,15 @@ def _txt(card, css):
             continue
     return ""
 
+def detectar_operacion(title):
+    """Detecta si el titulo indica alquiler en vez de venta. Por defecto asume
+    venta (todas las URLs scrapeadas hasta ahora son paginas de venta), pero
+    algunos listings individuales aparecen mal categorizados dentro de esas
+    paginas (ej. un alquiler listado en una pagina de venta)."""
+    title_lower = (title or "").lower()
+    if "alquiler" in title_lower or "renta" in title_lower:
+        return "alquiler"
+    return "venta"
 
 def _num(text):
     if not text:
@@ -267,6 +310,11 @@ def _num(text):
 
 
 def _feature_by_icon_alt(card, alt_value):
+    """
+    Busca dentro de ul.ib-prop-features el <li> cuyo <img alt=...> coincide
+    con alt_value (ej. 'camas', 'baños', 'metraje') y devuelve el texto suelto
+    que lo acompaña. Necesario porque los 3 <li> comparten la misma clase padre.
+    """
     try:
         items = card.find_elements(By.CSS_SELECTOR, SELECTORS["features"])
     except (NoSuchElementException, WebDriverException):
@@ -282,6 +330,10 @@ def _feature_by_icon_alt(card, alt_value):
 
 
 def parse_card(card, zone_label):
+    """
+    zone_label: nombre del corregimiento segun la URL/pagina scrapeada (fallback).
+    zone_raw: texto tal cual del listing individual -- fuente de verdad prioritaria.
+    """
     link = ""
     try:
         link = card.find_element(By.CSS_SELECTOR, SELECTORS["link"]).get_attribute("href")
@@ -295,6 +347,7 @@ def parse_card(card, zone_label):
     price_raw = _txt(card, SELECTORS["price"])
     zone_raw_text = _txt(card, SELECTORS["zone"])
     zone_raw_norm = zone_raw_text.strip().lower()
+    title_text = _txt(card, SELECTORS["title"])
 
     if zone_raw_norm in BARRIOS_A_COREGIMIENTO:
         zone_final = BARRIOS_A_COREGIMIENTO[zone_raw_norm]
@@ -305,11 +358,11 @@ def parse_card(card, zone_label):
     else:
         zone_final = zone_label
         zone_source = "pagina_scrapeada_no_resuelto"
-        
+
     return {
         "listing_url": link,
         "listing_id": listing_id,
-        "title": _txt(card, SELECTORS["title"]),
+        "title": title_text,
         "zone_raw": zone_raw_text,
         "zone": zone_final,
         "zone_source": zone_source,
@@ -318,7 +371,7 @@ def parse_card(card, zone_label):
         "bedrooms": _num(_feature_by_icon_alt(card, "camas")),
         "bathrooms": _num(_feature_by_icon_alt(card, "baños")),
         "area_m2": _num(_feature_by_icon_alt(card, "metraje")),
-        "operation": "venta",
+        "operation": detectar_operacion(title_text),
         "source": "inmopanama.com",
         "scraped_at": time.strftime("%Y-%m-%d %H:%M:%S"),
     }
@@ -369,6 +422,11 @@ def scrape(holder: DriverHolder, max_records, start_url, zone_label):
             except Exception as e:
                 print(f"  [skip] error parseando tarjeta: {e}")
                 continue
+
+            if es_tipo_excluido(rec["title"]):
+                print(f"  [skip] tipo excluido por titulo: {rec['title']}")
+                continue
+
             key = rec["listing_id"] or rec["listing_url"] or rec["title"]
             if key and key not in seen:
                 seen.add(key)
@@ -388,8 +446,10 @@ def save(records, zone_slug):
     if not records:
         print("[save] 0 registros. Verifica selectores con --discover.")
         return
-    out_json = f"{zone_slug}_listings.json"
-    out_csv = f"{zone_slug}_listings.csv"
+    out_dir = "data/raw"
+    os.makedirs(out_dir, exist_ok=True)
+    out_json = os.path.join(out_dir, f"{zone_slug}_listings.json")
+    out_csv = os.path.join(out_dir, f"{zone_slug}_listings.csv")
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
     with open(out_csv, "w", encoding="utf-8", newline="") as f:
