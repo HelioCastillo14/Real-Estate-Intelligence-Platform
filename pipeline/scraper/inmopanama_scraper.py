@@ -109,6 +109,10 @@ COREGIMIENTOS_OFICIALES = {
 # no adivinanza. "El Carmen" es un barrio de Bella Vista, no un corregimiento propio.
 BARRIOS_A_COREGIMIENTO = {
     "el carmen": "Bella Vista",
+    "punta paitilla": "San Francisco",
+    "punta pacifica": "San Francisco",
+    "coco del mar": "San Francisco",
+    
 }
 
 
