@@ -237,3 +237,8 @@ pipeline/data/synthetic/*
 # Excepcion: datos de prueba del scraper, evidencia para revision
 !pipeline/data/raw/*.csv
 !pipeline/data/raw/*.json
+
+venv/
+.env
+__pycache__/
+*.pyc
