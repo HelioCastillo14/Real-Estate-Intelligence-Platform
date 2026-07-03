@@ -1,0 +1,50 @@
+[
+  {
+    "listing_url": "https://www.inmopanama.com/se-vende-apartamento-en-rana-de-oro-pedregal_p-142691.htm",
+    "listing_id": "142691",
+    "title": "Se vende apartamento en Rana de Oro, Pedregal",
+    "zone_raw": "Pedregal",
+    "zone": "Pedregal",
+    "zone_source": "zone_raw",
+    "price_raw": "$65,000",
+    "price_usd": 65000,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area_m2": 50,
+    "operation": "venta",
+    "source": "inmopanama.com",
+    "scraped_at": "2026-07-01 11:06:38"
+  },
+  {
+    "listing_url": "https://www.inmopanama.com/venta-de-apartamento-en-ph-ambar-la-florida-pedregal_p-139843.htm",
+    "listing_id": "139843",
+    "title": "Venta de apartamento en PH Ambar, La florida Pedregal.",
+    "zone_raw": "Pedregal",
+    "zone": "Pedregal",
+    "zone_source": "zone_raw",
+    "price_raw": "$89,000",
+    "price_usd": 89000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area_m2": 62,
+    "operation": "venta",
+    "source": "inmopanama.com",
+    "scraped_at": "2026-07-01 11:06:38"
+  },
+  {
+    "listing_url": "https://www.inmopanama.com/your-smart-investment-in-a-perfect-location_p-137485.htm",
+    "listing_id": "137485",
+    "title": "Your smart investment in a perfect location",
+    "zone_raw": "Pedregal",
+    "zone": "Pedregal",
+    "zone_source": "zone_raw",
+    "price_raw": "$1,500,000",
+    "price_usd": 1500000,
+    "bedrooms": null,
+    "bathrooms": null,
+    "area_m2": 65000,
+    "operation": "venta",
+    "source": "inmopanama.com",
+    "scraped_at": "2026-07-01 11:06:38"
+  }
+]
