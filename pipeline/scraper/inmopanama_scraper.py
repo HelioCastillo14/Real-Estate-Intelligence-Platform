@@ -120,7 +120,7 @@ SELECTORS = {
 
 LISTING_ID_RE = re.compile(r"_p-(\d+)\.htm")
 
-PAGINATION_MODE = "button"
+PAGINATION_MODE = "url"
 NEXT_BUTTON_SELECTOR = "a.next, a[rel='next'], .pagination a:last-child"
 
 # Corregimientos oficiales en alcance -- si zone_raw coincide exacto, se usa tal cual.
@@ -150,6 +150,19 @@ TIPOS_EXCLUIDOS_KEYWORDS = [
     "galera", "nave industrial", "lote",
 ]
 
+
+PRECIO_MIN_USD = 700
+
+def validar_precio(price_usd, area_m2):
+    """Regla de dominio, no estadistica. Detecta fallos de extraccion,
+    no outliers de mercado legitimos. Retorna (valido: bool, motivo: str)."""
+    if price_usd is None or price_usd < PRECIO_MIN_USD:
+        return False, "precio_bajo_umbral"
+    if area_m2 and area_m2 > 0:
+        precio_m2 = price_usd / area_m2
+        if precio_m2 < 100 or precio_m2 > 15000:
+            return False, "precio_m2_fuera_de_rango"
+    return True, ""
 
 def es_tipo_excluido(title):
     """True si el titulo contiene alguna palabra clave de tipo de inmueble excluido."""
@@ -330,10 +343,6 @@ def _feature_by_icon_alt(card, alt_value):
 
 
 def parse_card(card, zone_label):
-    """
-    zone_label: nombre del corregimiento segun la URL/pagina scrapeada (fallback).
-    zone_raw: texto tal cual del listing individual -- fuente de verdad prioritaria.
-    """
     link = ""
     try:
         link = card.find_element(By.CSS_SELECTOR, SELECTORS["link"]).get_attribute("href")
@@ -359,6 +368,10 @@ def parse_card(card, zone_label):
         zone_final = zone_label
         zone_source = "pagina_scrapeada_no_resuelto"
 
+    precio_usd_val = _num(price_raw)
+    area_val = _num(_feature_by_icon_alt(card, "metraje"))
+    precio_valido, precio_motivo = validar_precio(precio_usd_val, area_val)
+
     return {
         "listing_url": link,
         "listing_id": listing_id,
@@ -367,30 +380,40 @@ def parse_card(card, zone_label):
         "zone": zone_final,
         "zone_source": zone_source,
         "price_raw": price_raw,
-        "price_usd": _num(price_raw),
+        "price_usd": precio_usd_val,
+        "precio_no_evaluable": not precio_valido,
+        "precio_no_evaluable_motivo": precio_motivo,
         "bedrooms": _num(_feature_by_icon_alt(card, "camas")),
         "bathrooms": _num(_feature_by_icon_alt(card, "baños")),
-        "area_m2": _num(_feature_by_icon_alt(card, "metraje")),
+        "area_m2": area_val,
         "operation": detectar_operacion(title_text),
         "source": "inmopanama.com",
         "scraped_at": time.strftime("%Y-%m-%d %H:%M:%S"),
     }
 
-
-def get_cards(driver):
-    try:
-        WebDriverWait(driver, WAIT_TIMEOUT).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, SELECTORS["card"].split(",")[0].strip()))
-        )
-    except TimeoutException:
-        print("[warn] No aparecieron tarjetas con el selector actual. Corre --discover.")
-    return driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"])
+def get_cards(driver, max_retries=2):
+    for attempt in range(1, max_retries + 1):
+        try:
+            WebDriverWait(driver, WAIT_TIMEOUT).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, SELECTORS["card"].split(",")[0].strip()))
+            )
+        except TimeoutException:
+            print(f"[warn] Intento {attempt}/{max_retries}: no aparecieron tarjetas.")
+        cards = driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"])
+        if cards:
+            return cards
+        if attempt < max_retries:
+            print(f"[warn] 0 tarjetas en intento {attempt}, reintentando tras recarga...")
+            driver.refresh()
+            time.sleep(3)
+    return []
 
 
 def go_next_page(driver, page_num, page_url_template):
     if PAGINATION_MODE == "url":
         driver.get(page_url_template.format(n=page_num + 1))
-        return True
+        time.sleep(1)
+        return len(driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"])) > 0
     try:
         btn = driver.find_element(By.CSS_SELECTOR, NEXT_BUTTON_SELECTOR)
         if btn.is_enabled() and btn.is_displayed():
