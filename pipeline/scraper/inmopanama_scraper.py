@@ -105,7 +105,7 @@ COREGIMIENTOS = {
 REQUEST_DELAY = 2.5          # segundos entre paginas (cortesia, evita rate-limit)
 PAGE_LOAD_TIMEOUT = 45       # timeout de carga de pagina
 WAIT_TIMEOUT = 15            # espera explicita por elementos
-MAX_PAGES = 20               # tope de paginas a recorrer (cinturon de seguridad)
+MAX_PAGES = 65               # tope de paginas a recorrer (cinturon de seguridad)
 MAX_GET_RETRIES = 3          # reintentos de driver.get() con reinicio de driver ante timeout
 DRIVER_STARTUP_DELAY = 2     # segundos de espera tras crear el driver, antes del primer comando
 
@@ -120,7 +120,7 @@ SELECTORS = {
 
 LISTING_ID_RE = re.compile(r"_p-(\d+)\.htm")
 
-PAGINATION_MODE = "button"
+PAGINATION_MODE = "url"
 NEXT_BUTTON_SELECTOR = "a.next, a[rel='next'], .pagination a:last-child"
 
 # Corregimientos oficiales en alcance -- si zone_raw coincide exacto, se usa tal cual.
@@ -150,6 +150,27 @@ TIPOS_EXCLUIDOS_KEYWORDS = [
     "galera", "nave industrial", "lote",
 ]
 
+
+PRECIO_MIN_VENTA = 20000
+PRECIO_MIN_ALQUILER = 400  # confirmar con evidencia real, no aceptar sin validar
+
+def validar_precio(price_usd, area_m2, operation):
+    """Regla de dominio, no estadistica. Umbral depende de operation --
+    venta y alquiler son mercados de magnitud distinta, un solo umbral
+    para ambos es estructuralmente incorrecto."""
+    umbral = PRECIO_MIN_VENTA if operation == "venta" else PRECIO_MIN_ALQUILER
+    if price_usd is None or price_usd < umbral:
+        return False, "precio_bajo_umbral"
+    if area_m2 and area_m2 > 0:
+        precio_m2 = price_usd / area_m2
+        # Rango precio/m2 tambien depende de operation -- venta y alquiler
+        # tienen escalas de precio/m2 completamente distintas. Aplicar el
+        # mismo rango [100, 15000] a alquiler produciria falsos positivos
+        # masivos (casi todo alquiler cae debajo de $100/m2 en venta-equivalente).
+        if operation == "venta" and not (100 <= precio_m2 <= 15000):
+            return False, "precio_m2_fuera_de_rango"
+        # Alquiler: rango pendiente de definir con evidencia, no inventado aqui.
+    return True, ""
 
 def es_tipo_excluido(title):
     """True si el titulo contiene alguna palabra clave de tipo de inmueble excluido."""
@@ -330,10 +351,6 @@ def _feature_by_icon_alt(card, alt_value):
 
 
 def parse_card(card, zone_label):
-    """
-    zone_label: nombre del corregimiento segun la URL/pagina scrapeada (fallback).
-    zone_raw: texto tal cual del listing individual -- fuente de verdad prioritaria.
-    """
     link = ""
     try:
         link = card.find_element(By.CSS_SELECTOR, SELECTORS["link"]).get_attribute("href")
@@ -359,6 +376,11 @@ def parse_card(card, zone_label):
         zone_final = zone_label
         zone_source = "pagina_scrapeada_no_resuelto"
 
+    operacion_val = detectar_operacion(title_text)
+    precio_usd_val = _num(price_raw)
+    area_val = _num(_feature_by_icon_alt(card, "metraje"))
+    precio_valido, precio_motivo = validar_precio(precio_usd_val, area_val, operacion_val)
+
     return {
         "listing_url": link,
         "listing_id": listing_id,
@@ -367,30 +389,45 @@ def parse_card(card, zone_label):
         "zone": zone_final,
         "zone_source": zone_source,
         "price_raw": price_raw,
-        "price_usd": _num(price_raw),
+        "price_usd": precio_usd_val,
+        "precio_no_evaluable": not precio_valido,
+        "precio_no_evaluable_motivo": precio_motivo,
         "bedrooms": _num(_feature_by_icon_alt(card, "camas")),
         "bathrooms": _num(_feature_by_icon_alt(card, "baños")),
-        "area_m2": _num(_feature_by_icon_alt(card, "metraje")),
-        "operation": detectar_operacion(title_text),
+        "area_m2": area_val,
+        "operation": operacion_val,
         "source": "inmopanama.com",
         "scraped_at": time.strftime("%Y-%m-%d %H:%M:%S"),
     }
 
+def get_cards(driver, max_retries=2):
+    for attempt in range(1, max_retries + 1):
+        try:
+            WebDriverWait(driver, WAIT_TIMEOUT).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, SELECTORS["card"].split(",")[0].strip()))
+            )
+        except TimeoutException:
+            print(f"[warn] Intento {attempt}/{max_retries}: no aparecieron tarjetas.")
+        cards = driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"])
+        if cards:
+            return cards
+        if attempt < max_retries:
+            print(f"[warn] 0 tarjetas en intento {attempt}, reintentando tras recarga...")
+            driver.refresh()
+            time.sleep(3)
+    return []
 
-def get_cards(driver):
-    try:
-        WebDriverWait(driver, WAIT_TIMEOUT).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, SELECTORS["card"].split(",")[0].strip()))
-        )
-    except TimeoutException:
-        print("[warn] No aparecieron tarjetas con el selector actual. Corre --discover.")
-    return driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"])
 
-
-def go_next_page(driver, page_num, page_url_template):
+def go_next_page(driver, page_num, page_url_template, log_file=None):
     if PAGINATION_MODE == "url":
         driver.get(page_url_template.format(n=page_num + 1))
-        return True
+        time.sleep(1)
+        cards_found = len(driver.find_elements(By.CSS_SELECTOR, SELECTORS["card"]))
+        exito = cards_found > 0
+        if log_file:
+            log_file.write(f"{page_num + 1},{'OK' if exito else 'FALLO'},{cards_found}\n")
+            log_file.flush()
+        return exito
     try:
         btn = driver.find_element(By.CSS_SELECTOR, NEXT_BUTTON_SELECTOR)
         if btn.is_enabled() and btn.is_displayed():
@@ -409,12 +446,20 @@ def scrape(holder: DriverHolder, max_records, start_url, zone_label):
     retry_get(holder, start_url)
     accept_cookies(holder.driver)
 
+    os.makedirs("data/raw", exist_ok=True)
+    log_path = f"data/raw/{zone_label}_pagination_log.csv"
+    log_file = open(log_path, "w", encoding="utf-8")
+    log_file.write("pagina,resultado,tarjetas\n")
+
     page_url_template = start_url + "?page={n}"
     records, seen = [], set()
     for page in range(1, MAX_PAGES + 1):
         time.sleep(REQUEST_DELAY)
         cards = get_cards(holder.driver)
         print(f"[scrape] Pagina {page}: {len(cards)} tarjetas encontradas.")
+        if page == 1:
+            log_file.write(f"1,{'OK' if cards else 'FALLO'},{len(cards)}\n")
+            log_file.flush()
 
         for card in cards:
             try:
@@ -435,10 +480,12 @@ def scrape(holder: DriverHolder, max_records, start_url, zone_label):
         print(f"[scrape] Acumulados: {len(records)}")
         if len(records) >= max_records:
             break
-        if not go_next_page(holder.driver, page, page_url_template):
+        if not go_next_page(holder.driver, page, page_url_template, log_file):
             print("[scrape] No hay mas paginas.")
             break
 
+    log_file.close()
+    print(f"[scrape] Log de paginacion -> {log_path}")
     return records[:max_records]
 
 
