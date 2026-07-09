@@ -12,16 +12,15 @@ El Cangrejo, Marbella, Obarrio (heredan de Bella Vista) y Costa del Este
 (sin herencia, sin score compuesto) se resuelven en Feature 1.4.6 y
 deliberadamente NO se tocan aqui.
 
-FUENTE DE DATOS -- NOTA DE HIGIENE (sesion REIP, ver decision log 1.4.1):
-  El archivo canonico `pipeline/data/External/SEIC/seguridad_homicidios_2023.jsonl`
-  tiene `tasa_por_100k` en null para las 5 zonas -- el join con poblacion (INEC)
-  que produce la tasa no se aplico ahi. Los valores ya computados (los que
-  documenta CLAUDE.md: 14.83, 4.74, 21.01, 15.60, 3.26) viven en un archivo
-  aparentemente mal archivado: `pipeline/data/External/INEC/seguridad_homicidios_2023 (1).jsonl`
-  (carpeta INEC en vez de SEIC, sufijo "(1)" de una segunda descarga). Este modulo
-  lee de ese archivo porque es la unica fuente con el computo ya hecho, pero el
-  problema de archivado en si queda fuera del alcance de 1.4.1 -- pendiente de que
-  el equipo lo revise en Feature 1.3.
+FUENTE DE DATOS (actualizado tras la reorganizacion de external/, commit 93009ea):
+  `pipeline/data/external/seguridad/seguridad_homicidios_2023.jsonl` -- 9 filas,
+  una por cada una de las 9 zonas del scope. Solo las 5 zonas reales
+  (ZONAS_REALES) traen `tasa_por_100k` poblado; las 4 restantes (El Cangrejo,
+  Marbella, Obarrio, Costa del Este) traen `tasa_por_100k: null` porque heredan
+  o quedan excluidas (ver CLAUDE.md, decision #2). `_cargar_tasas_desde_jsonl`
+  filtra explicitamente por zona en ZONAS_REALES Y tasa_por_100k no-null antes
+  de pasarle nada a `normalizar_seguridad` -- no asumir que un archivo futuro
+  con mas filas o mas nulls vaya a comportarse igual sin ese filtro.
 """
 
 import json
@@ -38,9 +37,9 @@ ZONAS_REALES = [
 RUTA_ENTRADA = (
     Path(__file__).resolve().parents[1]
     / "data"
-    / "External"
-    / "INEC"
-    / "seguridad_homicidios_2023 (1).jsonl"
+    / "external"
+    / "seguridad"
+    / "seguridad_homicidios_2023.jsonl"
 )
 
 RUTA_SALIDA = (
