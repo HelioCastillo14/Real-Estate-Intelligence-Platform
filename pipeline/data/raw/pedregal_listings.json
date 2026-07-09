@@ -15,7 +15,7 @@
     "area_m2": 50,
     "operation": "venta",
     "source": "inmopanama.com",
-    "scraped_at": "2026-07-02 23:00:00"
+    "scraped_at": "2026-07-02 23:49:15"
   },
   {
     "listing_url": "https://www.inmopanama.com/venta-de-apartamento-en-ph-ambar-la-florida-pedregal_p-139843.htm",
@@ -33,7 +33,7 @@
     "area_m2": 62,
     "operation": "venta",
     "source": "inmopanama.com",
-    "scraped_at": "2026-07-02 23:00:00"
+    "scraped_at": "2026-07-02 23:49:15"
   },
   {
     "listing_url": "https://www.inmopanama.com/your-smart-investment-in-a-perfect-location_p-137485.htm",
@@ -51,6 +51,6 @@
     "area_m2": 65000,
     "operation": "venta",
     "source": "inmopanama.com",
-    "scraped_at": "2026-07-02 23:00:00"
+    "scraped_at": "2026-07-02 23:49:16"
   }
 ]
