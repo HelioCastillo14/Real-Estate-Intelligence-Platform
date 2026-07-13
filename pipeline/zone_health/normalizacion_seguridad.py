@@ -9,8 +9,12 @@ por corregimiento, para el Zone Health Composite Index (peso 0.30).
 SOLO cubre las 5 zonas con corregimiento administrativo real y `tasa_por_100k`
 propia: Bella Vista, Betania, Parque Lefevre, Pedregal, San Francisco.
 El Cangrejo, Marbella, Obarrio (heredan de Bella Vista) y Costa del Este
-(sin herencia, sin score compuesto) se resuelven en Feature 1.4.6 y
-deliberadamente NO se tocan aqui.
+(sin herencia, sin score compuesto) NO se tocan aqui -- que feature exacta
+resuelve su herencia/visualizacion no esta confirmado en este repo. (Una
+version previa de este docstring decia "Feature 1.4.6"; ese numero resulto
+ser invencion propagada sin verificar entre los scripts de zone_health --
+ver auditoria en pipeline/data/external/amenidades/LOG_EXTRACCION.md,
+seccion "Correccion de referencia de feature", 2026-07-09.)
 
 FUENTE DE DATOS (actualizado tras la reorganizacion de external/, commit 93009ea):
   `pipeline/data/external/seguridad/seguridad_homicidios_2023.jsonl` -- 9 filas,
@@ -70,7 +74,7 @@ def normalizar_seguridad(tasas_por_100k: dict[str, float]) -> dict[str, float]:
     este calculo, todos los scores cambian -- no solo el de la zona nueva --
     porque el rango completo se recalcula. Esto es un riesgo aceptado, no
     un bug: se documenta aqui para que quien consuma este score (Feature
-    1.4.6, Zone Health Composite Index) no lo trate como una escala absoluta.
+    Zone Health Composite Index) no lo trate como una escala absoluta.
 
     Args:
         tasas_por_100k: dict corregimiento -> tasa_por_100k. Debe contener

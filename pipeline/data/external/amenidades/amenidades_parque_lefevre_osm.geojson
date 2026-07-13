@@ -7,6 +7,19 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "google_places/ChIJ_RhnnuqprI8RLJnDYw6FrtY",
+        "amenity": "clinic",
+        "name": "Centro Medico San Luis",
+        "nota_auditoria": "Movido de amenidades_san_francisco_google_places.jsonl -- auditoria 2026-07-09 confirmo con asignar_corregimiento(9.0184392, -79.4928076) -> 'Parque Lefevre', no 'San Francisco'. Sin duplicado previo en este archivo (clinicas/hospitales OSM mas cercanos a >700m)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.4928076, 9.0184392]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "way/317525706",
         "area": "yes",
         "historic": "yes",

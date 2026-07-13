@@ -1,0 +1,1727 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Supermercado Rey",
+    "operator": "El Rey",
+    "shop": "supermarket",
+    "@id": "node/858081710"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5352238,
+     9.0096473
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Super 99",
+    "shop": "supermarket",
+    "@id": "node/858081719"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5354598,
+     9.0079624
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "name": "Rey",
+    "@id": "node/858116236"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5350199,
+     9.0096049
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica Villarreal",
+    "@id": "node/858157165"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.534526,
+     8.9933492
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "@id": "node/858157167"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5347363,
+     8.9933676
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "name": "El Javillo",
+    "@id": "node/971482497"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5336742,
+     8.9937156
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 62 C Oeste",
+    "amenity": "pharmacy",
+    "name": "Hogar y Salud",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3892667944"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.533004,
+     8.9982343
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Camino Real De Betania",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmatecsa",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3893744440"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5268462,
+     9.0110159
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Camino Real De Betania",
+    "amenity": "clinic",
+    "name": "Centro Medico La Gloria",
+    "phone": "261 7012",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3893744446"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5267114,
+     9.0110452
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 74 Oeste",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "MET-Rx",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3894125700"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5337332,
+     9.0116014
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 74 Oeste",
+    "name": "Mini Super Alejandria",
+    "shop": "supermarket",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3894125702"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5335441,
+     9.0116478
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida 20 F Norte",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacia Javier",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3895349611"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5208531,
+     9.0258481
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Camino Real De Betania",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Médico Bernardette",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/3907223702"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5234122,
+     9.0020876
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Mini super condado del rey",
+    "shop": "supermarket",
+    "@id": "node/5868401793"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5244857,
+     9.0353813
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "name": "Centro Medico Omega",
+    "operator": "Dr Enrique Chial",
+    "@id": "node/6139320886"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5341555,
+     9.0101178
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida GMO. Patterson Jr",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Shaddai Centro Médico",
+    "phone": "507 390 8779",
+    "source": "KG Ground Survey 2015",
+    "website": "www.shaddaipanama.com",
+    "@id": "node/8653765364"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5247225,
+     9.0024872
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida GMO. Patterson Jr",
+    "amenity": "school",
+    "name": "Instituto Técnico Superior Shaddai",
+    "phone": "507 390 8649",
+    "source": "KG Ground Survey 2015",
+    "website": "www.institutoshaddaipanama.edu.pa",
+    "@id": "node/8653765365"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5246528,
+     9.0024607
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Hawaii Supermarket",
+    "shop": "supermarket",
+    "@id": "node/9341032217"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5362079,
+     9.0092756
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacia El Galeno",
+    "@id": "node/11833671768"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.524785,
+     9.0352595
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "FarmaValue",
+    "@id": "node/11882945456"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5360172,
+     9.0156699
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Machetazo",
+    "shop": "supermarket",
+    "@id": "node/11887025452"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5340592,
+     9.0107574
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "name": "Jumbo Market",
+    "shop": "supermarket",
+    "@id": "node/11895741399"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5310299,
+     9.0211538
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmanet",
+    "@id": "node/11913738653"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5252953,
+     9.0213951
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 74 Oeste",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Médico Garibaldo",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/11983028543"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5262764,
+     9.0122005
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Ave 14C Norte",
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacia La Gloria",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/12123073629"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5260649,
+     9.0117308
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Metro",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/12128817265"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5257987,
+     8.9994284
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Médico Nazareth",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/12143503952"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5196126,
+     9.0252219
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Doctor Integral",
+    "@id": "node/12153993808"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5216394,
+     9.0144084
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacia Real",
+    "@id": "node/12175108826"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5245117,
+     9.0040524
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Medico Dr. Beluche",
+    "@id": "node/12175108827"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5245669,
+     9.0040325
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Camino Real De Betania",
+    "amenity": "clinic",
+    "fax": "229 9086",
+    "healthcare": "clinic",
+    "name": "Centro de Medicina Integral Camino Real",
+    "phone": "229 9085",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/12203225066"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5250534,
+     9.0042566
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Médico Bernardette",
+    "@id": "node/12207263734"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5231548,
+     9.0027833
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacia Alba",
+    "@id": "node/12207263735"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.52316,
+     9.0029361
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida 8a A. Norte",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Laboratorio de Análisis Especializado y Control de Calidad, S.A.",
+    "source": "KG Ground Survey 2015",
+    "@id": "node/12207721698"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.528152,
+     9.0012392
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "healthcare": "pharmacy",
+    "name": "Farmacias Metro",
+    "@id": "node/12413046741"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5187713,
+     9.0311586
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque de Bethania",
+    "@id": "way/176427326"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5236954,
+     9.0057315
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Panamá",
+    "addr:street": "Bulevar Joseph I Esses",
+    "amenity": "school",
+    "name": "La Escuela de Oxford",
+    "name:en": "The Oxford School",
+    "name:es": "La Escuela de Oxford",
+    "wikidata": "Q21072130",
+    "wikipedia": "en:The Oxford School (Panama)",
+    "@id": "way/304692182"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5319105,
+     8.9918756
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "healthcare": "clinic",
+    "healthcare:speciality": "ophthalmology",
+    "name": "Clínica YEE",
+    "@id": "way/304717021"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5174017,
+     9.0313899
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 62 Oeste",
+    "amenity": "school",
+    "building": "school",
+    "building:levels": "2",
+    "name": "Colegio de C.P.A.",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/385913796"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5293652,
+     8.9968137
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Vía Ricardo J. Alfaro",
+    "building": "yes",
+    "building:levels": "1",
+    "height": "5",
+    "name": "Super 99",
+    "shop": "supermarket",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/385924650"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5326375,
+     9.0003828
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Super 99",
+    "shop": "supermarket",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386044820"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5252798,
+     9.0115558
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida 14C Norte",
+    "amenity": "pharmacy",
+    "building": "yes",
+    "building:levels": "2",
+    "healthcare": "pharmacy",
+    "name": "Metro",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386058155"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5253197,
+     9.0134477
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle Juan Rivera Reyes",
+    "building": "yes",
+    "shop": "supermarket",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386068393"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5375834,
+     9.0103277
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle 75 B Oeste",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "healthcare": "clinic",
+    "name": "Clínica Townsend Camazon",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386089043"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.53357,
+     9.0150162
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Leon A. Soto",
+    "@id": "way/386093645"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5243938,
+     9.018064
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida de la Paz",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "1",
+    "emergency": "yes",
+    "healthcare": "clinic",
+    "name": "Vive",
+    "phone": "279 3100",
+    "phone_2": "279 3111",
+    "source": "KG Ground Survey 2015",
+    "website": "https://www.vive.com.pa/",
+    "@id": "way/386204020"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5227331,
+     9.0177795
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida 20 F Norte",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "1",
+    "healthcare": "clinic",
+    "name": "Clínica Los Libertadores",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386208461"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5209388,
+     9.0254303
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida 20 F Norte",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Supermercado Ideal #2",
+    "shop": "supermarket",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386208462"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5208535,
+     9.0253061
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Villa Cáceres",
+    "@id": "way/386208464"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5204011,
+     9.0235439
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Avenida de la Paz",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "1",
+    "healthcare": "clinic",
+    "healthcare:speciality": "general",
+    "name": "Clinica de Hernias",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386242077"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5233924,
+     9.0203461
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "building": "school",
+    "building:levels": "4",
+    "name": "Colegio Cristiano El Buen Pastor",
+    "source": "KG Ground Survey 2015",
+    "@id": "way/386244005"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5185863,
+     9.0164739
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "The Oxford School - High School Area",
+    "@id": "way/435359940"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5295158,
+     8.9944978
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Panama",
+    "addr:street": "Urbanización Edison Park",
+    "amenity": "school",
+    "name": "Colegio Alemán Nikolaus Kopernikus Panamá",
+    "@id": "way/437332232"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5319745,
+     8.9937918
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque de Miraflores",
+    "@id": "way/499388809"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5191021,
+     9.0234041
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Casa Club de la Contraloría",
+    "@id": "way/499390027"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5142125,
+     9.0283052
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:street": "Calle Nombre de Dios",
+    "leisure": "park",
+    "name": "Parque Recreativo Profesor David Crespo González",
+    "@id": "way/550774132"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5226942,
+     9.0130181
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "description": "Cancha de Basketball, Juego para niños.",
+    "leisure": "park",
+    "name": "Parque y Mirador De La Gloria",
+    "@id": "way/550967587"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5304311,
+     9.0144649
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "description": "Mirador a la Ciudad de Panamá.",
+    "leisure": "park",
+    "name": "Parque Mirador El Dorado",
+    "@id": "way/550967800"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5317607,
+     9.0096723
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque JJ Vallarino",
+    "@id": "way/551714932"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5282482,
+     9.0037685
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "description": "Parque de Bethania",
+    "leisure": "park",
+    "name": "Parque Eduardo Vallarino Ch",
+    "@id": "way/553606935"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5231233,
+     9.0034557
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "landuse": "religious",
+    "leisure": "park",
+    "name": "Predios de la Iglesia de Padua",
+    "@id": "way/553611791"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5201982,
+     9.0224262
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Insituto America",
+    "@id": "way/555005917"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5282001,
+     9.0210532
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Esquinado",
+    "@id": "way/556668410"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5325389,
+     9.0123524
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "building": "yes",
+    "building:levels": "1",
+    "healthcare": "pharmacy",
+    "name": "Farmacia Metro",
+    "@id": "way/556671754"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5340517,
+     9.0064857
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Altos del Chase",
+    "@id": "way/557065183"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5384281,
+     9.0081935
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Nuestra Señora De Los Ángeles",
+    "@id": "way/557071948"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5308557,
+     8.9966028
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque de La Alameda",
+    "name:en": "Alameda Park",
+    "@id": "way/575296950"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5396699,
+     8.9982046
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque La Guayabita",
+    "@id": "way/600846716"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5231027,
+     9.0327992
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "building": "yes",
+    "building:levels": "1",
+    "healthcare": "pharmacy",
+    "height": "5",
+    "name": "Farmacias Arrocha",
+    "shop": "chemist",
+    "@id": "way/615981503"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5326345,
+     9.004361
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Sara Sotillo",
+    "@id": "way/677697958"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5155705,
+     9.0324621
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "layer": "-1",
+    "leisure": "park",
+    "name": "Plaza de Ingreso",
+    "@id": "way/685508966"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5170168,
+     9.0307527
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "C.E.B.G. Octavio Méndez Pereira",
+    "@id": "way/834354612"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.530764,
+     9.018339
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Escuela José A. Arango",
+    "@id": "way/834359970"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5283457,
+     9.0057849
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Instituto Panameño de Habilitación Especial",
+    "@id": "way/834359971"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5278897,
+     9.0074774
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Colegio La Santa Familia",
+    "@id": "way/834359972"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5247481,
+     9.0099545
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Escuela Manuel E. Amador",
+    "@id": "way/834360730"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5189699,
+     9.0105737
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Escuela República de Japón",
+    "@id": "way/834361453"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5372865,
+     8.993684
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "addr:city": "Bethania",
+    "amenity": "school",
+    "name": "Instituto Fermín Naudeau",
+    "@id": "way/834361455"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.536646,
+     8.9946058
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "@id": "way/1274491057"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5211564,
+     9.0295479
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "@id": "way/1280096053"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5288031,
+     9.020275
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "@id": "way/1280096054"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5284044,
+     9.0204663
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Colegio Internacional de María Inmaculada",
+    "religion": "christian",
+    "@id": "way/1281352901"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5352759,
+     8.998257
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Academia Hebrea de Panamá",
+    "@id": "way/1281352907"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5372921,
+     8.9988359
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "The King's School",
+    "@id": "way/1282532061"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5186025,
+     9.0178568
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "@id": "way/1283762609"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.526708,
+     9.0203248
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Centro Educativo ABC",
+    "@id": "way/1283774946"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5271314,
+     9.0214645
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Instituto Bilingüe Santa María La Antigua",
+    "@id": "way/1283774947"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5269148,
+     9.0212927
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Policlinica Don Alejandro de la Guardia",
+    "operator": "Caja del Seguro Social",
+    "operator:type": "public",
+    "@id": "way/1283776962"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5258368,
+     9.0214142
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Parvulario Minerva Marin",
+    "@id": "way/1284156488"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5307168,
+     9.019729
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "education": "school",
+    "name": "Centro Educativo Comunitario San Antonio",
+    "@id": "way/1286098711"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5213808,
+     9.0211702
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "pharmacy",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "Farmacias Arrocha",
+    "@id": "way/1287483293"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5254595,
+     9.0110812
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Villa De La Fuente 2",
+    "@id": "way/1288562934"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5387232,
+     9.0152522
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Pacífico Park",
+    "@id": "way/1288977340"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5348982,
+     9.001989
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Atlántico",
+    "name:en": "Atlantic Park",
+    "@id": "way/1309475377"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5392284,
+     9.0018593
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque de Pribanco",
+    "@id": "way/1309971763"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5314639,
+     9.0018023
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Colegio Bilingue Los Angeles",
+    "@id": "way/1309979382"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5269065,
+     8.9997202
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "1",
+    "healthcare": "clinic",
+    "name": "CLIMAR Panamá",
+    "@id": "way/1310781900"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5234818,
+     9.0044696
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "healthcare": "clinic",
+    "name": "Laboratorio Clínico LB, S.A",
+    "@id": "way/1311923743"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5222718,
+     9.0188417
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "building": "house",
+    "building:levels": "1",
+    "name": "Lécole Panamá",
+    "@id": "way/1312057580"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5188239,
+     9.0237646
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "name": "Parque Nuevo Altos de Miraflores",
+    "@id": "way/1312319132"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5177769,
+     9.0248454
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "fixme": "Encontrar el nombre del parque.",
+    "leisure": "park",
+    "@id": "way/1318229188"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5372234,
+     8.9972074
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "amenity": "school",
+    "name": "Centro Educativo Integral Montessori",
+    "@id": "way/1346551343"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5221914,
+     9.0129772
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "leisure": "park",
+    "@id": "way/1348714269"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5323863,
+     8.9929393
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Supermercados Rey | El Bosque",
+    "shop": "supermarket",
+    "@id": "way/1492960449"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.5188505,
+     9.0309868
+    ]
+   }
+  }
+ ]
+}

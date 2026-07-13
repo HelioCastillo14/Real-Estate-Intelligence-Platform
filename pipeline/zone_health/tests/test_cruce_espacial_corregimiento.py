@@ -20,6 +20,12 @@ CASOS_DENTRO_DE_SCOPE = [
     ("Vía Argentina", 8.989345, -79.52235, "Bella Vista"),
     ("Pedregal-Las Acacias", 9.059848, -79.429287, "Pedregal"),
     ("Don Bosco", 9.063089, -79.420385, "Pedregal"),
+    # Supermercado Rey (node/858081710, amenidades_betania_osm.geojson) --
+    # cubre Betania, zona sin representacion previa en este set de casos
+    # (auditoria 2026-07-09: ninguna de las 30 estaciones de metro cae
+    # dentro de su poligono, dejando la normalizacion Bethania->Betania
+    # sin ejercitar en la ruta de asignacion real).
+    ("Supermercado Rey", 9.0096473, -79.5352238, "Betania"),
 ]
 
 # Estacion Albrook (terminal de transporte, Curundu) -- fuera de las 5 zonas reales.
