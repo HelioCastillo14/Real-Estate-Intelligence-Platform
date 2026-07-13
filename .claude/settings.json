@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pipeline/venv/bin/python3 -c ' *)",
+      "WebSearch",
+      "Bash(pipeline/venv/bin/python3 -m pipeline.zone_health.normalizacion_amenidades)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
