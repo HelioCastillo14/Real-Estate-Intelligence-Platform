@@ -131,6 +131,7 @@ COREGIMIENTOS_OFICIALES = {
 
 # Barrios reconocidos DENTRO de un corregimiento oficial -- mapeo explicito,
 # no adivinanza. Crece a medida que se descubren barrios nuevos por corregimiento.
+# Se compara contra zone_raw (el campo de zona que expone la propia pagina).
 BARRIOS_A_COREGIMIENTO = {
     "el carmen": "Bella Vista",
     "punta paitilla": "San Francisco",
@@ -141,6 +142,20 @@ BARRIOS_A_COREGIMIENTO = {
     "tumba muerto": "Betania",
     "villa de las fuentes": "Betania",
     "edison park": "Betania",
+}
+
+# PH/edificios reconocidos por nombre -- deliberadamente SEPARADO de
+# BARRIOS_A_COREGIMIENTO porque se compara contra el TITULO del listing, no
+# contra zone_raw (los nombres de edificio nunca aparecen en el campo de zona
+# de la pagina). Agregado en la adenda de duplicados de Feature 1.2
+# (Context-MD/Acta_1.2_Adenda_Duplicados.md, 2026-07-13), a partir de 3 casos
+# verificados por cross-referencia interna del catalogo (mismo edificio
+# aparece en otros listings con zona ya resuelta de forma consistente).
+# Crece con el mismo criterio: solo alta confianza, nunca adivinanza.
+PH_A_COREGIMIENTO = {
+    "condesa del mar": "Bella Vista",
+    "rivage": "Bella Vista",
+    "mirador del golf": "San Francisco",
 }
 
 # Palabras clave que indican tipo de inmueble NO residencial/apartamento.
@@ -366,12 +381,18 @@ def parse_card(card, zone_label):
     zone_raw_norm = zone_raw_text.strip().lower()
     title_text = _txt(card, SELECTORS["title"])
 
+    title_norm = title_text.lower()
+    ph_match = next((ph for ph in PH_A_COREGIMIENTO if ph in title_norm), None)
+
     if zone_raw_norm in BARRIOS_A_COREGIMIENTO:
         zone_final = BARRIOS_A_COREGIMIENTO[zone_raw_norm]
         zone_source = "zone_raw_barrio_mapeado"
     elif zone_raw_norm in COREGIMIENTOS_OFICIALES:
         zone_final = zone_raw_text.strip()
         zone_source = "zone_raw"
+    elif ph_match:
+        zone_final = PH_A_COREGIMIENTO[ph_match]
+        zone_source = "titulo_ph_mapeado"
     else:
         zone_final = zone_label
         zone_source = "pagina_scrapeada_no_resuelto"
