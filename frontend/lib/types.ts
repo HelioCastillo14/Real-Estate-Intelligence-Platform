@@ -178,3 +178,173 @@ export function mapPropiedadDetalleApi(p: PropiedadDetalleApi): PropiedadDetalle
     transparenciaPrecio: p.transparencia_precio,
   };
 }
+
+/**
+ * Shape real de POST /search/nlp (backend/app/routers/search.py, SearchNlpResponse) —
+ * verificado contra el código real y 5 llamadas en vivo (resultados + los 3 motivo de
+ * fallback). tipo="resultados" trae criterios_extraidos + resultados, siempre null el
+ * otro; tipo="fallback" trae fallback, siempre null criterios_extraidos/resultados.
+ */
+export interface SemaforoNlp {
+  categoria: "verde" | "amarillo" | "rojo";
+  precioPredicho: number;
+  residual: number;
+  maeReferencia: number;
+  confianzaReducida: boolean;
+  nComparables: number;
+}
+
+export interface CandidatoNlp {
+  id: string;
+  listingId: number;
+  corregimiento: string;
+  tipoInmueble: string;
+  priceUsd: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  areaM2: number | null;
+  title: string;
+  imagenes: string[] | null;
+  descripcion: string | null;
+  distanciaCoseno: number;
+  semaforo: SemaforoNlp | null;
+  motivoSinSemaforo: string | null;
+}
+
+export interface CriteriosExtraidos {
+  zona: string | null;
+  tipoInmueble: string | null;
+  precioMin: number | null;
+  precioMax: number | null;
+  habitacionesMin: number | null;
+  banosMin: number | null;
+  confianza: number;
+}
+
+export interface FallbackNlp {
+  motivo: "fuera_tema" | "cobertura" | "ambiguedad";
+  mensaje: string;
+  zonaMencionTexto: string | null;
+  confianza: number;
+}
+
+export type SearchNlpResultado =
+  | {
+      tipo: "resultados";
+      criteriosExtraidos: CriteriosExtraidos;
+      nCandidatos: number;
+      candidatos: CandidatoNlp[];
+      respuestaFinal: string;
+    }
+  | { tipo: "fallback"; fallback: FallbackNlp };
+
+interface SemaforoNlpApi {
+  categoria: "verde" | "amarillo" | "rojo";
+  precio_predicho: number;
+  residual: number;
+  mae_referencia: number;
+  confianza_reducida: boolean;
+  n_comparables: number;
+}
+
+interface CandidatoNlpApi {
+  listing_id: number;
+  corregimiento: string;
+  tipo_inmueble: string;
+  price_usd: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  area_m2: number | null;
+  title: string;
+  imagenes: string[] | null;
+  descripcion: string | null;
+  distancia_coseno: number;
+  semaforo: SemaforoNlpApi | null;
+  motivo_sin_semaforo: string | null;
+}
+
+interface SearchNlpResponseApi {
+  consulta: string;
+  tipo: "resultados" | "fallback";
+  criterios_extraidos: {
+    zona: string | null;
+    tipo_inmueble: string | null;
+    precio_min: number | null;
+    precio_max: number | null;
+    habitaciones_min: number | null;
+    banos_min: number | null;
+    confianza: number;
+  } | null;
+  resultados: {
+    n_candidatos: number;
+    candidatos: CandidatoNlpApi[];
+    respuesta_final: string;
+  } | null;
+  fallback: {
+    motivo: "fuera_tema" | "cobertura" | "ambiguedad";
+    mensaje: string;
+    zona_mencion_texto: string | null;
+    confianza: number;
+  } | null;
+}
+
+function mapCandidatoNlpApi(c: CandidatoNlpApi): CandidatoNlp {
+  return {
+    id: String(c.listing_id),
+    listingId: c.listing_id,
+    corregimiento: c.corregimiento,
+    tipoInmueble: c.tipo_inmueble,
+    priceUsd: c.price_usd,
+    bedrooms: c.bedrooms,
+    bathrooms: c.bathrooms,
+    areaM2: c.area_m2,
+    title: c.title,
+    imagenes: c.imagenes,
+    descripcion: c.descripcion,
+    distanciaCoseno: c.distancia_coseno,
+    semaforo: c.semaforo
+      ? {
+          categoria: c.semaforo.categoria,
+          precioPredicho: c.semaforo.precio_predicho,
+          residual: c.semaforo.residual,
+          maeReferencia: c.semaforo.mae_referencia,
+          confianzaReducida: c.semaforo.confianza_reducida,
+          nComparables: c.semaforo.n_comparables,
+        }
+      : null,
+    motivoSinSemaforo: c.motivo_sin_semaforo,
+  };
+}
+
+export function mapSearchNlpResponseApi(data: SearchNlpResponseApi): SearchNlpResultado {
+  if (data.tipo === "fallback") {
+    const f = data.fallback!;
+    return {
+      tipo: "fallback",
+      fallback: {
+        motivo: f.motivo,
+        mensaje: f.mensaje,
+        zonaMencionTexto: f.zona_mencion_texto,
+        confianza: f.confianza,
+      },
+    };
+  }
+
+  const ce = data.criterios_extraidos!;
+  const r = data.resultados!;
+  return {
+    tipo: "resultados",
+    criteriosExtraidos: {
+      zona: ce.zona,
+      tipoInmueble: ce.tipo_inmueble,
+      precioMin: ce.precio_min,
+      precioMax: ce.precio_max,
+      habitacionesMin: ce.habitaciones_min,
+      banosMin: ce.banos_min,
+      confianza: ce.confianza,
+    },
+    nCandidatos: r.n_candidatos,
+    candidatos: r.candidatos.map(mapCandidatoNlpApi),
+    respuestaFinal: r.respuesta_final,
+  };
+}

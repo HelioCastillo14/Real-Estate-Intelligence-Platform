@@ -1,21 +1,32 @@
 import Link from "next/link";
 import type { PropiedadFiltro } from "@/lib/types";
 import { PendingBadge } from "./PendingBadge";
+import { SemaforoBadge, type CategoriaSemaforo } from "./SemaforoBadge";
 import { sanitizeText } from "@/lib/sanitize-text";
 
 export function PropertyCard({
   property,
   hovered,
   onHover,
+  semaforo,
+  motivoSinSemaforo,
 }: {
   property: PropiedadFiltro;
   hovered?: boolean;
   onHover?: (id: string | null) => void;
+  /**
+   * Solo en modo búsqueda NLP (candidatos de /search/nlp ya traen semáforo embebido).
+   * undefined = modo catálogo (/search/filtros, nunca tuvo semáforo). null = modo NLP
+   * pero esta propiedad puntual no tiene cobertura KNN — distinto de "no aplica".
+   */
+  semaforo?: CategoriaSemaforo | null;
+  motivoSinSemaforo?: string | null;
 }) {
   const pricePerM2 =
     property.areaM2 && property.areaM2 > 0 ? Math.round(property.priceUsd / property.areaM2) : null;
 
   const primeraImagen = property.imagenes?.[0] ?? null;
+  const modoNlp = semaforo !== undefined;
 
   return (
     <Link
@@ -54,7 +65,15 @@ export function PropertyCard({
               {sanitizeText(property.title)}
             </h3>
           </div>
-          <PendingBadge label="Compatibilidad y semáforo pendientes" />
+          {modoNlp ? (
+            semaforo ? (
+              <SemaforoBadge categoria={semaforo} compact />
+            ) : (
+              <PendingBadge label={motivoSinSemaforo ? "Sin semáforo — sin cobertura KNN" : "Sin semáforo"} />
+            )
+          ) : (
+            <PendingBadge label="Compatibilidad y semáforo pendientes" />
+          )}
         </div>
 
         <div className="mt-3 flex items-baseline justify-between">
