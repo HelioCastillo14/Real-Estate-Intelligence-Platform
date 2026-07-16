@@ -4,21 +4,22 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
-import type { PropiedadFiltro } from "@/lib/types";
+import type { PropiedadDetalle } from "@/lib/types";
 import { warnOnce } from "@/lib/warnings";
 import { sanitizeText } from "@/lib/sanitize-text";
+import { resolveClusterLabel } from "@/lib/cluster-label";
 
-export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
+export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
   const [imgIdx, setImgIdx] = useState(0);
 
   useEffect(() => {
-    warnOnce(
-      "detalle-solo-filtros",
-      "Detalle de propiedad usa los 10 campos reales de /search/filtros (no hay GET /propiedades/{id}). " +
-        "Sin dirección, lat/lng, compatibilidad (M1), semáforo/segmento (M2) ni confiabilidad — " +
-        "GET /valuation/transparencia y los endpoints de semáforo/zone-health por id no están conectados en esta migración.",
-    );
-  }, []);
+    if (property.ubicacionAproximada) {
+      warnOnce(
+        "detalle-ubicacion-aproximada",
+        `listing_id=${property.listingId}: geom generado dentro del polígono del corregimiento padre (zona no oficial sin polígono propio), no del polígono real de ${property.corregimiento}.`,
+      );
+    }
+  }, [property.ubicacionAproximada, property.listingId, property.corregimiento]);
 
   const imagenes = property.imagenes ?? [];
   const pricePerM2 =
@@ -108,28 +109,52 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
           <QuickStat label="Tipo" value={property.tipoInmueble} unit="" />
         </div>
 
-        {/* Análisis pendiente — M1/M2/Quality Scorer sin endpoint por id */}
+        {/* Análisis */}
         <div className="grid grid-cols-4 gap-4 mb-12">
           <AnalysisCardPending
             eyebrow="M1 · Preference Matching"
             title="Compatibilidad"
             note="Requiere un perfil de usuario (POST /match/score) — no aplica a una vista de detalle sin contexto de búsqueda."
           />
-          <AnalysisCardPending
-            eyebrow="M2 · Valuation"
-            title="Semáforo de precio"
-            note="No existe GET /valuation/semaforo/{id} — solo GET /valuation/transparencia, sin conectar en esta migración."
-          />
-          <AnalysisCardPending
-            eyebrow="M2 · Segmento"
-            title="Posición de mercado"
-            note="valuacion_segmento_kmeans.cluster_id no se expone por ningún endpoint todavía."
-          />
-          <AnalysisCardPending
-            eyebrow="Quality Scorer"
-            title="Confiabilidad del anuncio"
-            note="valuacion_quality_scorer no se expone por ningún endpoint todavía."
-          />
+
+          <AnalysisCard eyebrow="M2 · Valuation" title="Semáforo de precio">
+            {property.categoriaSemaforo ? (
+              <>
+                <div className="mt-3">
+                  <SemaforoBadge categoria={property.categoriaSemaforo} />
+                </div>
+                <div className="mt-3 space-y-1.5 text-xs">
+                  <RowKV k="Precio predicho" v={`$${Math.round(property.precioPredicho ?? 0).toLocaleString()}`} />
+                  <RowKV k="Confianza" v={property.confianzaReducida ? "Reducida" : "Normal"} />
+                </div>
+              </>
+            ) : (
+              <NoDisponible />
+            )}
+          </AnalysisCard>
+
+          <AnalysisCard eyebrow="M2 · Segmento" title="Posición de mercado">
+            {property.clusterId !== null ? (
+              <div className="mt-3 font-display text-xl text-ink font-medium">
+                {resolveClusterLabel(property.clusterId)}
+              </div>
+            ) : (
+              <NoDisponible />
+            )}
+          </AnalysisCard>
+
+          <AnalysisCard eyebrow="Quality Scorer" title="Confiabilidad del anuncio">
+            {property.completitudInformativa !== null ? (
+              <div className="mt-3 space-y-1.5 text-xs">
+                <RowKV k="Completitud informativa" v={`${property.completitudInformativa}/5`} />
+                <RowKV k="Calidad de presentación" v={`${property.calidadPresentacion}/5`} />
+                <RowKV k="Diferenciadores/amenidades" v={`${property.diferenciadoresAmenidades}/5`} />
+                <RowKV k="Transparencia de precio" v={`${property.transparenciaPrecio}/5`} />
+              </div>
+            ) : (
+              <NoDisponible />
+            )}
+          </AnalysisCard>
         </div>
 
         {/* Descripción original */}
@@ -165,7 +190,7 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
 
       <footer className="border-t border-border bg-canvas mt-16">
         <div className="max-w-[1400px] mx-auto px-8 py-6 text-xs text-muted-foreground">
-          REIP · Datos: catálogo real vía POST /search/filtros (backend)
+          REIP · Datos: catálogo real vía GET /propiedades/{"{"}id{"}"} (backend)
         </div>
       </footer>
     </div>
@@ -193,6 +218,56 @@ function AnalysisCardPending({ eyebrow, title, note }: { eyebrow: string; title:
         <PendingBadge />
       </div>
       <p className="mt-3 text-xs text-muted-foreground leading-relaxed">{note}</p>
+    </div>
+  );
+}
+
+function AnalysisCard({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-5 flex flex-col">
+      <div className="text-[10px] uppercase tracking-[0.18em] text-primary">{eyebrow}</div>
+      <h3 className="mt-1 font-display text-base text-ink font-medium">{title}</h3>
+      <div className="flex-1">{children}</div>
+    </div>
+  );
+}
+
+/**
+ * "No disponible para esta propiedad" — deliberadamente distinto del PendingBadge de
+ * "endpoint pendiente" que se usaba antes: GET /propiedades/{id} ya existe, esto es
+ * ausencia real de cobertura de modelo para este listing_id puntual (LEFT JOIN sin
+ * fila), no un hueco de backend.
+ */
+function NoDisponible() {
+  return (
+    <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-muted text-muted-foreground px-3 py-1.5 text-xs font-medium">
+      <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
+      No disponible para esta propiedad
+    </div>
+  );
+}
+
+function RowKV({ k, v }: { k: string; v: string }) {
+  return (
+    <div className="flex justify-between border-b border-border/60 pb-1.5 last:border-b-0">
+      <span className="text-muted-foreground">{k}</span>
+      <span className="text-ink font-medium tabular-nums">{v}</span>
+    </div>
+  );
+}
+
+const SEMAFORO_CONFIG = {
+  verde: { label: "Bajo mercado", dot: "bg-signal-green", bg: "bg-signal-green/10", text: "text-signal-green", border: "border-signal-green/30" },
+  amarillo: { label: "Precio justo", dot: "bg-signal-amber", bg: "bg-signal-amber/10", text: "text-signal-amber", border: "border-signal-amber/30" },
+  rojo: { label: "Sobre mercado", dot: "bg-signal-red", bg: "bg-signal-red/10", text: "text-signal-red", border: "border-signal-red/30" },
+} as const;
+
+function SemaforoBadge({ categoria }: { categoria: "verde" | "amarillo" | "rojo" }) {
+  const c = SEMAFORO_CONFIG[categoria];
+  return (
+    <div className={`inline-flex items-center gap-2 rounded-full border ${c.bg} ${c.border} px-3 py-1.5 text-xs font-medium ${c.text}`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+      <span>{c.label}</span>
     </div>
   );
 }

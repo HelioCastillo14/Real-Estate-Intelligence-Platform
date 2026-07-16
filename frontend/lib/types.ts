@@ -88,3 +88,93 @@ export function mapPropiedadApi(p: PropiedadFiltroApi): PropiedadFiltro {
     descripcion: p.descripcion,
   };
 }
+
+/**
+ * Shape real de GET /propiedades/{listing_id} (backend/app/routers/propiedades.py,
+ * PropiedadDetalleResponse) — verificado contra la respuesta real del endpoint (3 casos:
+ * cobertura completa, cobertura parcial, 404). Superset de PropiedadFiltro: agrega
+ * lat/lng, ubicacion_aproximada, y los 3 bloques de valuación (semáforo KNN, segmento
+ * KMeans, quality scorer) — cada uno null si el LEFT JOIN no encontró fila, no por
+ * ausencia de endpoint.
+ */
+export interface PropiedadDetalle {
+  id: string;
+  listingId: number;
+  corregimiento: string;
+  tipoInmueble: string;
+  priceUsd: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  areaM2: number | null;
+  title: string;
+  imagenes: string[] | null;
+  descripcion: string | null;
+  lat: number | null;
+  lng: number | null;
+  ubicacionAproximada: boolean;
+
+  /** null si listing_id no tiene fila en valuacion_semaforo_knn (135/1,177 sin cobertura KNN). */
+  precioPredicho: number | null;
+  categoriaSemaforo: "verde" | "amarillo" | "rojo" | null;
+  confianzaReducida: boolean | null;
+
+  /** cluster_id crudo (0/1) — resolver con resolveClusterLabel(), no aquí. null = sin cobertura KNN. */
+  clusterId: number | null;
+
+  /** null si listing_id no tiene fila en valuacion_quality_scorer (9/1,177 sin descripción evaluable). */
+  completitudInformativa: number | null;
+  calidadPresentacion: number | null;
+  diferenciadoresAmenidades: number | null;
+  transparenciaPrecio: number | null;
+}
+
+interface PropiedadDetalleApi {
+  listing_id: number;
+  corregimiento: string;
+  tipo_inmueble: string;
+  price_usd: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  area_m2: number | null;
+  title: string;
+  imagenes: string[] | null;
+  descripcion: string | null;
+  lat: number | null;
+  lng: number | null;
+  ubicacion_aproximada: boolean;
+  precio_predicho: number | null;
+  categoria_semaforo: "verde" | "amarillo" | "rojo" | null;
+  confianza_reducida: boolean | null;
+  cluster_id: number | null;
+  completitud_informativa: number | null;
+  calidad_presentacion: number | null;
+  diferenciadores_amenidades: number | null;
+  transparencia_precio: number | null;
+}
+
+export function mapPropiedadDetalleApi(p: PropiedadDetalleApi): PropiedadDetalle {
+  return {
+    id: String(p.listing_id),
+    listingId: p.listing_id,
+    corregimiento: p.corregimiento,
+    tipoInmueble: p.tipo_inmueble,
+    priceUsd: p.price_usd,
+    bedrooms: p.bedrooms,
+    bathrooms: p.bathrooms,
+    areaM2: p.area_m2,
+    title: p.title,
+    imagenes: p.imagenes,
+    descripcion: p.descripcion,
+    lat: p.lat,
+    lng: p.lng,
+    ubicacionAproximada: p.ubicacion_aproximada,
+    precioPredicho: p.precio_predicho,
+    categoriaSemaforo: p.categoria_semaforo,
+    confianzaReducida: p.confianza_reducida,
+    clusterId: p.cluster_id,
+    completitudInformativa: p.completitud_informativa,
+    calidadPresentacion: p.calidad_presentacion,
+    diferenciadoresAmenidades: p.diferenciadores_amenidades,
+    transparenciaPrecio: p.transparencia_precio,
+  };
+}
