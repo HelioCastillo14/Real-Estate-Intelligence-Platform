@@ -159,17 +159,43 @@ Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
   Pedregal y Parque Lefevre excluidos de KNN/KMeans por volumen insuficiente para 5-fold CV
   (siguen dentro del Zone Health Index, que es determinístico y no depende de volumen).
   `geom` de propiedades es sintético (jitter), solo para visualización — nunca insumo de modelo.
-- **Feature 1.3 (datos externos):** extracción y cómputo CERRADOS. Carga física a Supabase
-  PENDIENTE de Feature 1.5 (la tabla `corregimientos` con las columnas de Zone Health no existe
-  todavía). Los 7 archivos canónicos están en `pipeline/data/external/`.
-- **Feature 1.5 (schema DB):** no iniciado. **Excepción — 1.5b (dimensión de embedding, cerrada
-  2026-07-14):** la pausa de 1.5.1 por dimensión de embedding indecisa ya no aplica —
-  `propiedades.embedding` se define como `vector(3072)`, confirmado por 6.2.3 contra la API real.
-  DDL en `backend/app/db/schema/0001_propiedades_embedding.sql`, no ejecutado contra Supabase. El
-  resto de 1.5.1 (campos de `DOC-05 §4.2`, `geom`, índice GiST) sigue sin especificar en este
-  repo — no inventar esos campos. Detalle en
+- **Feature 1.3 (datos externos):** extracción, cómputo y carga física a Supabase CERRADOS —
+  corregido 2026-07-15 (sesión Feature 3.1.6): la tabla `corregimientos` SÍ existe, con las
+  columnas de Zone Health pobladas (9 filas, `zone_health_score`/`desglose_dimensiones`/
+  `estado_zone_health` con datos reales). Verificado contra la base real
+  (`ezutrurenerqgfmozbzz.supabase.co`), no asumido de una entrada anterior de este archivo, que
+  decía "PENDIENTE de Feature 1.5" y estaba desactualizada. Los 7 archivos canónicos siguen en
+  `pipeline/data/external/`.
+- **Feature 1.5 (schema DB):** APLICADA contra Supabase — corregido 2026-07-15 (sesión
+  Feature 3.1.6, misma auditoría que la entrada de 1.3 de arriba; esta entrada decía "no
+  iniciado" y era falsa). Las 8 migraciones de `supabase/migrations/` están aplicadas
+  (`supabase migration list`, local == remote): `propiedades` (1,177 filas, incluye `embedding
+  vector(3072)`, `geom` con índice GiST `idx_propiedades_geom`, e índice HNSW real
+  `idx_propiedades_embedding_hnsw` sobre `halfvec(3072)` en `20260715040005`), `corregimientos`
+  (9), `amenidades` (238), `perfiles_lifestyle` (6) + `conjunto_referencia_m1` (577),
+  `valuacion_quality_scorer` (1,168). `valuacion_semaforo_knn` (7 columnas desde
+  `20260715040006`), `valuacion_segmento_kmeans`, `sesiones_consulta`, `scores_compatibilidad`
+  existen con schema aplicado pero vacías — sus batches de carga de producción son tareas
+  aparte, no un problema de schema. El DDL de la dimensión de embedding vive en
+  `supabase/migrations/20260715032111_propiedades_embedding.sql` (no en
+  `backend/app/db/schema/`, que no existe — cita anterior de este archivo era un path
+  inventado). Detalle de la decisión de dimensión (no de la carga) en
   `Context-MD/Feature_1_5b_Embedding_Dimension_Cierre.md`.
+  **Nota de proceso, aplica a cualquier sesión futura:** los propios encabezados de estas 8
+  migraciones decían "NO EJECUTADA CONTRA SUPABASE" hasta 2026-07-15 — quedaron corregidos ese
+  mismo día, pero si alguna migración nueva aparece con esa frase, no asumirla sin correr
+  `supabase migration list` primero.
 - **Feature 1.4 (Zone Health Composite Index):** en progreso. Ver decisiones cerradas abajo.
+
+## Épica 2 (M1) y Épica 3 (M2) — producción backend, referencia corta
+
+Detalle línea por línea vive en los documentos citados, no aquí — evita que este archivo y esos
+documentos se desincronicen entre sí.
+
+| Épica | Servicios (`backend/app/services/`) | Tablas Supabase | Detalle completo |
+|---|---|---|---|
+| 2 — Preference Matching (M1) | `embeddings.py`, `busqueda_ann.py`, `perfil_usuario.py`, `explicador_compatibilidad.py` | `scores_compatibilidad` (schema aplicado, vacía — batch de producción pendiente) | `Context-MD/Epica_2_0_Preference_Matching_Documentacion.md` |
+| 3 — Property Valuation (M2, KNN semáforo de precio) | `comparables_knn.py` (3.1.1), `estimacion_precio_knn.py` (3.1.2), `semaforo_precio_knn.py` (3.1.3), `valuacion_knn.py` (3.1.5, orquestador) + `pipeline/scripts/analisis_mae_por_zona_3_1_4.py` (3.1.4, diagnóstico, no servicio) | `valuacion_semaforo_knn` (7 columnas desde `20260715040006`, vacía — batch 3.1.6 pendiente) | Acta de cierre de Épica 3 — pendiente de generar cuando cierre la épica; hasta entonces, ver el historial de sesión de Feature 3.1 |
 
 ## Decisiones formales cerradas — no las reabras sin que el equipo lo pida explícitamente
 
