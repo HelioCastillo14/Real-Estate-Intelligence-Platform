@@ -82,7 +82,11 @@
       "Bash(pipeline/venv/bin/python pipeline/scraper/enriquecer_detalle.py)",
       "Bash(pipeline/venv/bin/python -)",
       "Bash(pip install *)",
-      "Bash(pip3 install *)"
+      "Bash(pip3 install *)",
+      "Bash(supabase --version)",
+      "Bash(supabase migration *)",
+      "Bash(supabase db *)",
+      "Bash(npx tsc *)"
     ],
     "additionalDirectories": [
       "/tmp",
