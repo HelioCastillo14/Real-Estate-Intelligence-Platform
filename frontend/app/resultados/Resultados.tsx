@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Header } from "@/components/Header";
 import { PropertyCard } from "@/components/PropertyCard";
 import { PendingBadge } from "@/components/PendingBadge";
+import { ZoneHealthPanel } from "@/components/ZoneHealthPanel";
 import {
   ZONAS_VALIDAS,
   TIPOS_VALIDOS,
@@ -136,6 +137,16 @@ export function Resultados() {
           )}
         </div>
       </div>
+
+      {/* Zone Health (5.2.6): se dispara una sola llamada, para la zona seleccionada en
+          el filtro "Zona" — no una por cada corregimiento visible en los resultados (hasta
+          9 llamadas simultáneas sin mapa donde mostrarlas no tendría dónde aterrizar). Con
+          "Todas" no hay una sola zona que resolver, el panel no se renderiza. */}
+      {zona && (
+        <div className="max-w-[1720px] mx-auto px-8 pt-4">
+          <ZoneHealthPanel corregimiento={zona} />
+        </div>
+      )}
 
       {modoNlp ? (
         <ResultadosNlp
