@@ -6,16 +6,20 @@ import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
 import { SemaforoBadge } from "@/components/SemaforoBadge";
 import { TransparenciaScatter } from "@/components/TransparenciaScatter";
-import type { PropiedadDetalle, TransparenciaData } from "@/lib/types";
+import type { PropiedadDetalle, TransparenciaData, ZoneHealth, AmenidadZona } from "@/lib/types";
 import { warnOnce } from "@/lib/warnings";
 import { sanitizeText } from "@/lib/sanitize-text";
 import { resolveClusterLabel } from "@/lib/cluster-label";
 import { obtenerTransparencia } from "@/lib/transparencia";
+import { obtenerZoneHealth } from "@/lib/zone-health";
 
 export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
   const [imgIdx, setImgIdx] = useState(0);
   const [transparencia, setTransparencia] = useState<TransparenciaData | null>(null);
   const [transparenciaError, setTransparenciaError] = useState<string | null>(null);
+  const [zoneHealth, setZoneHealth] = useState<ZoneHealth | null>(null);
+  const [zoneHealthLoading, setZoneHealthLoading] = useState(true);
+  const [zoneHealthError, setZoneHealthError] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -30,6 +34,25 @@ export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    setZoneHealthLoading(true);
+    setZoneHealthError(null);
+    obtenerZoneHealth(property.corregimiento)
+      .then((zh) => {
+        if (!cancelled) setZoneHealth(zh);
+      })
+      .catch((err) => {
+        if (!cancelled) setZoneHealthError(err instanceof Error ? err.message : "Error desconocido");
+      })
+      .finally(() => {
+        if (!cancelled) setZoneHealthLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [property.corregimiento]);
 
   useEffect(() => {
     if (property.ubicacionAproximada) {
@@ -225,6 +248,41 @@ export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
           </div>
         </section>
 
+        {/* Servicios cercanos (5.3.6) */}
+        <section className="mb-12">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">
+            Servicios cercanos — {property.corregimiento}
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            {zoneHealthLoading ? (
+              <p className="text-sm text-muted-foreground">Consultando amenidades de {property.corregimiento}…</p>
+            ) : zoneHealthError ? (
+              <p className="text-sm text-muted-foreground">
+                No se pudo cargar Zone Health ({zoneHealthError}).
+              </p>
+            ) : zoneHealth === null ? (
+              <NoDisponible label="No disponible para esta propiedad — zona sin cobertura de Zone Health" />
+            ) : zoneHealth.amenidades.length === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                Sin amenidades registradas para {property.corregimiento}.
+              </p>
+            ) : (
+              <>
+                {zoneHealth.heredado && (
+                  <p className="mb-4 text-xs text-muted-foreground">
+                    Servicios de <span className="text-ink">{zoneHealth.heredaDe}</span> — {property.corregimiento}{" "}
+                    no tiene amenidades propias catalogadas, hereda las de su zona contenedora.
+                  </p>
+                )}
+                <AmenidadesPorCategoria amenidades={zoneHealth.amenidades} />
+                <p className="mt-4 text-[10px] text-muted-foreground italic">
+                  Vista de mapa pendiente — mostrando datos en formato lista mientras se reconstruye MapView.
+                </p>
+              </>
+            )}
+          </div>
+        </section>
+
         {/* Descripción original */}
         <section className="mb-12">
           <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">
@@ -306,11 +364,52 @@ function AnalysisCard({ eyebrow, title, children }: { eyebrow: string; title: st
  * ausencia real de cobertura de modelo para este listing_id puntual (LEFT JOIN sin
  * fila), no un hueco de backend.
  */
-function NoDisponible() {
+function NoDisponible({ label = "No disponible para esta propiedad" }: { label?: string }) {
   return (
     <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-muted text-muted-foreground px-3 py-1.5 text-xs font-medium">
       <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
-      No disponible para esta propiedad
+      {label}
+    </div>
+  );
+}
+
+/**
+ * Feature 5.3.6 — agrupa amenidades reales por categoría (6 posibles: parque, colegio,
+ * farmacia, supermercado, clinica, hospital). Sin mapa (MapView.tsx pendiente,
+ * frontend/docs/pendiente-mapview-signals.md), así que es una lista categorizada, no
+ * pines — el Done del WBS pide "al menos 3 categorías visibles", que esta vista cumple
+ * mostrando todas las categorías reales presentes, no un subconjunto fijo.
+ */
+function AmenidadesPorCategoria({ amenidades }: { amenidades: AmenidadZona[] }) {
+  const porCategoria = new Map<string, AmenidadZona[]>();
+  for (const a of amenidades) {
+    const lista = porCategoria.get(a.categoria) ?? [];
+    lista.push(a);
+    porCategoria.set(a.categoria, lista);
+  }
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {Array.from(porCategoria.entries()).map(([categoria, lista]) => (
+        <div key={categoria} className="border-l-2 border-border pl-3">
+          <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
+            {categoria} <span className="tabular-nums">({lista.length})</span>
+          </div>
+          <ul className="mt-1.5 space-y-1">
+            {lista.slice(0, 5).map((a) => (
+              <li key={a.id} className="text-xs text-ink truncate">
+                {a.nombre ?? "Sin nombre registrado"}
+                {a.rating !== null && (
+                  <span className="text-muted-foreground tabular-nums"> · {a.rating.toFixed(1)}★</span>
+                )}
+              </li>
+            ))}
+            {lista.length > 5 && (
+              <li className="text-[11px] text-muted-foreground">+{lista.length - 5} más</li>
+            )}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }

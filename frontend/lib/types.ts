@@ -409,3 +409,88 @@ export function mapTransparenciaApi(data: TransparenciaResponseApi): Transparenc
     })),
   };
 }
+
+/**
+ * Shape real de GET /zone-health/{corregimiento} (backend/app/routers/zone_health.py,
+ * ZoneHealthResponse) — verificado en vivo (oficial: Betania; heredado: El Cangrejo;
+ * sin composite: Costa del Este) el 2026-07-16, tras el fix de zona_etiquetada_origen.
+ * `desglose_dimensiones` tiene 4 claves reales hoy (seguridad, amenidades, transporte,
+ * walkability — socioeconómico se eliminó del composite, ver CLAUDE.md), no 6 y no un
+ * número fijo asumido: se leen las claves que el objeto trae, no una lista hardcodeada,
+ * para no desincronizarse si el backend cambia el desglose.
+ */
+export interface AmenidadZona {
+  id: number;
+  categoria: string;
+  /** null en 14/238 filas de la tabla real — no asumir siempre presente. */
+  nombre: string | null;
+  lat: number | null;
+  lng: number | null;
+  rating: number | null;
+}
+
+export interface ZoneHealth {
+  corregimiento: string;
+  esOficial: boolean;
+  heredaDe: string | null;
+  /** true si el score/desglose de esta zona es el de heredaDe, no propio. */
+  heredado: boolean;
+
+  zoneHealthScore: number | null;
+  /** Claves reales tal cual las devuelve el backend — no asumir un set fijo. */
+  desgloseDimensiones: Record<string, number> | null;
+  estadoZoneHealth: string;
+  /** true = sin composite (hoy solo Costa del Este) — distinto de "zona inexistente" (404). */
+  coberturaCompositeInsuficiente: boolean;
+
+  noVisualizado: boolean;
+  motivoVisualizacion: string | null;
+
+  amenidades: AmenidadZona[];
+}
+
+interface AmenidadZonaApi {
+  id: number;
+  categoria: string;
+  nombre: string | null;
+  lat: number | null;
+  lng: number | null;
+  rating: number | null;
+}
+
+interface ZoneHealthApi {
+  corregimiento: string;
+  es_oficial: boolean;
+  hereda_de: string | null;
+  heredado: boolean;
+  zone_health_score: number | null;
+  desglose_dimensiones: Record<string, number> | null;
+  estado_zone_health: string;
+  cobertura_composite_insuficiente: boolean;
+  no_visualizado: boolean;
+  motivo_visualizacion: string | null;
+  amenidades: AmenidadZonaApi[];
+}
+
+export function mapZoneHealthApi(z: ZoneHealthApi): ZoneHealth {
+  return {
+    corregimiento: z.corregimiento,
+    esOficial: z.es_oficial,
+    heredaDe: z.hereda_de,
+    heredado: z.heredado,
+    zoneHealthScore: z.zone_health_score,
+    desgloseDimensiones: z.desglose_dimensiones,
+    estadoZoneHealth: z.estado_zone_health,
+    coberturaCompositeInsuficiente: z.cobertura_composite_insuficiente,
+    noVisualizado: z.no_visualizado,
+    motivoVisualizacion: z.motivo_visualizacion,
+    amenidades: z.amenidades.map((a) => ({
+      id: a.id,
+      categoria: a.categoria,
+      nombre: a.nombre,
+      lat: a.lat,
+      lng: a.lng,
+      rating: a.rating,
+    })),
+  };
+}
