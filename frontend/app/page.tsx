@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
 import { warnOnce } from "@/lib/warnings";
@@ -14,12 +15,40 @@ const suggestions = [
   "Alquiler amoblado con vista al mar por menos de 3,000",
 ];
 
+/**
+ * Roles tomados de REIPPaperHCastilloJCopriAMontoyaDRivas.pdf, sección "Sobre los
+ * autores" — verificado contra el paper, no inventado. `avatarUrl` apunta a
+ * frontend/public/team/ (convención estándar de Next.js para assets estáticos
+ * servidos sin procesar por el pipeline de build).
+ */
 const TEAM = [
-  { name: "Besto", role: "PM / Technical Lead", roleConfirmed: true },
-  { name: "Copri", role: null, roleConfirmed: false },
-  { name: "Montoya", role: null, roleConfirmed: false },
-  { name: "Rives", role: null, roleConfirmed: false },
+  {
+    name: "Helio Castillo",
+    role: "PM / Technical Lead",
+    roleDetail: "Motor de valuación (M2) — KNN, Random Forest, KMeans",
+    avatarUrl: "/team/Helio-Castillo.png",
+  },
+  {
+    name: "Juan Copri",
+    role: "Recuperación semántica (M1)",
+    roleDetail: null,
+    avatarUrl: "/team/Juan-Copri.jpeg",
+  },
+  {
+    name: "Ariel Montoya",
+    role: "Quality Scorer y Orquestación NLP (M3)",
+    roleDetail: null,
+    avatarUrl: "/team/Ariel-Montoya.png",
+  },
+  {
+    name: "Daniel Rivas",
+    role: "Pipeline de Datos y Zone Health Index",
+    roleDetail: null,
+    avatarUrl: "/team/Daniel-Rivas.jpeg",
+  },
 ] as const;
+
+const AFILIACION = "Ingeniería de Software, Universidad Tecnológica de Panamá";
 
 export default function Home() {
   const router = useRouter();
@@ -201,23 +230,11 @@ export default function Home() {
               El equipo
             </div>
             <h2 className="font-display text-4xl leading-tight text-ink font-medium mb-10">
-              Tesis capstone, Universidad Tecnológica de Panamá
+              Equipo del proyecto
             </h2>
             <div className="grid grid-cols-4 gap-4">
               {TEAM.map((member) => (
-                <div key={member.name} className="rounded-2xl border border-border bg-card p-6">
-                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center font-display text-lg text-ink font-medium">
-                    {member.name[0]}
-                  </div>
-                  <div className="mt-4 font-display text-lg text-ink font-medium">{member.name}</div>
-                  <div className="mt-2">
-                    {member.roleConfirmed ? (
-                      <span className="text-sm text-muted-foreground">{member.role}</span>
-                    ) : (
-                      <PendingBadge label="Rol pendiente" />
-                    )}
-                  </div>
-                </div>
+                <TeamCard key={member.name} member={member} />
               ))}
             </div>
           </div>
@@ -232,6 +249,37 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function TeamCard({ member }: { member: (typeof TEAM)[number] }) {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <div className="rounded-2xl border border-border bg-card p-6">
+      {imgError ? (
+        <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center font-display text-lg text-ink font-medium">
+          {member.name[0]}
+        </div>
+      ) : (
+        <div className="relative w-16 h-16 rounded-full overflow-hidden bg-muted">
+          <Image
+            src={member.avatarUrl}
+            alt={member.name}
+            fill
+            sizes="64px"
+            className="object-cover"
+            onError={() => setImgError(true)}
+          />
+        </div>
+      )}
+      <div className="mt-4 font-display text-lg text-ink font-medium">{member.name}</div>
+      <div className="mt-2 text-sm text-muted-foreground">{member.role}</div>
+      {member.roleDetail && (
+        <div className="mt-1 text-xs text-muted-foreground leading-relaxed">{member.roleDetail}</div>
+      )}
+      <div className="mt-3 text-[11px] text-muted-foreground/80 leading-relaxed">{AFILIACION}</div>
     </div>
   );
 }
