@@ -19,6 +19,14 @@ El cast a `halfvec(3072)` es obligatorio en ambos lados del `<=>` para que el pl
 usar `idx_propiedades_embedding_hnsw` (ver Feature 2.1.4: el índice es una expresión sobre
 halfvec, la columna `embedding` real sigue siendo `vector(3072)` full precision).
 
+`title`/`imagenes`/`descripcion` (Épica 5, sesión de conexión de Resultados a
+`/search/nlp`): mismo criterio ya aplicado en `busqueda_estructurada.py` para
+`/search/filtros` — evita que el caller (`/search/nlp`) tenga que hacer un fetch
+adicional por candidato a `GET /propiedades/{id}` solo para completar la tarjeta con
+foto/título. No afecta a `/match/score` (`match.py`), el otro consumidor de esta
+función: `CandidatoMatchResponse` solo lee las claves que ya conocía del dict, las 3
+nuevas quedan sin usar ahí, sin romper nada.
+
 `transporte_score` (Feature 2.2.5): la query hace LEFT JOIN contra `corregimientos` para
 devolver `desglose_dimensiones->>'transporte'` por fila — es el insumo que
 `explicar_compatibilidad()` (2.2.4) necesita para evaluar esa dimensión, sin que el caller
@@ -95,6 +103,7 @@ def buscar_propiedades_ann(
 
     sql = f"""
         select p.listing_id, p.corregimiento, p.tipo_inmueble, p.price_usd, p.bedrooms, p.bathrooms, p.area_m2,
+               p.title, p.imagenes, p.descripcion,
                (c.desglose_dimensiones->>'transporte')::float as transporte_score,
                p.embedding::halfvec({DIMENSION_ESPERADA}) <=> %(query_embedding)s::halfvec({DIMENSION_ESPERADA}) as distancia_coseno
         from propiedades p

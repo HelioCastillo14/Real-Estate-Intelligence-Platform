@@ -109,6 +109,9 @@ class CandidatoNlpResponse(BaseModel):
     bedrooms: int | None
     bathrooms: int | None
     area_m2: float | None
+    title: str
+    imagenes: list[str] | None
+    descripcion: str | None
     distancia_coseno: float
     semaforo: SemaforoResponse | None
     motivo_sin_semaforo: str | None
@@ -252,6 +255,9 @@ def search_nlp(request: SearchNlpRequest) -> SearchNlpResponse:
             bedrooms=candidato["bedrooms"],
             bathrooms=candidato["bathrooms"],
             area_m2=float(candidato["area_m2"]) if candidato["area_m2"] is not None else None,
+            title=candidato["title"],
+            imagenes=candidato["imagenes"],
+            descripcion=candidato["descripcion"],
             distancia_coseno=candidato["distancia_coseno"],
             semaforo=semaforo,
             motivo_sin_semaforo=motivo_sin_semaforo,
