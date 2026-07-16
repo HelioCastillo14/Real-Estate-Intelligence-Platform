@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { PropiedadFiltro } from "@/lib/types";
 import { PendingBadge } from "./PendingBadge";
+import { sanitizeText } from "@/lib/sanitize-text";
 
 export function PropertyCard({
   property,
@@ -32,7 +33,7 @@ export function PropertyCard({
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={primeraImagen}
-            alt={property.title}
+            alt={sanitizeText(property.title)}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
           />
@@ -50,7 +51,7 @@ export function PropertyCard({
               {property.corregimiento} · {property.tipoInmueble}
             </div>
             <h3 className="font-display text-lg text-ink font-medium leading-tight mt-0.5 truncate">
-              {property.title}
+              {sanitizeText(property.title)}
             </h3>
           </div>
           <PendingBadge label="Compatibilidad y semáforo pendientes" />

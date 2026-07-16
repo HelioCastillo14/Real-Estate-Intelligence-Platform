@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
 import type { PropiedadFiltro } from "@/lib/types";
 import { warnOnce } from "@/lib/warnings";
+import { sanitizeText } from "@/lib/sanitize-text";
 
 export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
   const [imgIdx, setImgIdx] = useState(0);
@@ -46,7 +47,7 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
               {property.tipoInmueble} · {property.corregimiento}
             </div>
             <h1 className="font-display text-4xl md:text-5xl text-ink font-medium leading-tight mt-2">
-              {property.title}
+              {sanitizeText(property.title)}
             </h1>
             <div className="mt-3">
               <PendingBadge label="Dirección exacta pendiente — no está en /search/filtros" />
@@ -71,7 +72,7 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imagenes[imgIdx]}
-                alt={property.title}
+                alt={sanitizeText(property.title)}
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur text-xs tabular-nums">
@@ -140,7 +141,7 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
             {property.descripcion ? (
               <>
                 <p className="text-ink leading-relaxed whitespace-pre-line font-display text-lg">
-                  {property.descripcion}
+                  {sanitizeText(property.descripcion)}
                 </p>
                 <div className="mt-4 text-[11px] text-muted-foreground italic">
                   Texto sin edición — es el insumo del Quality Scorer.
