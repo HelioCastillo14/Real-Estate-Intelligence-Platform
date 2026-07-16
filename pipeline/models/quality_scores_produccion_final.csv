@@ -1,0 +1,1169 @@
+listing_id,modelo,completitud_informativa,calidad_presentacion,diferenciadores_amenidades,transparencia_precio,corregimiento,tipo_inmueble,price_usd,descripcion_fuente
+143196,gemini-3.5-flash,4,3,4,1,Bella Vista,Apartamentos,200000,completa
+143181,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,550000,completa
+143172,gemini-3.5-flash,5,5,5,2,Bella Vista,Apartamentos,448000,completa
+143139,gemini-3.5-flash,1,2,1,1,Obarrio,Apartamentos,199000,preview
+143472,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,200000,completa
+143468,gemini-3.5-flash,4,4,3,5,Obarrio,Apartamentos,297065,completa
+143474,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,155000,completa
+143473,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,248000,completa
+136390,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,189000,completa
+136683,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,375000,completa
+137269,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,470000,completa
+136394,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,210000,completa
+136077,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,387000,completa
+139353,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,210000,completa
+139984,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,382335,completa
+139985,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,280800,completa
+139986,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,237600,completa
+139987,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,199800,completa
+139991,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,185000,completa
+140000,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,151305,completa
+140001,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,156090,completa
+140002,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,188265,completa
+140025,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,448000,completa
+140028,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,448000,completa
+140038,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,315950,completa
+140039,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,231000,completa
+140040,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,120000,completa
+140041,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,199500,completa
+140042,gemini-3.5-flash,4,4,4,3,Bella Vista,Apartamentos,103000,completa
+140043,gemini-3.5-flash,4,5,4,3,Bella Vista,Apartamentos,104500,completa
+140075,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,260000,completa
+140076,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,206500,completa
+140077,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,175000,completa
+140115,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,365000,completa
+140117,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,315000,completa
+140162,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,317222,completa
+140163,gemini-3.5-flash,5,5,5,4,Bella Vista,Apartamentos,352806,completa
+140164,gemini-3.1-flash-lite,5,5,5,5,Bella Vista,Apartamentos,200501,completa
+140165,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,136721,completa
+140172,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,330000,completa
+140173,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,450000,completa
+140191,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,187800,completa
+140192,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,174710,completa
+140193,gemini-3.1-flash-lite,4,5,5,2,Bella Vista,Apartamentos,260720,completa
+140194,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,154640,completa
+140195,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,160000,completa
+140196,gemini-3.1-flash-lite,4,5,5,2,Bella Vista,Apartamentos,149850,completa
+140197,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,285590,completa
+140198,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,296000,completa
+140199,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,232910,completa
+140200,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,214150,completa
+140201,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,230800,completa
+140202,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,244600,completa
+140203,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,216790,completa
+140204,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,445000,completa
+140205,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,380000,completa
+140225,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,430823,completa
+140226,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,178339,completa
+140227,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,181304,completa
+140228,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,239625,completa
+140229,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,181717,completa
+140230,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,244160,completa
+140339,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,470000,completa
+141246,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,315950,completa
+141247,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,231000,completa
+141248,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,120000,completa
+141249,gemini-3.1-flash-lite,5,5,4,5,Bella Vista,Apartamentos,199500,completa
+141250,gemini-3.5-flash,4,4,4,3,Bella Vista,Apartamentos,106500,completa
+141251,gemini-3.1-flash-lite,5,5,5,5,Bella Vista,Apartamentos,104500,completa
+141281,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,260000,completa
+141282,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,206500,completa
+141283,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,175000,completa
+141324,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,365000,completa
+141373,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,320629,completa
+141374,gemini-3.5-flash,5,5,5,4,Bella Vista,Apartamentos,382218,completa
+141375,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,217419,completa
+141376,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,144539,completa
+141383,gemini-3.5-flash,4,4,5,1,Bella Vista,Apartamentos,330000,completa
+141384,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,450000,completa
+141402,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,187800,completa
+141403,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,174710,completa
+141404,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,260720,completa
+141405,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,154640,completa
+141406,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,160000,completa
+141407,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,149850,completa
+141408,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,285590,completa
+141409,gemini-3.1-flash-lite,4,5,5,2,Bella Vista,Apartamentos,296000,completa
+141410,gemini-3.1-flash-lite,4,5,5,2,Bella Vista,Apartamentos,232910,completa
+141411,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,214150,completa
+141412,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,230800,completa
+141413,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,244600,completa
+141414,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,216790,completa
+141415,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,445000,completa
+141436,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,430823,completa
+141437,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,178339,completa
+141438,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,181304,completa
+141439,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,239625,completa
+141440,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,181717,completa
+141441,gemini-3.5-flash,4,5,5,2,Bella Vista,Apartamentos,244160,completa
+141552,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,470000,completa
+136685,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,146745,completa
+136780,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,440000,completa
+136517,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,193058,completa
+136317,gemini-3.5-flash,4,5,4,5,zona_no_determinada,Apartamentos,315000,completa
+136505,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,225000,completa
+135942,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,1350000,completa
+136027,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,314550,completa
+139338,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,467900,completa
+139339,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,642725,completa
+143394,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,161355,completa
+139356,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,211472,completa
+139357,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,257923,completa
+139358,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,308478,completa
+136783,gemini-3.1-flash-lite,4,5,3,1,zona_no_determinada,Apartamentos,130000,completa
+139364,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,202574,completa
+143401,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,161355,completa
+143400,gemini-3.5-flash,5,4,4,5,zona_no_determinada,Apartamentos,224840,completa
+143399,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,254240,completa
+143392,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,254240,completa
+143393,gemini-3.5-flash,5,4,4,5,zona_no_determinada,Apartamentos,224840,completa
+136770,gemini-3.5-flash,5,5,4,1,zona_no_determinada,Apartamentos,130000,completa
+143459,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,412068,completa
+139988,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,31000,completa
+139989,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,372000,completa
+139990,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,268000,completa
+140019,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,769000,completa
+140020,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,769000,completa
+140073,gemini-3.5-flash,5,5,4,5,El Cangrejo,Apartamentos,189000,completa
+140083,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,138000,completa
+140084,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,180000,completa
+140133,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,1250000,completa
+140181,gemini-3.1-flash-lite,4,5,4,2,El Cangrejo,Apartamentos,220000,completa
+140182,gemini-3.1-flash-lite,4,5,4,1,El Cangrejo,Apartamentos,205000,completa
+140183,gemini-3.5-flash,4,5,5,1,El Cangrejo,Apartamentos,152000,completa
+140184,gemini-3.1-flash-lite,5,5,4,3,El Cangrejo,Apartamentos,290000,completa
+140185,gemini-3.5-flash,5,5,4,3,El Cangrejo,Apartamentos,380000,completa
+140186,gemini-3.5-flash,4,4,4,2,El Cangrejo,Apartamentos,210000,completa
+140187,gemini-3.5-flash,5,5,4,3,El Cangrejo,Apartamentos,491000,completa
+143458,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,542662,completa
+140246,gemini-3.5-flash,5,5,5,1,Obarrio,Apartamentos,191310,completa
+140247,gemini-3.5-flash,5,5,5,1,Obarrio,Apartamentos,181319,completa
+140272,gemini-3.5-flash,5,5,5,1,Obarrio,Apartamentos,454735,completa
+140273,gemini-3.5-flash,4,5,5,1,Obarrio,Apartamentos,350000,completa
+140274,gemini-3.5-flash,5,5,5,2,Obarrio,Apartamentos,450000,completa
+140411,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,308478,completa
+140412,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,211472,completa
+140413,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,257923,completa
+140414,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,193058,completa
+140415,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,225000,completa
+140505,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,314550,completa
+140506,gemini-3.1-flash-lite,5,5,5,5,Obarrio,Apartamentos,523555,completa
+140507,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,642725,completa
+140568,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,747470,completa
+140569,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,360000,completa
+140570,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,330400,completa
+140571,gemini-3.5-flash,4,5,5,5,El Cangrejo,Apartamentos,270000,completa
+140573,gemini-3.5-flash,5,5,4,5,Marbella,Apartamentos,275000,completa
+140736,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,246652,completa
+140737,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,307000,completa
+140738,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,166856,completa
+140739,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,226040,completa
+140740,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,270750,completa
+140742,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,232925,completa
+140744,gemini-3.1-flash-lite,5,5,5,5,Marbella,Apartamentos,266500,completa
+140747,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,430000,completa
+140857,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,365000,completa
+140878,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,647466,completa
+140879,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,446208,completa
+140880,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,431832,completa
+140881,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,340786,completa
+140883,gemini-3.5-flash,4,5,5,5,Marbella,Apartamentos,174000,completa
+140887,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,1275040,completa
+140888,gemini-3.5-flash,4,4,5,5,zona_no_determinada,Apartamentos,316160,completa
+140889,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,234260,completa
+140906,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,297000,completa
+140907,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,291000,completa
+140908,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,286500,completa
+140932,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,249900,completa
+140933,gemini-3.5-flash,5,4,5,5,El Cangrejo,Apartamentos,308478,completa
+140934,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,199472,completa
+140935,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,195058,completa
+140980,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,678898,completa
+140981,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,552436,completa
+140987,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,171100,completa
+141012,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,220000,completa
+141103,gemini-3.5-flash,4,4,3,5,Obarrio,Apartamentos,270000,completa
+141146,gemini-3.1-flash-lite,5,5,5,5,El Cangrejo,Apartamentos,420000,completa
+141147,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,375000,completa
+141148,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,348000,completa
+141192,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,470000,completa
+141193,gemini-3.5-flash,4,5,5,5,Obarrio,Apartamentos,390000,completa
+141194,gemini-3.5-flash,4,4,5,5,Obarrio,Apartamentos,460000,completa
+141224,gemini-3.5-flash,3,3,4,1,El Cangrejo,Apartamentos,239000,completa
+141279,gemini-3.5-flash,5,5,4,5,El Cangrejo,Apartamentos,189000,completa
+141286,gemini-3.1-flash-lite,5,5,5,5,Obarrio,Apartamentos,185000,completa
+141289,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,143000,completa
+141290,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,185000,completa
+141392,gemini-3.5-flash,4,5,5,1,El Cangrejo,Apartamentos,220000,completa
+141393,gemini-3.5-flash,4,5,5,1,El Cangrejo,Apartamentos,205000,completa
+141394,gemini-3.5-flash,4,5,5,1,El Cangrejo,Apartamentos,152000,completa
+141395,gemini-3.5-flash,4,3,3,1,El Cangrejo,Apartamentos,290000,completa
+141396,gemini-3.5-flash,4,3,3,1,El Cangrejo,Apartamentos,380000,completa
+141397,gemini-3.5-flash,3,2,2,1,El Cangrejo,Apartamentos,210000,completa
+141398,gemini-3.5-flash,4,3,3,1,El Cangrejo,Apartamentos,491000,completa
+141459,gemini-3.5-flash,5,5,5,2,Obarrio,Apartamentos,191310,completa
+141460,gemini-3.5-flash,4,5,5,2,Obarrio,Apartamentos,181319,completa
+141484,gemini-3.5-flash,5,5,5,1,Obarrio,Apartamentos,454735,completa
+141485,gemini-3.5-flash,5,5,5,2,Obarrio,Apartamentos,350000,completa
+141486,gemini-3.5-flash,5,5,5,2,Obarrio,Apartamentos,450000,completa
+141623,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,308478,completa
+141624,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,257923,completa
+141625,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,211472,completa
+141626,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,193058,completa
+141627,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,225000,completa
+141718,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,314550,completa
+141719,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,523555,completa
+141720,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,642725,completa
+141782,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,747470,completa
+141783,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,360000,completa
+141784,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,330400,completa
+141785,gemini-3.5-flash,4,5,5,4,El Cangrejo,Apartamentos,270000,completa
+141788,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,275000,completa
+141951,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,271454,completa
+141952,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,307000,completa
+141953,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,270750,completa
+141954,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,166856,completa
+141955,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,226040,completa
+141956,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,232925,completa
+141957,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,266500,completa
+141962,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,430000,completa
+142073,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,365000,completa
+142093,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,647466,completa
+142094,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,446208,completa
+142095,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,431832,completa
+142096,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,340786,completa
+142098,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,174000,completa
+142102,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,1275040,completa
+142103,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,316160,completa
+142104,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,234260,completa
+142121,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,297000,completa
+142122,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,291000,completa
+142123,gemini-3.1-flash-lite,5,5,5,5,Marbella,Apartamentos,286500,completa
+142147,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,249900,completa
+142148,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,308478,completa
+142149,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,199472,completa
+142150,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,195058,completa
+142200,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,678898,completa
+142201,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,552436,completa
+142207,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,171100,completa
+142232,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,220000,completa
+142325,gemini-3.5-flash,4,3,3,5,Obarrio,Apartamentos,270000,completa
+142368,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,420000,completa
+142370,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,348000,completa
+142415,gemini-3.5-flash,4,4,5,5,Obarrio,Apartamentos,470000,completa
+142416,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,390000,completa
+142417,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,460000,completa
+142451,gemini-3.5-flash,4,2,4,1,El Cangrejo,Apartamentos,239000,completa
+142483,gemini-3.5-flash,4,4,5,2,El Cangrejo,Apartamentos,296482,completa
+142484,gemini-3.5-flash,5,5,5,1,El Cangrejo,Apartamentos,424636,completa
+142485,gemini-3.5-flash,4,5,5,1,El Cangrejo,Apartamentos,201135,completa
+143460,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,240006,completa
+143461,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,438012,completa
+143450,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,193760,completa
+143451,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,188100,completa
+143455,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,299065,completa
+143453,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,268922,completa
+143426,gemini-3.5-flash,4,4,4,1,zona_no_determinada,Apartamentos,260000,completa
+143420,gemini-3.5-flash,4,3,4,1,zona_no_determinada,Apartamentos,155000,completa
+143384,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,169000,completa
+143414,gemini-3.5-flash,4,4,4,1,zona_no_determinada,Apartamentos,99500,completa
+143413,gemini-3.5-flash,4,4,3,1,zona_no_determinada,Apartamentos,130000,completa
+143389,gemini-3.5-flash,2,4,3,1,Marbella,Apartamentos,230000,completa
+143309,gemini-3.5-flash,5,5,5,2,Bella Vista,Apartamentos,480000,completa
+143308,gemini-3.5-flash,5,5,5,1,Obarrio,Apartamentos,320755,completa
+143307,gemini-3.5-flash,4,5,5,1,zona_no_determinada,Apartamentos,243977,completa
+143197,gemini-3.5-flash,5,4,5,1,Bella Vista,Apartamentos,210000,completa
+143192,gemini-3.5-flash,4,4,3,5,Bella Vista,Apartamentos,210000,completa
+143179,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,375000,completa
+143175,gemini-3.5-flash,4,5,3,1,El Cangrejo,Apartamentos,330000,completa
+136217,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,192577,completa
+143154,gemini-3.5-flash,4,4,3,1,El Cangrejo,Apartamentos,223128,completa
+143411,gemini-3.5-flash,2,2,1,1,zona_no_determinada,Apartamentos,168000,preview
+143140,gemini-3.5-flash,4,5,3,1,Obarrio,Apartamentos,225000,completa
+143138,gemini-3.5-flash,1,2,1,1,Obarrio,Apartamentos,180519,preview
+143087,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,215000,completa
+143085,gemini-3.5-flash,5,5,4,1,Bella Vista,Apartamentos,199000,completa
+143084,gemini-3.5-flash,5,5,4,5,Marbella,Apartamentos,340000,completa
+143075,gemini-3.5-flash,5,5,4,2,Marbella,Apartamentos,195000,completa
+142795,gemini-3.5-flash,4,4,4,1,Bella Vista,Apartamentos,915000,completa
+142779,gemini-3.5-flash,2,4,2,1,Bella Vista,Apartamentos,104000,completa
+142698,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,180000,completa
+142635,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,100200,completa
+142572,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,420000,completa
+142811,gemini-3.5-flash,4,4,4,2,Bella Vista,Apartamentos,220000,completa
+142813,gemini-3.5-flash,4,4,3,1,Bella Vista,Apartamentos,240000,completa
+142822,gemini-3.5-flash,4,4,4,1,Bella Vista,Apartamentos,279000,completa
+142824,gemini-3.5-flash,4,4,5,1,Bella Vista,Apartamentos,349000,completa
+142825,gemini-3.5-flash,4,3,4,1,Bella Vista,Apartamentos,349000,completa
+142845,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,250000,completa
+142854,gemini-3.5-flash,5,5,4,1,Bella Vista,Apartamentos,950000,completa
+142873,gemini-3.5-flash,4,4,5,1,Bella Vista,Apartamentos,380000,completa
+142908,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,313000,completa
+142910,gemini-3.5-flash,5,4,4,5,Bella Vista,Apartamentos,564000,completa
+142931,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,183168,completa
+142932,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,143789,completa
+142943,gemini-3.5-flash,4,4,5,1,Bella Vista,Apartamentos,200000,completa
+142958,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,206783,completa
+142805,gemini-3.5-flash,4,4,4,1,zona_no_determinada,Apartamentos,99500,completa
+142793,gemini-3.5-flash,4,4,5,1,El Cangrejo,Apartamentos,1250000,completa
+142781,gemini-3.5-flash,4,4,5,1,El Cangrejo,Apartamentos,320000,completa
+142778,gemini-3.5-flash,3,4,3,1,Marbella,Apartamentos,230000,completa
+142632,gemini-3.5-flash,4,4,4,1,El Cangrejo,Apartamentos,188999,completa
+143409,gemini-3.5-flash,4,4,4,1,zona_no_determinada,Apartamentos,120000,completa
+143408,gemini-3.5-flash,4,4,5,1,San Francisco,Apartamentos,150000,completa
+143407,gemini-3.5-flash,4,4,4,1,zona_no_determinada,Apartamentos,130000,completa
+142836,gemini-3.5-flash,4,5,5,1,Obarrio,Apartamentos,257300,completa
+142888,gemini-3.5-flash,4,4,4,1,Obarrio,Apartamentos,269000,completa
+142930,gemini-3.5-flash,5,4,5,5,El Cangrejo,Apartamentos,245671,completa
+142978,gemini-3.5-flash,4,5,4,1,Marbella,Apartamentos,250500,completa
+142509,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,655000,completa
+143406,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,117000,completa
+142472,gemini-3.5-flash,3,4,4,1,Bella Vista,Apartamentos,695000,completa
+142473,gemini-3.5-flash,3,4,4,1,Bella Vista,Apartamentos,225000,completa
+136835,gemini-3.5-flash,5,5,5,1,Bella Vista,Apartamentos,360000,completa
+139881,gemini-3.5-flash,1,2,1,1,zona_no_determinada,Apartamentos,200000,preview
+139925,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,655000,completa
+139809,gemini-3.5-flash,5,3,4,4,Bella Vista,Apartamentos,330000,completa
+139860,gemini-3.5-flash,5,4,4,1,Bella Vista,Apartamentos,420000,completa
+139877,gemini-3.5-flash,5,4,5,1,Bella Vista,Apartamentos,495000,completa
+139878,gemini-3.5-flash,5,4,5,1,Bella Vista,Apartamentos,340000,completa
+139749,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,365000,completa
+139750,gemini-3.5-flash,4,4,3,1,Obarrio,Apartamentos,248000,completa
+139768,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,145000,completa
+139914,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,760000,completa
+139687,gemini-3.1-flash-lite,5,5,4,1,Bella Vista,Apartamentos,235900,completa
+139685,gemini-3.5-flash,5,5,5,1,Marbella,Apartamentos,875000,completa
+137707,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,185000,completa
+136512,gemini-3.5-flash,3,5,4,1,Bella Vista,Apartamentos,312000,completa
+136721,gemini-3.5-flash,5,5,4,5,zona_no_determinada,Apartamentos,369000,completa
+136309,gemini-3.5-flash,5,5,5,1,zona_no_determinada,Apartamentos,595000,completa
+143042,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,365000,completa
+138305,gemini-3.5-flash,5,5,4,5,zona_no_determinada,Apartamentos,256000,completa
+139532,gemini-3.5-flash,4,5,5,1,Bella Vista,Apartamentos,420000,completa
+136558,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,135000,completa
+138045,gemini-3.5-flash,4,4,5,1,Bella Vista,Apartamentos,320000,completa
+143031,gemini-3.5-flash,4,3,4,1,El Cangrejo,Apartamentos,491000,completa
+137677,gemini-3.1-flash-lite,5,5,4,5,Bella Vista,Apartamentos,189000,completa
+137650,gemini-3.5-flash,5,5,4,5,Bella Vista,Apartamentos,315000,completa
+137619,gemini-3.5-flash,2,3,2,1,zona_no_determinada,Apartamentos,391000,completa
+136596,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,695000,completa
+136590,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,137000,completa
+137297,gemini-3.5-flash,3,4,5,1,zona_no_determinada,Apartamentos,249000,completa
+136892,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,445000,completa
+136893,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,794000,completa
+137054,gemini-3.5-flash,5,4,5,1,Bella Vista,Apartamentos,199000,completa
+136953,gemini-3.5-flash,3,5,3,1,Bella Vista,Apartamentos,205000,completa
+139378,gemini-3.5-flash,4,5,4,1,Bella Vista,Apartamentos,170000,completa
+136861,gemini-3.5-flash,5,5,4,1,Obarrio,Apartamentos,249000,completa
+136822,gemini-3.5-flash,1,1,1,1,Bella Vista,Apartamentos,155000,preview
+136722,gemini-3.5-flash,4,4,5,5,Marbella,Apartamentos,156320,completa
+136711,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,265000,completa
+136609,gemini-3.5-flash,5,4,5,5,zona_no_determinada,Apartamentos,192000,completa
+136594,gemini-3.5-flash,5,4,5,5,Bella Vista,Apartamentos,120000,completa
+136530,gemini-3.5-flash,2,4,3,1,zona_no_determinada,Apartamentos,350000,completa
+136515,gemini-3.5-flash,2,4,3,1,Bella Vista,Apartamentos,247500,completa
+136421,gemini-3.5-flash,5,3,5,5,El Cangrejo,Apartamentos,144371,completa
+136298,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,125000,completa
+136293,gemini-3.5-flash,4,5,3,1,Bella Vista,Apartamentos,370000,completa
+136305,gemini-3.5-flash,5,5,4,5,zona_no_determinada,Apartamentos,400000,completa
+136304,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Apartamentos,625000,completa
+136233,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,183000,completa
+136239,gemini-3.1-flash-lite,4,4,3,1,Obarrio,Apartamentos,1500000,completa
+136193,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,312000,completa
+136196,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,550000,completa
+136212,gemini-3.5-flash,5,5,5,5,Marbella,Apartamentos,220000,completa
+136152,gemini-3.5-flash,4,4,4,1,Bella Vista,Apartamentos,170000,preview
+136056,gemini-3.5-flash,4,5,5,1,Marbella,Apartamentos,226000,completa
+136008,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,222062,completa
+136030,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,119000,completa
+136023,gemini-3.5-flash,4,5,3,1,Obarrio,Apartamentos,238000,completa
+135955,gemini-3.5-flash,5,5,5,5,Obarrio,Apartamentos,311550,completa
+135964,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,117975,completa
+135741,gemini-3.5-flash,4,5,3,5,zona_no_determinada,Apartamentos,1500,completa
+135691,gemini-3.5-flash,4,5,4,5,Bella Vista,Apartamentos,247000,completa
+135726,gemini-3.5-flash,4,5,3,5,Bella Vista,Apartamentos,350000,completa
+135721,gemini-3.5-flash,4,5,3,1,zona_no_determinada,Apartamentos,170000,completa
+139321,gemini-3.5-flash,4,5,4,5,zona_no_determinada,Apartamentos,313500,completa
+135796,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,119000,completa
+135815,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,285000,completa
+137151,gemini-3.5-flash,1,2,1,1,zona_no_determinada,Apartamentos,450000,preview
+140080,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,175000,completa
+140081,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,161000,completa
+141287,gemini-3.5-flash,5,5,4,5,Obarrio,Apartamentos,168000,completa
+142881,gemini-3.5-flash,3,4,5,1,Bella Vista,Apartamentos,269050,completa
+142882,gemini-3.5-flash,3,4,4,1,Bella Vista,Apartamentos,235450,completa
+142886,gemini-3.5-flash,3,4,4,1,Bella Vista,Apartamentos,144500,completa
+142955,gemini-3.5-flash,4,4,4,1,Bella Vista,Apartamentos,520000,completa
+142858,gemini-3.5-flash,5,4,5,5,Obarrio,Apartamentos,467900,completa
+142859,gemini-3.5-flash,5,4,5,5,Obarrio,Apartamentos,645225,completa
+137066,gemini-3.5-flash,5,5,5,5,El Cangrejo,Apartamentos,113000,completa
+137017,gemini-3.5-flash,4,4,5,1,zona_no_determinada,Apartamentos,1000000,completa
+136553,gemini-3.5-flash,2,4,3,1,Bella Vista,Apartamentos,350000,completa
+143457,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,161722,completa
+143456,gemini-3.5-flash,4,5,4,5,Obarrio,Apartamentos,180519,completa
+143428,gemini-3.5-flash,5,5,5,5,Bella Vista,Apartamentos,230000,completa
+143028,gemini-3.5-flash,3,4,3,1,zona_no_determinada,Apartamentos,1500000,completa
+143475,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,158000,completa
+136451,gemini-3.5-flash,3,2,4,1,Betania,Apartamentos,550000,completa
+141184,gemini-3.5-flash,5,5,4,1,Betania,Casas,599000,completa
+142407,gemini-3.5-flash,5,5,4,1,Betania,Casas,599000,completa
+140502,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,135000,completa
+140553,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,260000,completa
+140610,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,266000,completa
+140613,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,204300,completa
+140625,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,217800,completa
+140626,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,580000,completa
+140627,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,314107,completa
+140628,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,227016,completa
+140629,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,197500,completa
+140630,gemini-3.1-flash-lite,5,5,5,5,Betania,Apartamentos,171000,completa
+140631,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,152248,completa
+140632,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,139268,completa
+141715,gemini-3.5-flash,5,4,5,5,Betania,Apartamentos,135000,completa
+141767,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,260000,completa
+141827,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,266000,completa
+141828,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,204300,completa
+141840,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,217800,completa
+141841,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,580000,completa
+141842,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,314107,completa
+141843,gemini-3.5-flash,5,4,5,5,Betania,Apartamentos,227016,completa
+141844,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,197500,completa
+141845,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,171000,completa
+141846,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,152248,completa
+141847,gemini-3.5-flash,5,4,5,5,Betania,Apartamentos,139268,completa
+137311,gemini-3.5-flash,4,5,4,1,zona_no_determinada,Casas,599000,completa
+140965,gemini-3.5-flash,5,4,4,5,zona_no_determinada,Casas,498000,completa
+141082,gemini-3.5-flash,5,5,5,5,Betania,Casas,560000,completa
+142182,gemini-3.5-flash,5,5,5,5,zona_no_determinada,Casas,498000,completa
+142304,gemini-3.5-flash,5,5,5,5,Betania,Casas,560000,completa
+140554,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,254000,completa
+140802,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,300105,completa
+140803,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,259038,completa
+140804,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,244709,completa
+140805,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,158665,completa
+141768,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,254000,completa
+142018,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,300105,completa
+142019,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,259038,completa
+142020,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,244709,completa
+142021,gemini-3.1-flash-lite,5,5,5,5,Betania,Apartamentos,158665,completa
+140462,gemini-3.5-flash,5,4,5,5,Betania,Apartamentos,260000,completa
+141674,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,260000,completa
+143213,gemini-3.5-flash,3,5,3,1,Betania,Apartamentos,165000,completa
+143185,gemini-3.5-flash,4,5,4,1,Betania,Apartamentos,230000,completa
+142766,gemini-3.5-flash,3,4,3,1,Betania,Locales,30000,completa
+142714,gemini-3.5-flash,4,5,4,1,Betania,Apartamentos,144000,completa
+142651,gemini-3.5-flash,5,5,4,1,Betania,Casas,480000,completa
+142576,gemini-3.5-flash,5,5,5,1,Betania,Apartamentos,650000,completa
+142855,gemini-3.5-flash,4,5,4,1,Betania,Casas,550000,completa
+142891,gemini-3.5-flash,4,4,4,1,Betania,Apartamentos,135000,completa
+142907,gemini-3.5-flash,4,4,5,1,Betania,Apartamentos,409000,completa
+142909,gemini-3.1-flash-lite,4,3,3,2,Betania,Apartamentos,884000,completa
+142857,gemini-3.5-flash,5,4,5,5,Betania,Apartamentos,210000,completa
+142977,gemini-3.5-flash,5,5,4,1,Betania,Apartamentos,130000,completa
+139888,gemini-3.5-flash,2,2,1,1,Betania,Edificios,750000,preview
+139746,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,105000,completa
+139747,gemini-3.5-flash,4,4,3,1,Betania,Apartamentos,125000,completa
+139800,gemini-3.5-flash,5,4,4,1,Betania,Casas,580000,completa
+139832,gemini-3.5-flash,5,5,4,1,Betania,Casas,320000,completa
+139839,gemini-3.5-flash,5,5,5,1,Betania,Casas,790000,completa
+139850,gemini-3.5-flash,4,4,3,1,Betania,Casas,275000,completa
+139720,gemini-3.5-flash,1,1,1,1,Betania,Apartamentos,150000,preview
+139751,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,145000,completa
+139842,gemini-3.5-flash,5,5,4,1,Betania,Casas,225000,completa
+137348,gemini-3.5-flash,3,2,2,1,zona_no_determinada,Casas,5500000,preview
+137828,gemini-3.5-flash,4,5,3,1,Betania,Edificios,450000,completa
+137535,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,210000,completa
+137536,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,155900,completa
+137538,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,138500,completa
+137483,gemini-3.5-flash,4,4,3,2,zona_no_determinada,Apartamentos,120000,completa
+137100,gemini-3.5-flash,4,4,5,1,Betania,Apartamentos,223400,completa
+137099,gemini-3.5-flash,5,5,4,5,Betania,Casas,468000,completa
+137082,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,250000,completa
+137078,gemini-3.5-flash,5,5,5,5,Betania,Apartamentos,389025,completa
+137025,gemini-3.5-flash,4,5,2,5,Betania,Apartamentos,130000,completa
+136983,gemini-3.5-flash,4,5,4,1,Betania,Casas,320000,completa
+136872,gemini-3.5-flash,5,5,4,5,Betania,Apartamentos,150000,completa
+136541,gemini-3.5-flash,3,4,3,1,Betania,Apartamentos,260000,completa
+136307,gemini-3.5-flash,4,5,4,1,Betania,Apartamentos,389000,completa
+135640,gemini-3.5-flash,5,5,5,5,Betania,Casas,487750,completa
+142869,gemini-3.5-flash,4,4,4,1,Betania,Apartamentos,210000,completa
+143467,gemini-3.5-flash,5,5,5,2,zona_no_determinada,Locales,900000,completa
+136195,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,403000,completa
+143104,gemini-3.5-flash,5,5,4,5,Costa del Este,Apartamentos,610000,completa
+138394,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,416026,completa
+136658,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,398429,completa
+140024,gemini-3.5-flash,5,5,4,5,Costa del Este,Apartamentos,575000,completa
+140027,gemini-3.5-flash,5,5,4,5,Costa del Este,Apartamentos,575000,completa
+140169,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,465000,completa
+140174,gemini-3.5-flash,5,5,4,5,Costa del Este,Apartamentos,465000,completa
+140266,gemini-3.5-flash,5,4,5,5,Costa del Este,Apartamentos,885000,completa
+140268,gemini-3.5-flash,5,5,5,1,Costa del Este,Apartamentos,430000,completa
+140269,gemini-3.5-flash,5,5,5,2,Costa del Este,Apartamentos,323700,completa
+140271,gemini-3.5-flash,5,5,5,1,Costa del Este,Apartamentos,344214,completa
+140320,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,464989,completa
+140333,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,700000,completa
+140476,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,403000,completa
+140541,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,750894,completa
+140542,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,608540,completa
+140543,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,1124000,completa
+140544,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,1245750,completa
+140701,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,291925,completa
+140704,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,416322,completa
+140714,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,398429,completa
+140745,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,2050000,completa
+140808,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,455000,completa
+140809,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,429500,completa
+140810,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,415000,completa
+140844,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,1421000,completa
+140845,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1661250,completa
+140847,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,470000,completa
+140848,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,403000,completa
+140849,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,486000,completa
+140852,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,315055,completa
+140853,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,439268,completa
+140868,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,714000,completa
+140869,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,692000,completa
+140939,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,1249876,completa
+140940,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,1334717,completa
+140941,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,296887,completa
+140942,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,283036,completa
+140943,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,550000,completa
+140944,gemini-3.5-flash,4,5,5,1,Costa del Este,Apartamentos,450870,completa
+140945,gemini-3.5-flash,4,5,5,5,Costa del Este,Apartamentos,482000,completa
+140946,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,436500,completa
+140947,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,317000,completa
+140990,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Casas,1385000,completa
+140994,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,720000,completa
+141009,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,395000,completa
+141011,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,950000,completa
+141016,gemini-3.1-flash-lite,5,5,3,5,Costa del Este,Apartamentos,895000,completa
+141031,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,791700,completa
+141032,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,868400,completa
+141052,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,930800,completa
+141064,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,3365149,completa
+141091,gemini-3.5-flash,4,5,3,1,Costa del Este,Apartamentos,782560,completa
+141093,gemini-3.5-flash,4,5,4,1,Costa del Este,Apartamentos,909243,completa
+141104,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,692000,completa
+141105,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,732000,completa
+141106,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,730000,completa
+141107,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,724000,completa
+141108,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,720000,completa
+141109,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,740000,completa
+141110,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,736000,completa
+141111,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,734000,completa
+141112,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,716000,completa
+141113,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,714000,completa
+141169,gemini-3.5-flash,4,4,3,5,Costa del Este,Apartamentos,827000,preview
+141170,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,550000,completa
+141221,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,1018900,completa
+141229,gemini-3.5-flash,3,4,2,1,Costa del Este,Apartamentos,221200,completa
+141230,gemini-3.1-flash-lite,4,4,3,1,Costa del Este,Apartamentos,711900,completa
+141380,gemini-3.5-flash,5,5,5,5,Costa del Este,Apartamentos,465000,completa
+141385,gemini-3.5-flash,5,4,5,5,Costa del Este,Apartamentos,465000,completa
+141478,gemini-3.1-flash-lite,4,4,5,5,Costa del Este,Apartamentos,885000,completa
+141480,gemini-3.5-flash,5,5,5,1,Costa del Este,Apartamentos,430000,completa
+141481,gemini-3.1-flash-lite,5,5,5,3,Costa del Este,Apartamentos,323700,completa
+141483,gemini-3.1-flash-lite,5,5,5,3,Costa del Este,Apartamentos,344214,completa
+141532,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,464989,completa
+141545,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,700000,completa
+141689,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,403000,completa
+141755,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,750894,completa
+141756,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,608540,completa
+141757,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1124000,completa
+141758,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1245750,completa
+141917,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,291925,completa
+141918,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,416322,completa
+141928,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,398429,completa
+141961,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,2050000,completa
+142024,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,455000,completa
+142025,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,429500,completa
+142026,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,415000,completa
+142060,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1421000,completa
+142061,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1661250,completa
+142063,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,470000,completa
+142064,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,403000,completa
+142065,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,486000,completa
+142068,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,315055,completa
+142069,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,439268,completa
+142083,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,714000,completa
+142084,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,692000,completa
+142156,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1249876,completa
+142157,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1334717,completa
+142158,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,296887,completa
+142159,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,283036,completa
+142160,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,263949,completa
+142161,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,550000,completa
+142162,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,450870,completa
+142163,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,482000,completa
+142164,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,436500,completa
+142165,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,317000,completa
+142211,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Casas,1385000,completa
+142215,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,720000,completa
+142230,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,395000,completa
+142233,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,950000,completa
+142237,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,895000,completa
+142252,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,791700,completa
+142253,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,868400,completa
+142274,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,930800,completa
+142286,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,3365149,completa
+142314,gemini-3.1-flash-lite,4,5,3,2,Costa del Este,Apartamentos,782560,completa
+142315,gemini-3.1-flash-lite,4,4,3,1,Costa del Este,Apartamentos,909243,completa
+142326,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,692000,completa
+142327,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,732000,completa
+142328,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,730000,completa
+142329,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,724000,completa
+142330,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,720000,completa
+142331,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,740000,completa
+142332,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,736000,completa
+142333,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,734000,completa
+142334,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,716000,completa
+142335,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,714000,completa
+142391,gemini-3.1-flash-lite,5,4,3,5,Costa del Este,Apartamentos,827000,preview
+142392,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,550000,completa
+142448,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,1018900,completa
+142456,gemini-3.1-flash-lite,4,4,3,1,Costa del Este,Apartamentos,221200,completa
+142457,gemini-3.1-flash-lite,4,5,3,1,Costa del Este,Apartamentos,711900,completa
+136121,gemini-3.1-flash-lite,4,5,3,1,Costa del Este,Apartamentos,1149737,completa
+143141,gemini-3.1-flash-lite,2,2,1,1,Costa del Este,Apartamentos,950000,preview
+142791,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,662053,completa
+142612,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,899000,completa
+142581,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,439500,completa
+142580,gemini-3.1-flash-lite,4,5,5,1,Costa del Este,Casas,1300000,completa
+142564,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,385000,completa
+142814,gemini-3.1-flash-lite,5,5,4,1,Costa del Este,Apartamentos,500000,completa
+142830,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,257530,completa
+142863,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,818601,completa
+142864,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,645618,completa
+142865,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,1469218,completa
+142867,gemini-3.1-flash-lite,5,4,5,3,Costa del Este,Apartamentos,481100,completa
+142868,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,560200,completa
+142871,gemini-3.1-flash-lite,5,3,5,5,Costa del Este,Apartamentos,435000,completa
+142880,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,414849,completa
+142905,gemini-3.1-flash-lite,5,4,4,5,Costa del Este,Apartamentos,649000,completa
+142956,gemini-3.1-flash-lite,4,3,3,1,Costa del Este,Casas,2400000,completa
+142959,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,711900,completa
+142963,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,686000,completa
+142964,gemini-3.1-flash-lite,4,3,5,5,Costa del Este,Apartamentos,504500,completa
+142498,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,430000,completa
+142499,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,560000,completa
+142463,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,560000,completa
+142464,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,430000,completa
+142475,gemini-3.1-flash-lite,3,3,1,1,Costa del Este,Apartamentos,895000,preview
+136625,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,439500,completa
+139721,gemini-3.1-flash-lite,2,2,1,1,Costa del Este,Casas,1100000,preview
+139724,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,275000,completa
+143055,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,398000,completa
+137299,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,500000,completa
+137193,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,192131,completa
+137007,gemini-3.1-flash-lite,5,4,4,5,Costa del Este,Apartamentos,285000,completa
+136684,gemini-3.1-flash-lite,2,2,1,1,Costa del Este,Apartamentos,490000,preview
+136616,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,140000,completa
+136613,gemini-3.1-flash-lite,5,4,5,5,Costa del Este,Apartamentos,405000,completa
+136623,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,270000,completa
+136179,gemini-3.1-flash-lite,5,5,4,1,Costa del Este,Casas,2300000,completa
+136120,gemini-3.1-flash-lite,4,5,3,1,Costa del Este,Apartamentos,225000,completa
+136013,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,245229,completa
+135800,gemini-3.1-flash-lite,5,4,4,5,Costa del Este,Apartamentos,608540,completa
+135661,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,707635,completa
+135801,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,1109680,completa
+135814,gemini-3.1-flash-lite,5,5,4,5,Costa del Este,Apartamentos,690000,completa
+142792,gemini-3.1-flash-lite,5,4,5,4,Costa del Este,Apartamentos,1259750,completa
+142877,gemini-3.1-flash-lite,4,3,5,1,Costa del Este,Apartamentos,235000,completa
+142954,gemini-3.1-flash-lite,4,4,4,1,Costa del Este,Apartamentos,930000,completa
+143135,gemini-3.1-flash-lite,4,5,4,5,Costa del Este,Apartamentos,591000,completa
+143134,gemini-3.1-flash-lite,4,5,4,5,Costa del Este,Apartamentos,420000,completa
+143133,gemini-3.1-flash-lite,5,5,5,5,Costa del Este,Apartamentos,430000,completa
+143132,gemini-3.1-flash-lite,4,5,4,5,Costa del Este,Apartamentos,570000,completa
+143119,gemini-3.1-flash-lite,4,5,5,1,Costa del Este,Apartamentos,1,completa
+143147,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,1,completa
+143120,gemini-3.1-flash-lite,5,5,5,1,Costa del Este,Apartamentos,1,completa
+143122,gemini-3.1-flash-lite,4,5,5,1,Costa del Este,Apartamentos,1,completa
+141083,gemini-3.1-flash-lite,5,5,5,5,El Cangrejo,Casas,1800000,completa
+142305,gemini-3.1-flash-lite,5,5,4,5,El Cangrejo,Casas,1800000,completa
+142437,gemini-3.1-flash-lite,5,4,5,1,El Cangrejo,Edificios,13000000,completa
+143089,gemini-3.1-flash-lite,5,5,4,5,El Cangrejo,Edificios,3500000,completa
+132175,gemini-3.1-flash-lite,5,3,5,1,El Cangrejo,Locales,660000,completa
+135934,gemini-3.1-flash-lite,5,5,5,5,Parque Lefevre,Apartamentos,209000,completa
+137833,gemini-3.1-flash-lite,4,4,3,1,Parque Lefevre,Casas,589000,preview
+143390,gemini-3.1-flash-lite,4,4,3,1,Parque Lefevre,Apartamentos,120000,completa
+142488,gemini-3.1-flash-lite,5,5,3,5,Parque Lefevre,Apartamentos,95000,completa
+142774,gemini-3.1-flash-lite,4,4,3,1,Parque Lefevre,Apartamentos,158000,completa
+142965,gemini-3.1-flash-lite,5,4,5,5,Parque Lefevre,Apartamentos,166586,completa
+139883,gemini-3.1-flash-lite,2,2,2,1,Parque Lefevre,Apartamentos,122000,preview
+139653,gemini-3.1-flash-lite,5,5,4,5,Parque Lefevre,Apartamentos,170000,completa
+137351,gemini-3.1-flash-lite,2,3,2,1,Parque Lefevre,Apartamentos,165000,preview
+136821,gemini-3.1-flash-lite,4,4,4,1,Parque Lefevre,Apartamentos,172500,completa
+136128,gemini-3.1-flash-lite,5,5,4,1,Parque Lefevre,Apartamentos,180000,completa
+136142,gemini-3.1-flash-lite,5,5,4,5,Parque Lefevre,Apartamentos,130000,completa
+136099,gemini-3.1-flash-lite,4,4,3,1,Parque Lefevre,Apartamentos,170000,preview
+136109,gemini-3.1-flash-lite,5,5,4,5,Parque Lefevre,Apartamentos,145000,completa
+135702,gemini-3.1-flash-lite,5,5,4,5,Parque Lefevre,Casas,1500000,completa
+135828,gemini-3.1-flash-lite,5,5,4,5,Parque Lefevre,Edificios,2500000,completa
+142691,gemini-3.1-flash-lite,4,4,3,1,Pedregal,Apartamentos,65000,completa
+139843,gemini-3.1-flash-lite,5,5,4,1,Pedregal,Apartamentos,89000,completa
+137485,gemini-3.1-flash-lite,4,4,4,1,Pedregal,Terrenos,1500000,completa
+143477,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,285000,completa
+143476,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,162000,completa
+136970,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1534600,completa
+135608,gemini-3.1-flash-lite,5,4,3,1,San Francisco,Apartamentos,149000,completa
+136477,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,290000,completa
+136965,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1035714,completa
+136964,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2575500,completa
+136942,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,797900,completa
+136885,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,745000,completa
+136966,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1467347,completa
+136868,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,330000,completa
+136141,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,195000,completa
+139368,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1500000,completa
+143012,gemini-3.1-flash-lite,4,5,3,1,San Francisco,Apartamentos,450000,completa
+139383,gemini-3.1-flash-lite,4,4,5,2,San Francisco,Apartamentos,865000,completa
+139974,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1190000,completa
+139976,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,429000,completa
+139977,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,429000,completa
+139978,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,276500,completa
+139979,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,204000,completa
+139980,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,188500,completa
+139981,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,169500,completa
+140004,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1853500,completa
+140005,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,865000,completa
+140006,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1016400,completa
+140007,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,2038540,completa
+140008,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1143138,completa
+140009,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1174488,completa
+140014,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,495000,completa
+141236,gemini-3.1-flash-lite,5,4,3,5,San Francisco,Apartamentos,469170,completa
+141332,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2167550,completa
+141333,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2055550,completa
+141361,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,228800,completa
+141362,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,289000,completa
+141381,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,400000,completa
+141463,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,215828,completa
+141464,gemini-3.1-flash-lite,5,5,5,3,San Francisco,Apartamentos,245336,completa
+141465,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,187559,completa
+141467,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,291920,completa
+141468,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,264308,completa
+141469,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,283100,completa
+141470,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,298960,completa
+141471,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,225896,completa
+141472,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,511000,completa
+141473,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,471000,completa
+141474,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,511000,completa
+141475,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,458000,completa
+141476,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,669000,completa
+136602,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,269730,completa
+136389,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+136428,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,345000,completa
+136720,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1150000,completa
+136816,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,629000,completa
+136458,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,400000,completa
+135735,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,790000,completa
+135897,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,450000,completa
+135994,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,323555,completa
+136019,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,615000,completa
+139332,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,327379,completa
+139333,gemini-3.1-flash-lite,4,5,5,5,San Francisco,Apartamentos,348820,completa
+139334,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,297659,completa
+139335,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,494647,completa
+139355,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,640000,completa
+139952,gemini-3.1-flash-lite,4,5,3,5,San Francisco,Apartamentos,350000,completa
+139969,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1300000,completa
+139970,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,305000,completa
+139971,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,265000,completa
+140013,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,480000,completa
+140021,gemini-3.1-flash-lite,4,5,5,1,San Francisco,Apartamentos,769000,completa
+140022,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,769000,completa
+140029,gemini-3.1-flash-lite,5,4,3,5,San Francisco,Apartamentos,499930,completa
+140034,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,656232,completa
+140035,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,473728,completa
+140036,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1283467,completa
+140037,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1082343,completa
+140088,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,950000,completa
+140104,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1250000,completa
+140106,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,5067375,completa
+140107,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,2202375,completa
+140119,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1044500,completa
+140121,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,881250,completa
+140122,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1685275,completa
+140135,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,340000,completa
+140167,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,490000,completa
+140175,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,375250,completa
+140176,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,328950,completa
+140177,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,267840,completa
+140178,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,365275,completa
+140179,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,320875,completa
+140180,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,260480,completa
+140232,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,334110,completa
+140233,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,308835,completa
+140234,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,299770,completa
+140255,gemini-3.1-flash-lite,5,5,5,3,San Francisco,Apartamentos,264308,completa
+140258,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,333270,completa
+140260,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,368632,completa
+140261,gemini-3.1-flash-lite,4,4,5,2,San Francisco,Apartamentos,327379,completa
+140262,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,363480,completa
+140263,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,297659,completa
+140264,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,494647,completa
+140270,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,265000,completa
+140343,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,615000,completa
+140344,gemini-3.1-flash-lite,4,5,4,5,San Francisco,Apartamentos,483980,completa
+140380,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,330000,completa
+140390,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,629000,completa
+140391,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,590000,completa
+140392,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,600000,completa
+140395,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1150000,completa
+140405,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,269730,completa
+140424,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,345000,completa
+140435,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+140491,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,323555,completa
+140492,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,357432,completa
+140494,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,304156,completa
+140495,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,517980,completa
+140501,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,615000,completa
+140513,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,450000,completa
+140522,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,790000,completa
+140546,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,310800,completa
+140547,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,233500,completa
+140548,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,125000,completa
+140555,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1149750,completa
+140556,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1532600,completa
+140557,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,913400,completa
+140566,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,795221,completa
+140567,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,454500,completa
+140580,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1639000,completa
+140581,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1057143,completa
+140582,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2100000,completa
+140584,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+140585,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1450000,completa
+140587,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,765000,completa
+140619,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,550000,completa
+140620,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,342000,completa
+140621,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,270000,completa
+140650,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,480000,completa
+140665,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,540000,completa
+140669,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1500000,completa
+140673,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1409412,completa
+140682,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1354288,completa
+140683,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1230000,completa
+140721,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,365000,completa
+140727,gemini-3.1-flash-lite,5,4,5,2,San Francisco,Apartamentos,1400000,completa
+140746,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,495000,completa
+140778,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2535121,completa
+140781,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1346794,completa
+140856,gemini-3.1-flash-lite,4,3,4,1,San Francisco,Apartamentos,2500000,completa
+140864,gemini-3.1-flash-lite,5,4,3,1,San Francisco,Apartamentos,750000,completa
+140866,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,1485000,completa
+140884,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3410300,completa
+140885,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2450400,completa
+140924,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2752000,completa
+140925,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1064784,completa
+140926,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1616500,completa
+140927,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,342888,completa
+140928,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,349373,completa
+140929,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,341856,completa
+140930,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,710000,completa
+140952,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,415000,completa
+140955,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,350000,completa
+140959,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1106450,completa
+140960,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1178775,completa
+140961,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1203275,completa
+140962,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,790000,completa
+140963,gemini-3.1-flash-lite,4,5,4,5,San Francisco,Apartamentos,440000,completa
+140978,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1175706,completa
+140979,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,633882,completa
+140986,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,330000,completa
+141001,gemini-3.1-flash-lite,4,5,5,5,San Francisco,Apartamentos,3202880,completa
+141002,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3228015,completa
+141003,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,2457152,completa
+141004,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1325000,completa
+141013,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,280000,completa
+141033,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,250000,completa
+141034,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,280000,completa
+141069,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,520000,completa
+141072,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,1505000,completa
+141076,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1800000,completa
+141099,gemini-3.1-flash-lite,5,4,4,5,San Francisco,Apartamentos,525000,completa
+141152,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,449000,completa
+141154,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,3900000,completa
+141160,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,684613,completa
+141161,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,503196,completa
+141162,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,496478,completa
+141171,gemini-3.1-flash-lite,5,4,4,5,San Francisco,Apartamentos,221000,completa
+141181,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,1580000,completa
+141182,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,565000,completa
+141234,gemini-3.1-flash-lite,5,4,3,5,San Francisco,Apartamentos,613970,completa
+141235,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,545300,completa
+141237,gemini-3.1-flash-lite,5,4,3,5,San Francisco,Apartamentos,499930,completa
+141242,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,656232,completa
+141243,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,473728,completa
+141244,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1283467,completa
+141245,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1082343,completa
+141294,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,950000,completa
+141310,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1250000,completa
+141312,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,5067375,completa
+141313,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2322375,completa
+141314,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2202375,completa
+141315,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3562875,completa
+141328,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1044500,completa
+141329,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,881250,completa
+141330,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1685275,completa
+141343,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,340000,completa
+141378,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,490000,completa
+141386,gemini-3.1-flash-lite,5,5,5,3,San Francisco,Apartamentos,375250,completa
+141387,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,328950,completa
+141388,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,267840,completa
+141389,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,365275,completa
+141390,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,320875,completa
+141391,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,260480,completa
+141443,gemini-3.1-flash-lite,4,4,5,2,San Francisco,Apartamentos,334110,completa
+141444,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,299770,completa
+141445,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,308835,completa
+141482,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,265000,completa
+141556,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,615000,completa
+141557,gemini-3.1-flash-lite,4,4,5,5,San Francisco,Apartamentos,483980,completa
+141591,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,330000,completa
+141603,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,590000,completa
+141604,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,600000,completa
+141605,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,629000,completa
+141608,gemini-3.1-flash-lite,5,4,4,5,San Francisco,Apartamentos,1150000,completa
+141618,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,269730,completa
+141636,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,345000,completa
+141647,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+141704,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,323555,completa
+141705,gemini-3.1-flash-lite,4,4,5,2,San Francisco,Apartamentos,440000,completa
+141706,gemini-3.1-flash-lite,4,4,5,2,San Francisco,Apartamentos,439000,completa
+141707,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,364000,completa
+141708,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,517980,completa
+141714,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,615000,completa
+141726,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,450000,completa
+141735,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,790000,completa
+141760,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,310800,completa
+141761,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,233500,completa
+141762,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,125000,completa
+141769,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1532600,completa
+141770,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1149750,completa
+141771,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,913400,completa
+141780,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,795221,completa
+141781,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,454500,completa
+141794,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1057143,completa
+141795,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1639000,completa
+141796,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2100000,completa
+141797,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+141798,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1450000,completa
+141799,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,765000,completa
+141834,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,550000,completa
+141835,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,342000,completa
+141836,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,270000,completa
+141865,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,480000,completa
+141880,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,540000,completa
+141884,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1500000,completa
+141888,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1409412,completa
+141897,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1354288,completa
+141898,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1230000,completa
+141936,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,365000,completa
+141942,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,1400000,completa
+141960,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,495000,completa
+141994,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2535121,completa
+141996,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,1346794,completa
+142072,gemini-3.1-flash-lite,4,3,4,1,San Francisco,Apartamentos,2500000,completa
+142079,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,750000,completa
+142081,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,1485000,completa
+142099,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3410300,completa
+142100,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2450400,completa
+142139,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2752000,completa
+142140,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1064784,completa
+142141,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1616500,completa
+142142,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,342888,completa
+142143,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,349373,completa
+142144,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,341856,completa
+142145,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,710000,completa
+142151,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,436000,completa
+142152,gemini-3.1-flash-lite,5,4,4,5,San Francisco,Apartamentos,1275000,completa
+142171,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,415000,completa
+142172,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,350000,completa
+142177,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1106450,completa
+142178,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1178775,completa
+142179,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1203275,completa
+142180,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,790000,completa
+142183,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,440000,completa
+142191,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,419000,completa
+142192,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,357850,completa
+142198,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1175706,completa
+142199,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,633882,completa
+142206,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,330000,completa
+142221,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3202880,completa
+142222,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3228015,completa
+142223,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,2457152,completa
+142224,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1325000,completa
+142234,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,280000,completa
+142254,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,250000,completa
+142255,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,280000,completa
+142291,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,520000,completa
+142294,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,1505000,completa
+142298,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1800000,completa
+142321,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,525000,completa
+142374,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,449000,completa
+142376,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,3900000,completa
+142382,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,684613,completa
+142383,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,503196,completa
+142384,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,496478,completa
+142393,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,221000,completa
+142403,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,1580000,completa
+142404,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,565000,completa
+142405,gemini-3.1-flash-lite,5,3,3,5,San Francisco,Apartamentos,428000,completa
+142478,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,398800,completa
+142479,gemini-3.1-flash-lite,5,5,5,2,San Francisco,Apartamentos,290020,completa
+143438,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,930000,completa
+143452,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,500000,completa
+143425,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,215000,completa
+143391,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,264700,completa
+143323,gemini-3.1-flash-lite,2,3,2,1,San Francisco,Apartamentos,315000,completa
+143332,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,246500,completa
+143329,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,437100,completa
+143387,gemini-3.1-flash-lite,3,4,3,1,San Francisco,Apartamentos,386000,completa
+143388,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,390000,completa
+143328,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,386100,completa
+143299,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,335200,completa
+143300,gemini-3.1-flash-lite,4,4,5,1,San Francisco,Apartamentos,357300,completa
+143189,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1,completa
+136219,gemini-3.1-flash-lite,3,4,3,1,San Francisco,Apartamentos,364000,completa
+139674,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,152000,completa
+143088,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,750000,completa
+143086,gemini-3.1-flash-lite,4,4,2,1,San Francisco,Apartamentos,175000,completa
+143083,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,700000,completa
+143081,gemini-3.1-flash-lite,5,5,4,2,San Francisco,Apartamentos,1500000,completa
+142801,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,850000,completa
+142796,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,750000,completa
+142786,gemini-3.1-flash-lite,4,4,3,2,San Francisco,Apartamentos,280000,completa
+142773,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,280208,completa
+142772,gemini-3.1-flash-lite,4,4,5,1,San Francisco,Apartamentos,202300,completa
+142771,gemini-3.1-flash-lite,4,4,5,1,San Francisco,Apartamentos,240896,completa
+142819,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,180000,completa
+142820,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,160000,completa
+142894,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,165000,completa
+142906,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,580000,completa
+142806,gemini-3.1-flash-lite,5,4,4,1,San Francisco,Apartamentos,530000,completa
+142784,gemini-3.1-flash-lite,4,3,3,1,San Francisco,Apartamentos,590000,completa
+142777,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,390000,completa
+142776,gemini-3.1-flash-lite,3,4,3,1,San Francisco,Apartamentos,386000,completa
+142761,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,715000,completa
+142562,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,350000,completa
+142673,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,330000,completa
+142652,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,900000,completa
+142590,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,379000,completa
+142569,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,320000,completa
+142818,gemini-3.1-flash-lite,4,4,4,1,San Francisco,Apartamentos,950000,completa
+142846,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,330000,completa
+142876,gemini-3.1-flash-lite,4,4,4,1,San Francisco,Apartamentos,310000,completa
+142887,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,810000,completa
+142893,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,225000,completa
+142979,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,650000,completa
+142493,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1200000,completa
+142519,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,570000,completa
+142523,gemini-3.1-flash-lite,2,2,1,1,San Francisco,Apartamentos,320000,preview
+142481,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,1200000,completa
+139934,gemini-3.1-flash-lite,5,5,3,1,San Francisco,Apartamentos,440000,completa
+139879,gemini-3.1-flash-lite,2,2,1,1,San Francisco,Apartamentos,140000,preview
+139880,gemini-3.1-flash-lite,2,2,1,1,San Francisco,Apartamentos,185000,preview
+139928,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,605000,completa
+139753,gemini-3.1-flash-lite,5,5,3,1,San Francisco,Apartamentos,300000,completa
+139807,gemini-3.1-flash-lite,5,4,3,1,San Francisco,Apartamentos,430000,completa
+139703,gemini-3.1-flash-lite,3,2,1,1,San Francisco,Apartamentos,155000,completa
+139729,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,230000,completa
+139730,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,665000,completa
+139738,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,240000,completa
+139656,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,570000,completa
+143014,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,270000,completa
+143022,gemini-3.1-flash-lite,4,4,4,1,San Francisco,Apartamentos,350000,completa
+138557,gemini-3.1-flash-lite,5,4,4,3,San Francisco,Apartamentos,310000,completa
+136860,gemini-3.1-flash-lite,4,5,3,5,San Francisco,Apartamentos,250000,completa
+136342,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,165000,completa
+137102,gemini-3.1-flash-lite,5,5,5,4,San Francisco,Apartamentos,189000,completa
+137061,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,330000,completa
+143056,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,210000,completa
+143054,gemini-3.1-flash-lite,5,4,5,2,San Francisco,Apartamentos,246600,completa
+143051,gemini-3.1-flash-lite,3,4,3,5,San Francisco,Apartamentos,440000,completa
+143047,gemini-3.1-flash-lite,3,3,3,1,San Francisco,Apartamentos,1430000,completa
+138129,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,320000,completa
+137031,gemini-3.1-flash-lite,4,5,5,1,San Francisco,Apartamentos,3999000,completa
+136034,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,379000,completa
+136057,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,250000,completa
+138029,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,910000,completa
+137766,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,220000,completa
+137318,gemini-3.1-flash-lite,4,4,5,1,San Francisco,Apartamentos,913400,completa
+137314,gemini-3.1-flash-lite,4,3,5,1,San Francisco,Apartamentos,1530600,completa
+137276,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,1320000,completa
+137227,gemini-3.1-flash-lite,2,4,1,1,San Francisco,Apartamentos,382800,preview
+137228,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,237600,preview
+137229,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,349800,preview
+137225,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,267300,preview
+137226,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,237600,preview
+137230,gemini-3.1-flash-lite,2,3,1,1,San Francisco,Apartamentos,376200,preview
+137161,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,241000,completa
+137142,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,335000,completa
+137071,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,320742,completa
+137065,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,290000,completa
+137063,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,359000,completa
+136978,gemini-3.1-flash-lite,4,5,3,1,San Francisco,Apartamentos,420000,completa
+136971,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,490000,completa
+136944,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,240000,completa
+136950,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,499000,completa
+136959,gemini-3.1-flash-lite,5,5,4,1,San Francisco,Apartamentos,500000,completa
+136960,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,225000,completa
+136859,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1400000,completa
+136824,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,963870,completa
+136792,gemini-3.1-flash-lite,5,4,5,2,San Francisco,Apartamentos,285000,completa
+136750,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,185000,completa
+136752,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,131000,completa
+136678,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,180926,completa
+137659,gemini-3.1-flash-lite,4,5,5,1,San Francisco,Apartamentos,454500,completa
+136591,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,105000,completa
+136559,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,225896,completa
+136567,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,185530,completa
+136529,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1021929,completa
+136457,gemini-3.1-flash-lite,4,3,3,5,San Francisco,Apartamentos,349000,preview
+136415,gemini-3.1-flash-lite,4,5,3,1,San Francisco,Apartamentos,195000,completa
+136401,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,195000,completa
+136386,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,190000,completa
+136311,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,220000,completa
+136230,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,1400000,completa
+136229,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,480000,completa
+136187,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,200000,completa
+136002,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,180926,completa
+136037,gemini-3.1-flash-lite,4,4,5,5,San Francisco,Apartamentos,196000,completa
+138853,gemini-3.1-flash-lite,4,4,3,1,San Francisco,Apartamentos,201150,completa
+135958,gemini-3.1-flash-lite,4,5,5,2,San Francisco,Apartamentos,270000,completa
+135924,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,176800,completa
+135965,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,440000,preview
+135902,gemini-3.1-flash-lite,4,5,3,5,San Francisco,Apartamentos,189000,completa
+135903,gemini-3.1-flash-lite,4,5,3,5,San Francisco,Apartamentos,288000,completa
+135692,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,320000,completa
+135725,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,427000,completa
+135759,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,340000,completa
+135813,gemini-3.1-flash-lite,5,5,3,5,San Francisco,Apartamentos,345000,completa
+133085,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,280000,completa
+130699,gemini-3.1-flash-lite,5,4,5,1,San Francisco,Apartamentos,265650,completa
+138697,gemini-3.1-flash-lite,4,3,3,1,San Francisco,Apartamentos,199000,completa
+143330,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,386600,completa
+143190,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1,completa
+142815,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,210000,completa
+142823,gemini-3.1-flash-lite,4,5,4,5,San Francisco,Apartamentos,280000,completa
+142860,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,765000,completa
+142861,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,981400,completa
+142862,gemini-3.1-flash-lite,5,4,4,5,San Francisco,Apartamentos,480240,completa
+142892,gemini-3.1-flash-lite,4,5,4,1,San Francisco,Apartamentos,665000,completa
+136840,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,191500,completa
+136687,gemini-3.1-flash-lite,5,4,5,5,San Francisco,Apartamentos,896000,completa
+136373,gemini-3.1-flash-lite,4,4,5,5,San Francisco,Apartamentos,277000,completa
+143440,gemini-3.1-flash-lite,5,5,5,5,San Francisco,Apartamentos,161400,completa
+143418,gemini-3.1-flash-lite,4,5,4,5,San Francisco,Apartamentos,195400,completa
+143417,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,163600,completa
+143416,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,197900,completa
+143415,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,146000,completa
+143148,gemini-3.1-flash-lite,4,5,5,1,San Francisco,Apartamentos,1,completa
+143331,gemini-3.1-flash-lite,5,5,4,5,San Francisco,Apartamentos,157900,completa
+143169,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1,completa
+143168,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1,completa
+143302,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,398200,completa
+143171,gemini-3.1-flash-lite,5,5,5,1,San Francisco,Apartamentos,1,completa
+143123,gemini-3.1-flash-lite,4,5,5,1,San Francisco,Apartamentos,1,completa

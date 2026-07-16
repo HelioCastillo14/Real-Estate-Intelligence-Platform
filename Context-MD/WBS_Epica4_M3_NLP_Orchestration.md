@@ -27,3 +27,15 @@ Story Points totales: 22 | 4 ingenieros — 23 días disponibles
 | 4.3.3 | Medir y documentar tiempo de respuesta end-to-end del endpoint NLP (objetivo ≤5s, SRS-024) | 2 | Medición realizada con al menos 10 consultas de prueba; promedio documentado; si supera 5s, se abre issue con causa identificada | 4.3.1 |
 
 **Nota de alcance:** Feature 4.3 es implementación de backend (Épica 4, producción con FastAPI). Notebook 6.2.7 es la fase de experimentación que precede y valida el diseño de 4.1–4.2 antes de construir los endpoints reales — no implementa los endpoints en sí.
+
+**Nota de riesgo de 4.3.3 — resuelta antes de construir 4.3.1 (2026-07-15):** una medición previa
+de 27 llamadas reales contra el contrato de extracción de 6.2.7 mostró que `gemini-3.5-flash` no
+cumplía el objetivo de ≤5s de esta tarea ni en el camino sin reintento (mediana 11.3s, hasta 71.6s
+con backoff de 503) — riesgo real de incumplir el SRS-024, no un caso aislado. Se resolvió
+reemplazando el modelo del contrato v0 por `gemini-3.1-flash-lite` (mediana 1.3s, 0 reintentos de
+13 llamadas pareadas), verificado sin cambios de comportamiento cualitativo del mecanismo de
+extracción (31/31 consultas de calibración/medición reproducen el mismo desglose 50%/20%/5%/25%
+con el `SYSTEM_PROMPT` corregido). La causa raíz (latencia base del modelo) quedó resuelta por
+cambio de modelo, no por ajuste de backoff ni relajación del objetivo de 5s — 4.3.3 debería medir
+contra el contrato ya actualizado. Detalle completo en
+`Context-MD/Feature_6_2_7_M3_Orchestration_Cierre.md` §8ter.

@@ -31,3 +31,6 @@ urllib3==2.7.0
 webdriver-manager==4.1.2
 websocket-client==1.9.0
 wsproto==1.3.2
+
+# --- carga a Supabase (Feature 1.5.2) ---
+psycopg2-binary==2.9.12

@@ -29,14 +29,30 @@ Si una tarea requiere una decisión que no está documentada, pregunta antes de 
   diagnóstico de 25 llamadas). **No se hereda esa decisión sin comprobarla de nuevo en cada
   notebook posterior — la disponibilidad de un modelo Gemini es una condición del momento de
   ejecución, no una garantía permanente.** En 6.2.7 (M3 NLP Orchestration), el mismo lote
-  diagnóstico de 25 llamadas contra `gemini-3.5-flash` dio 100% de éxito — **modelo usado
-  actualmente en 6.2.7: `gemini-3.5-flash` (GA, id fijo)**, no el "preview" de 6.2.6. Cualquier
+  diagnóstico de 25 llamadas contra `gemini-3.5-flash` dio 100% de éxito — modelo usado en el
+  cierre original de 6.2.7: `gemini-3.5-flash` (GA, id fijo), no el "preview" de 6.2.6. Cualquier
   notebook futuro que dependa de la API debe repetir esta verificación real, no asumir el
   resultado de la corrida más reciente. `GEMINI_API_KEY` generado 2026-07-13 — ya no bloquea
   M3/embeddings. **Modelo de embeddings de M1 confirmado contra
   la API real:** `gemini-embedding-001` (3072 dimensiones). `text-embedding-004` (nombre de
   versiones anteriores de la documentación pública de Gemini) ya no existe en esta API — devuelve
   404, no usar esa referencia.
+  **Actualización post-cierre (2026-07-15) — dos modelos LLM distintos en el proyecto, no
+  uno solo — no asumir que un cambio de modelo en un módulo aplica a otro:**
+  - **M2 Quality Scorer (6.2.6):** sigue usando `gemini-3.5-flash` (y `gemini-3-flash-preview`
+    para las filas evaluadas durante la ventana de indisponibilidad) — sin cambios, decisión
+    cerrada de 6.2.6, no afectada por lo siguiente.
+  - **M3 extracción de intención (6.2.7, contrato v0 en `notebooks/05_m3_nlp_orchestration.ipynb`):**
+    **reemplazado por `gemini-3.1-flash-lite`** (GA, verificado contra la API real, no asumido de
+    `client.models.list()`) — motivado por latencia: `gemini-3.5-flash` no cumplía el objetivo de
+    ≤5s de SRS-024 (WBS 4.3.3) ni sin reintentos (mediana 11.3s de 21 llamadas de intento único,
+    hasta 71.6s con backoff de 503). `gemini-3.1-flash-lite` da mediana 1.3s / p90 1.5s sobre 13
+    consultas pareadas, 0 reintentos de 13 (vs. 3/13 con `gemini-3.5-flash`). Requirió corregir el
+    `SYSTEM_PROMPT` en 2 puntos (Terreno como `tipo_inmueble` válido para `es_consulta_inmobiliaria`;
+    distinción explícita entre nombre de lugar concreto y calificativo cualitativo para
+    `zona_mencion_texto`) para igualar el comportamiento de `gemini-3.5-flash` en las 31 consultas
+    de calibración/medición de 6.2.7 — verificado, no asumido. Detalle completo en
+    `Context-MD/Feature_6_2_7_M3_Orchestration_Cierre.md` §8ter.
 - **Monorepo:** `backend/`, `frontend/`, `pipeline/` como carpetas hermanas. Rama activa: `dev`.
 
 ## Módulos (nombres técnicos aprobados — no usar nombres previos deprecados)
@@ -111,9 +127,14 @@ Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
 - **Notebook 5 (6.2.7), CERRADO — último notebook de Feature 6.2, Feature completa (23 SP):** M3
   NLP Orchestration. **Modelo LLM re-verificado, no heredado de 6.2.6:** `gemini-3.5-flash` pasó de
   100% de fallo sostenido (6.2.6) a 100% de éxito en un lote diagnóstico idéntico de 25 llamadas —
-  se usa `gemini-3.5-flash` (GA, id fijo) en vez de `gemini-3-flash-preview`. La disponibilidad de
-  modelos Gemini es una condición del momento de ejecución, se debe re-verificar en cada notebook
-  futuro que dependa de la API, no asumir el resultado de una corrida anterior.
+  modelo del cierre original de 6.2.7: `gemini-3.5-flash` (GA, id fijo) en vez de
+  `gemini-3-flash-preview`. La disponibilidad de modelos Gemini es una condición del momento de
+  ejecución, se debe re-verificar en cada notebook futuro que dependa de la API, no asumir el
+  resultado de una corrida anterior. **Actualización post-cierre (2026-07-15):** el contrato v0
+  de `extraer()` reemplazó `gemini-3.5-flash` por `gemini-3.1-flash-lite` por latencia (mediana
+  1.3s vs. 12.3s, 0/13 vs. 3/13 reintentos de 503) — específico a M3, no afecta al modelo de
+  6.2.6 (Quality Scorer, sigue en `gemini-3.5-flash`). Ver detalle arriba en la entrada de NLP y
+  `Context-MD/Feature_6_2_7_M3_Orchestration_Cierre.md` §8ter.
   **Umbral de confianza de extracción de intención: 0.65**, calibrado sobre 5 consultas claras + 5
   ambiguas + 1 caso límite de control — marcado explícitamente como calibración provisional, no
   optimizada (salto limpio de 0.45 sin casos intermedios reales observados). **Mecanismo de
@@ -141,7 +162,13 @@ Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
 - **Feature 1.3 (datos externos):** extracción y cómputo CERRADOS. Carga física a Supabase
   PENDIENTE de Feature 1.5 (la tabla `corregimientos` con las columnas de Zone Health no existe
   todavía). Los 7 archivos canónicos están en `pipeline/data/external/`.
-- **Feature 1.5 (schema DB):** no iniciado.
+- **Feature 1.5 (schema DB):** no iniciado. **Excepción — 1.5b (dimensión de embedding, cerrada
+  2026-07-14):** la pausa de 1.5.1 por dimensión de embedding indecisa ya no aplica —
+  `propiedades.embedding` se define como `vector(3072)`, confirmado por 6.2.3 contra la API real.
+  DDL en `backend/app/db/schema/0001_propiedades_embedding.sql`, no ejecutado contra Supabase. El
+  resto de 1.5.1 (campos de `DOC-05 §4.2`, `geom`, índice GiST) sigue sin especificar en este
+  repo — no inventar esos campos. Detalle en
+  `Context-MD/Feature_1_5b_Embedding_Dimension_Cierre.md`.
 - **Feature 1.4 (Zone Health Composite Index):** en progreso. Ver decisiones cerradas abajo.
 
 ## Decisiones formales cerradas — no las reabras sin que el equipo lo pida explícitamente
