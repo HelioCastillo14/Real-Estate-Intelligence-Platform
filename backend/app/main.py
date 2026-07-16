@@ -6,7 +6,7 @@ from fastapi import FastAPI
 load_dotenv(find_dotenv())
 
 from app.db.pool import cerrar_pool, inicializar_pool
-from app.routers import match, search, valuation
+from app.routers import match, propiedades, search, valuation
 
 
 @asynccontextmanager
@@ -20,6 +20,7 @@ app = FastAPI(lifespan=lifespan)
 app.include_router(match.router)
 app.include_router(valuation.router)
 app.include_router(search.router)
+app.include_router(propiedades.router)
 
 @app.get("/health")
 def health():
