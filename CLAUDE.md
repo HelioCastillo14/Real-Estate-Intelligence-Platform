@@ -65,13 +65,26 @@ Si una tarea requiere una decisión que no está documentada, pregunta antes de 
 
 ## Zonas del scope — 9 nombres, pero solo 5 son corregimientos administrativos reales
 
-Reales (tienen `geom` propio, extracción independiente de SIEC/INEC/GTFS):
-San Francisco, Bella Vista, Parque Lefevre, Betania, Pedregal.
+Reales (tienen `geom` propio): San Francisco, Bella Vista, Parque Lefevre, Betania, Pedregal.
+**`corregimientos.geom` poblado con polígono real desde 2026-07-16**
+(`pipeline/scripts/cargar_geom_corregimientos.py`) — antes de esa fecha esta línea decía
+"extracción independiente de SIEC/INEC/GTFS" y era **falsa**: `geom` estaba 100% `NULL` en
+las 9 filas (verificado, no asumido) y esos shapefiles nunca existieron en el repo. La fuente
+real usada, aprobada por Besto, es un GeoJSON de OSM Overpass
+(`pipeline/data/external/corregimientos/corregimientos_5zonas_poligonos_raw_osm.geojson`),
+no SIEC/INEC/GTFS. San Francisco es `MultiPolygon` en OSM (islotes/exclaves menores) — se
+cargó solo el sub-polígono principal (96.4% del área), la columna sigue siendo
+`geometry(Polygon, 4326)` estricto en los 5. Costa del Este **no tiene polígono en OSM**
+(verificado contra Overpass, solo existe como `node` puntual) — queda sin `geom`, no es un
+pendiente de este script sino una limitación real de la fuente.
 
 Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
-- El Cangrejo, Marbella, Obarrio → heredan de **Bella Vista** (las 5 dimensiones)
+- El Cangrejo, Marbella, Obarrio → heredan de **Bella Vista** (las 5 dimensiones). `geom`
+  sigue `NULL` para estas 3 — por diseño, no se duplica el polígono del padre en la tabla
+  (`Ajuste_WBS_1_5_2_Esquema_Corregimientos.md` §3); la resolución de qué polígono mostrar
+  para una zona heredada en el mapa es trabajo de Épica 5, todavía sin resolver en frontend.
 - Costa del Este → **NO hereda de nada** (ver decisión abajo). Tiene amenidades propias
-  reales (24 POIs, Google Places), pero ningún score compuesto.
+  reales (24 POIs, Google Places), pero ningún score compuesto, y tampoco `geom` (ver arriba).
 
 ## Feature 6.2 — Notebooks de análisis y entrenamiento (actualizado 2026-07-13)
 
