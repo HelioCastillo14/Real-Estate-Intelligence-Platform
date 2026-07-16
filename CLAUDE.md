@@ -79,7 +79,8 @@ cargó solo el sub-polígono principal (96.4% del área), la columna sigue siend
 pendiente de este script sino una limitación real de la fuente.
 
 Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
-- El Cangrejo, Marbella, Obarrio → heredan de **Bella Vista** (las 5 dimensiones). `geom`
+- El Cangrejo, Marbella, Obarrio → heredan de **Bella Vista** (las 4 dimensiones —
+  socioeconómico eliminado del composite, ver sección de pesos abajo). `geom`
   sigue `NULL` para estas 3 — por diseño, no se duplica el polígono del padre en la tabla
   (`Ajuste_WBS_1_5_2_Esquema_Corregimientos.md` §3); la resolución de qué polígono mostrar
   para una zona heredada en el mapa es trabajo de Épica 5, todavía sin resolver en frontend.
@@ -225,10 +226,11 @@ documentos se desincronicen entre sí.
 
 ## Decisiones formales cerradas — no las reabras sin que el equipo lo pida explícitamente
 
-1. **Pedregal:** permanece dentro de la fórmula del Zone Health Index (4/5 dimensiones sólidas).
+1. **Pedregal:** permanece dentro de la fórmula del Zone Health Index (3/4 dimensiones sólidas,
+   tras la eliminación de socioeconómico — ver sección de pesos abajo).
    Excluido de la *visualización activa* por amenidades débiles (12 POIs vs. 32-52 promedio) —
    se calcula, no se muestra. Pendiente validación con consejo académico.
-2. **Costa del Este:** NO recibe score compuesto. 4 de 5 dimensiones no tienen insumo (dependían
+2. **Costa del Este:** NO recibe score compuesto. 3 de 4 dimensiones no tienen insumo (dependían
    de Juan Díaz, que nunca se extrajo por estar fuera del scope de 9 zonas). Estado de UI:
    "cobertura de datos insuficiente", igual que Pedregal pero con causa distinta y más severa
    (ausencia estructural, no debilidad de un componente). Sus 24 POIs de amenidades pueden
@@ -242,8 +244,18 @@ documentos se desincronicen entre sí.
 
 ## Pesos del Zone Health Composite Index (Feature 1.4)
 
-Seguridad 0.30, transporte 0.20, amenidades 0.20, walkability 0.15, socioeconómico 0.15.
-Tráfico vehicular = etiqueta cualitativa por clasificación de vía OSM, no score numérico.
+**4 dimensiones, no 5** — la dimensión socioeconómica (1.4.5) se eliminó del composite:
+sin proxy defendible de nivel socioeconómico a partir de los datos INEC disponibles
+(alfabetización, composición de hogares), su inclusión habría exigido inventar una
+dirección normativa arbitraria. Su peso original (0.15) se redistribuyó
+proporcionalmente entre las 4 dimensiones restantes (÷0.85), no en partes iguales —
+preserva el orden relativo de prioridad de la Encuesta de Requerimientos §2.2. Pesos
+finales: seguridad 0.352941176, transporte 0.235294118, amenidades 0.235294118,
+walkability 0.176470588. `corregimientos.desglose_dimensiones` (jsonb) tiene 4 claves
+reales, verificado contra la base — no construir a partir de 5 sin confirmar de nuevo.
+Detalle completo en `Context-MD/Feature_1_4_Zone_Health_Composite_Index_Documentacion_Granular.md`
+§1 y §6. Tráfico vehicular = etiqueta cualitativa por clasificación de vía OSM, no score
+numérico.
 
 ## Regla de citas de features — no copiar sin verificar
 
@@ -274,6 +286,25 @@ solo los archivos OSM la tenían, dentro de `normalizacion_amenidades._contar_os
 Auditoría posterior encontró 3 de 18 registros de Bella Vista mal asignados
 (2 fuera de las 5 zonas reales, 1 perteneciente a San Francisco). San Francisco y
 Costa del Este quedaron pendientes de la misma auditoría en el momento de este hallazgo.
+
+## Disciplina de commits
+
+- Commit obligatorio al cierre de cada sesión de trabajo con Claude Code, sin
+  excepción — incluso si el trabajo está incompleto o experimental. Un commit "wip:
+  [descripción]" es preferible a working tree sin registrar.
+- Commits agrupados por unidad lógica (backend / schema+pipeline / frontend / docs),
+  no un commit monolítico por sesión — permite revert y bisect selectivo.
+- Antes de borrar cualquier archivo con trabajo no trivial (>20 líneas o con lógica
+  no reproducible en segundos), confirmar que existe al menos un commit previo que lo
+  contenga. Si no existe, commitear primero o preguntar explícitamente antes de borrar.
+
+**Caso encontrado (2026-07-16):** backend M1/M2/M3 completo (`search.py`, `valuation.py`,
+7 services), las migraciones de schema y la migración entera de frontend
+(Lovable→Next.js 14) llevaban sesiones enteras sin un solo commit — todo vivía solo en el
+working tree. En la misma sesión, dos componentes corregidos (`MapView.tsx` con tiles
+OpenFreeMap, `Signals.tsx` con el fix de paleta SRS-035) se crearon y se borraron sin
+ningún commit intermedio — no recuperables vía git, solo reconstruibles desde el
+historial de la conversación (ver `frontend/docs/pendiente-mapview-signals.md`).
 
 ---
 
