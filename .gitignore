@@ -238,6 +238,15 @@ pipeline/data/synthetic/*
 !pipeline/data/raw/*.csv
 !pipeline/data/raw/*.json
 
+# Excepcion: artifacts de produccion (backend los carga en runtime, Feature 3.1/4.3 —
+# ver Context-MD/Feature_Artifacts_Produccion_Cierre.md). Solo estos 4, ~97KB total —
+# NO abre el patron *.pkl completo (embeddings de 26-28MB y random_forest de 10MB
+# siguen excluidos, nunca los necesita el backend en runtime).
+!pipeline/models/knn_semaforo_precio_6_2_4.pkl
+!pipeline/models/escalador_knn_6_2_4.pkl
+!pipeline/models/knn_semaforo_precio_6_2_4_listing_ids_train.pkl
+!pipeline/data/processed/conjunto_test_semaforo_knn_3_5_1.csv
+
 venv/
 .env
 __pycache__/
