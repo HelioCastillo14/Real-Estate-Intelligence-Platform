@@ -112,6 +112,8 @@ export interface PropiedadDetalle {
   lat: number | null;
   lng: number | null;
   ubicacionAproximada: boolean;
+  /** Anuncio público original en inmopanama.com — botón "Contactar anunciante" (Feature 7.2.2). */
+  listingUrl: string | null;
 
   /** null si listing_id no tiene fila en valuacion_semaforo_knn (135/1,177 sin cobertura KNN). */
   precioPredicho: number | null;
@@ -142,6 +144,7 @@ interface PropiedadDetalleApi {
   lat: number | null;
   lng: number | null;
   ubicacion_aproximada: boolean;
+  listing_url: string | null;
   precio_predicho: number | null;
   categoria_semaforo: "verde" | "amarillo" | "rojo" | null;
   confianza_reducida: boolean | null;
@@ -168,6 +171,7 @@ export function mapPropiedadDetalleApi(p: PropiedadDetalleApi): PropiedadDetalle
     lat: p.lat,
     lng: p.lng,
     ubicacionAproximada: p.ubicacion_aproximada,
+    listingUrl: p.listing_url,
     precioPredicho: p.precio_predicho,
     categoriaSemaforo: p.categoria_semaforo,
     confianzaReducida: p.confianza_reducida,

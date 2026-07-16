@@ -105,6 +105,16 @@ export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
                 ${pricePerM2.toLocaleString()} / m²
               </div>
             )}
+            {property.listingUrl && (
+              <a
+                href={property.listingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary text-primary-foreground px-5 py-2.5 text-sm font-medium hover:bg-primary/90 transition-colors"
+              >
+                Contactar anunciante ↗
+              </a>
+            )}
           </div>
         </div>
 

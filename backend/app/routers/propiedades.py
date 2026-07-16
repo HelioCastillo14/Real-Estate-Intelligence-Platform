@@ -52,6 +52,11 @@ class PropiedadDetalleResponse(BaseModel):
     lng: float | None
     ubicacion_aproximada: bool
 
+    # Feature 7.2.2 — botón "Contactar anunciante": enlaza al anuncio público original en
+    # inmopanama.com (verificado en la auditoría PII: HTTP 200 sin login, misma página que ya
+    # expone el contacto del anunciante). No es un endpoint de contacto propio ni de terceros.
+    listing_url: str | None
+
     # valuacion_semaforo_knn — NULL si la propiedad no tiene cobertura KNN (135/1,177)
     precio_predicho: float | None
     categoria_semaforo: str | None
@@ -71,7 +76,7 @@ SQL_DETALLE = """
     select
         p.listing_id, p.corregimiento, p.tipo_inmueble, p.price_usd, p.bedrooms,
         p.bathrooms, p.area_m2, p.title, p.imagenes, p.descripcion,
-        ST_X(p.geom) as lng, ST_Y(p.geom) as lat, p.ubicacion_aproximada,
+        ST_X(p.geom) as lng, ST_Y(p.geom) as lat, p.ubicacion_aproximada, p.listing_url,
         s.precio_predicho, s.categoria_semaforo, s.confianza_reducida,
         k.cluster_id,
         q.completitud_informativa, q.calidad_presentacion,
