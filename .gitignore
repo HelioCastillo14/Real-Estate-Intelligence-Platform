@@ -238,14 +238,16 @@ pipeline/data/synthetic/*
 !pipeline/data/raw/*.csv
 !pipeline/data/raw/*.json
 
-# Excepcion: artifacts de produccion (backend los carga en runtime, Feature 3.1/4.3 —
-# ver Context-MD/Feature_Artifacts_Produccion_Cierre.md). Solo estos 4, ~97KB total —
-# NO abre el patron *.pkl completo (embeddings de 26-28MB y random_forest de 10MB
-# siguen excluidos, nunca los necesita el backend en runtime).
-!pipeline/models/knn_semaforo_precio_6_2_4.pkl
-!pipeline/models/escalador_knn_6_2_4.pkl
-!pipeline/models/knn_semaforo_precio_6_2_4_listing_ids_train.pkl
-!pipeline/data/processed/conjunto_test_semaforo_knn_3_5_1.csv
+# Excepcion: artifacts de produccion, vendorizados dentro de backend/ (no en pipeline/,
+# ver Context-MD/Feature_Vendorizacion_Artifacts_Backend.md) — Railway despliega con
+# Root Directory=backend/, pipeline/ (hermano de backend/) nunca llega al build.
+# Solo estos 4, ~97KB total — NO abre el patron *.pkl completo (embeddings de 26-28MB
+# y random_forest de 10MB en pipeline/models/ siguen excluidos, nunca los necesita el
+# backend en runtime).
+!backend/models/knn_semaforo_precio_6_2_4.pkl
+!backend/models/escalador_knn_6_2_4.pkl
+!backend/models/knn_semaforo_precio_6_2_4_listing_ids_train.pkl
+!backend/data/conjunto_test_semaforo_knn_3_5_1.csv
 
 venv/
 .env

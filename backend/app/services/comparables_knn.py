@@ -74,8 +74,15 @@ import pickle
 from functools import lru_cache
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
-RUTA_MODELOS = REPO_ROOT / "pipeline" / "models"
+# Vendorizado en backend/models/ (no leído desde pipeline/models/) — Railway despliega
+# backend/ con Root Directory=backend/, así que pipeline/ (hermano de backend/ en el
+# monorepo) nunca llega al filesystem del contenedor, sin importar qué esté commiteado
+# en git. Ver Context-MD/Feature_Vendorizacion_Artifacts_Backend.md para el porqué
+# completo de esta duplicación intencional con pipeline/models/ (fuente de verdad del
+# entrenamiento) — no son artifacts desincronizados por accidente, backend/models/ es
+# una copia de despliegue que se actualiza a mano cuando el pickle de producción cambia.
+BACKEND_ROOT = Path(__file__).resolve().parents[2]
+RUTA_MODELOS = BACKEND_ROOT / "models"
 RUTA_KNN = RUTA_MODELOS / "knn_semaforo_precio_6_2_4.pkl"
 RUTA_ESCALADOR = RUTA_MODELOS / "escalador_knn_6_2_4.pkl"
 RUTA_LISTING_IDS_TRAIN = RUTA_MODELOS / "knn_semaforo_precio_6_2_4_listing_ids_train.pkl"

@@ -34,8 +34,12 @@ import csv
 from functools import lru_cache
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
-RUTA_CSV = REPO_ROOT / "pipeline" / "data" / "processed" / "conjunto_test_semaforo_knn_3_5_1.csv"
+# Vendorizado en backend/data/ (no leído desde pipeline/data/processed/) — mismo motivo
+# que RUTA_MODELOS en comparables_knn.py: Railway despliega backend/ con Root
+# Directory=backend/, pipeline/ nunca llega al contenedor. Ver
+# Context-MD/Feature_Vendorizacion_Artifacts_Backend.md.
+BACKEND_ROOT = Path(__file__).resolve().parents[2]
+RUTA_CSV = BACKEND_ROOT / "data" / "conjunto_test_semaforo_knn_3_5_1.csv"
 
 # Verificados en 3.1.3 (reproducción exacta contra el catálogo real) y 3.5.1 (recalculados desde
 # este mismo CSV, coincidencia exacta confirmada) — no recalculados aquí desde el catálogo
