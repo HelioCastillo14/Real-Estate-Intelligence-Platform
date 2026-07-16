@@ -348,3 +348,64 @@ export function mapSearchNlpResponseApi(data: SearchNlpResponseApi): SearchNlpRe
     respuestaFinal: r.respuesta_final,
   };
 }
+
+/**
+ * Shape real de GET /valuation/transparencia (backend/app/routers/valuation.py,
+ * TransparenciaResponse) — verificado en vivo. `propiedad_id` es literalmente
+ * `listing_id` (confirmado contra pipeline/scripts/exportar_conjunto_test_semaforo_knn_3_5_1.py:116,
+ * `"propiedad_id": listing_id_test.values` — no es un id distinto), así que sí se puede
+ * detectar si una propiedad ya está en el conjunto de test comparando por listingId.
+ * precio_real/precio_predicho en USD absoluto — misma escala que price_usd/precio_predicho
+ * de GET /propiedades/{id}, verificado cruzando el mismo listing_id entre ambos endpoints
+ * (valores idénticos), sin conversión de unidades necesaria.
+ */
+export interface ParPrediccion {
+  propiedadId: number;
+  precioReal: number;
+  precioPredicho: number;
+  diferenciaAbsoluta: number;
+  zona: string;
+}
+
+export interface TransparenciaData {
+  nMuestras: number;
+  maeAbsoluto: number;
+  maePorcentual: number;
+  poblacionMaeAbsoluto: string;
+  poblacionMaePorcentual: string;
+  pares: ParPrediccion[];
+}
+
+interface TransparenciaResponseApi {
+  resumen: {
+    n_muestras: number;
+    mae_absoluto: number;
+    mae_porcentual: number;
+    poblacion_mae_absoluto: string;
+    poblacion_mae_porcentual: string;
+  };
+  pares: {
+    propiedad_id: number;
+    precio_real: number;
+    precio_predicho: number;
+    diferencia_absoluta: number;
+    zona: string;
+  }[];
+}
+
+export function mapTransparenciaApi(data: TransparenciaResponseApi): TransparenciaData {
+  return {
+    nMuestras: data.resumen.n_muestras,
+    maeAbsoluto: data.resumen.mae_absoluto,
+    maePorcentual: data.resumen.mae_porcentual,
+    poblacionMaeAbsoluto: data.resumen.poblacion_mae_absoluto,
+    poblacionMaePorcentual: data.resumen.poblacion_mae_porcentual,
+    pares: data.pares.map((p) => ({
+      propiedadId: p.propiedad_id,
+      precioReal: p.precio_real,
+      precioPredicho: p.precio_predicho,
+      diferenciaAbsoluta: p.diferencia_absoluta,
+      zona: p.zona,
+    })),
+  };
+}

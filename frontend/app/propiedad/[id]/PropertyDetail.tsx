@@ -5,13 +5,31 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
 import { SemaforoBadge } from "@/components/SemaforoBadge";
-import type { PropiedadDetalle } from "@/lib/types";
+import { TransparenciaScatter } from "@/components/TransparenciaScatter";
+import type { PropiedadDetalle, TransparenciaData } from "@/lib/types";
 import { warnOnce } from "@/lib/warnings";
 import { sanitizeText } from "@/lib/sanitize-text";
 import { resolveClusterLabel } from "@/lib/cluster-label";
+import { obtenerTransparencia } from "@/lib/transparencia";
 
 export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
   const [imgIdx, setImgIdx] = useState(0);
+  const [transparencia, setTransparencia] = useState<TransparenciaData | null>(null);
+  const [transparenciaError, setTransparenciaError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    obtenerTransparencia()
+      .then((data) => {
+        if (!cancelled) setTransparencia(data);
+      })
+      .catch((err) => {
+        if (!cancelled) setTransparenciaError(err instanceof Error ? err.message : "Error desconocido");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (property.ubicacionAproximada) {
@@ -157,6 +175,55 @@ export function PropertyDetail({ property }: { property: PropiedadDetalle }) {
             )}
           </AnalysisCard>
         </div>
+
+        {/* Transparencia del modelo (5.3.5) */}
+        <section className="mb-12">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">
+            M2 · Transparencia — Cómo se calculó el precio
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            {transparenciaError ? (
+              <p className="text-sm text-muted-foreground">
+                No se pudo cargar el conjunto de transparencia ({transparenciaError}).
+              </p>
+            ) : !transparencia ? (
+              <p className="text-sm text-muted-foreground">Cargando conjunto de transparencia…</p>
+            ) : (
+              <div className="grid grid-cols-[1fr_220px] gap-8">
+                <div>
+                  <TransparenciaScatter
+                    pares={transparencia.pares}
+                    propiedadActual={
+                      property.precioPredicho !== null
+                        ? { precioReal: property.priceUsd, precioPredicho: property.precioPredicho }
+                        : null
+                    }
+                  />
+                  {property.precioPredicho === null && (
+                    <p className="mt-3 text-xs text-muted-foreground italic">
+                      Esta propiedad no tiene predicción de precio disponible — se muestra el desempeño
+                      general del modelo sobre las {transparencia.nMuestras} propiedades de test.
+                    </p>
+                  )}
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wider text-muted-foreground">MAE</div>
+                    <div className="font-display text-2xl text-ink font-semibold tabular-nums">
+                      ${Math.round(transparencia.maeAbsoluto).toLocaleString()}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-1 tabular-nums">
+                      {transparencia.maePorcentual.toFixed(1)}% del precio promedio del catálogo
+                    </div>
+                  </div>
+                  <p className="text-[11px] text-muted-foreground leading-relaxed">
+                    {transparencia.poblacionMaeAbsoluto}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
 
         {/* Descripción original */}
         <section className="mb-12">
