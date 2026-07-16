@@ -172,6 +172,19 @@ Sin `geom` propio, heredan Zone Health de su corregimiento contenedor:
   Pedregal y Parque Lefevre excluidos de KNN/KMeans por volumen insuficiente para 5-fold CV
   (siguen dentro del Zone Health Index, que es determinístico y no depende de volumen).
   `geom` de propiedades es sintético (jitter), solo para visualización — nunca insumo de modelo.
+  **Poblado desde 2026-07-16** (`pipeline/scripts/cargar_geom_sintetico_propiedades.py`)
+  — antes de esa fecha esta línea era **descriptiva de la
+  intención, no del estado real**: `geom` estaba 100% `NULL` en las 1,177 filas. Estado
+  real tras la carga: **933 filas con `geom`** (466 San Francisco, 178 Bella Vista, 79
+  Betania, 77 El Cangrejo, 64 Obarrio, 49 Marbella, 17 Parque Lefevre, 3 Pedregal) y
+  **244 filas sin `geom`, NULL explícito** — 191 en Costa del Este (sin polígono en OSM,
+  verificado contra Overpass API, no un pendiente técnico sino una limitación real de la
+  fuente) + 53 en `zona_no_determinada` (no es un corregimiento real, sin polígono con el
+  que hacer join). Esta exclusión es **decisión formal de esta sesión, no un bug**. El
+  punto se genera dentro del polígono del corregimiento oficial correspondiente, o del
+  padre (`hereda_de`) para las 3 zonas heredadas de Bella Vista — `propiedades.ubicacion_aproximada`
+  (migración `20260716005446`) distingue ambos casos: `true` únicamente en El
+  Cangrejo/Marbella/Obarrio.
 - **Feature 1.3 (datos externos):** extracción, cómputo y carga física a Supabase CERRADOS —
   corregido 2026-07-15 (sesión Feature 3.1.6): la tabla `corregimientos` SÍ existe, con las
   columnas de Zone Health pobladas (9 filas, `zone_health_score`/`desglose_dimensiones`/
