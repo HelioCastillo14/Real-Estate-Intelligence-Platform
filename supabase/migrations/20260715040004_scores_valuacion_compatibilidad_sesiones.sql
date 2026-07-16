@@ -3,12 +3,14 @@
 -- Fuente de la decisión: Context-MD/Ajuste_WBS_1_5_4_Esquema_Scores.md (diseño aprobado
 -- 2026-07-15, pendiente de ejecución).
 --
--- NO EJECUTADA CONTRA SUPABASE. Acción sobre infraestructura compartida — requiere confirmación
--- explícita del usuario en el momento de aplicarla (no basta con este archivo existiendo en el
--- repo). Mismo protocolo que 20260715040000_propiedades_create_table.sql (1.5.1),
--- 20260715040001_corregimientos_create_table.sql (1.5.2),
--- 20260715040002_perfiles_lifestyle_y_conjunto_referencia_m1.sql (1.5.5) y
--- 20260715040003_amenidades_create_table.sql (1.5.3).
+-- APLICADA CONTRA SUPABASE — verificado 2026-07-15 (sesión Feature 3.1.6, migración 040006):
+-- `supabase migration list` confirma local == remote, las 5 tablas existen realmente. Esta línea
+-- decía "NO EJECUTADA... requiere confirmación" y era falsa — corregida como parte de una
+-- auditoría completa de encabezados de migración, ver CLAUDE.md para el resto de hallazgos de
+-- esa sesión. `valuacion_semaforo_knn` recibió 2 columnas adicionales
+-- (`confianza_reducida`, `n_comparables`) en `20260715040006_valuacion_semaforo_knn_agrega_
+-- confianza.sql`, antes de que corriera su primer batch de carga (3.1.6) — este archivo sigue
+-- siendo la fuente de las 5 columnas originales, no se reescribe aquí.
 --
 -- Orden de creación fijado por dependencias de FK: sesiones_consulta debe existir antes que
 -- scores_compatibilidad, que la referencia (§4-5 del documento de diseño). Las 3 tablas de

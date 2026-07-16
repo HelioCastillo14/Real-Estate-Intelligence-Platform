@@ -1,7 +1,17 @@
 -- Feature 1.5b — decisión de dimensión de embedding (Context-MD/Feature_1_5b_Embedding_Dimension_Cierre.md)
 -- Alcance: SOLO la columna embedding. El resto de la tabla propiedades (1.5.1 completo,
 -- incluyendo geom, campos de DOC-05 §4.2, índice GiST) no está definido en este repo todavía
--- y no se inventa aquí. No ejecutado contra Supabase — artifact de repo pendiente de aplicar.
+-- y no se inventa aquí.
+--
+-- APLICADA CONTRA SUPABASE — verificado 2026-07-15 (sesión Feature 3.1.6, migración 040006):
+-- `propiedades.embedding` existe en la base real (`supabase migration list`, local == remote).
+-- Esta línea decía "No ejecutado... pendiente de aplicar" y era falsa — corregida como parte de
+-- una auditoría completa de encabezados de migración, ver CLAUDE.md para el resto de hallazgos
+-- de esa sesión. El índice HNSW comentado más abajo (`embedding vector_cosine_ops`, sin cast a
+-- halfvec) NO es el que terminó aplicado: el real es
+-- `20260715040005_propiedades_embedding_hnsw_index.sql`
+-- (`idx_propiedades_embedding_hnsw`, sobre `halfvec(3072)`, `m=16, ef_construction=64`) — no
+-- correr el bloque comentado de este archivo asumiendo que sigue pendiente.
 
 -- Requiere pgvector habilitado (1.1.1, completado).
 

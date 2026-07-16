@@ -4,9 +4,11 @@
 -- a `DOC-05 §4.2` (documento inexistente en este repo, confirmado sin resultado). Ver también
 -- Context-MD/Gobernanza_WBS_vs_Feature_6_2.md, entrada "1.5.1" en la sección 3.
 --
--- NO EJECUTADA CONTRA SUPABASE. Acción sobre infraestructura compartida — requiere confirmación
--- explícita del usuario en el momento de aplicarla (no basta con este archivo existiendo en el
--- repo). Preparada para revisión, no para correr automáticamente.
+-- APLICADA CONTRA SUPABASE — verificado 2026-07-15 (sesión Feature 3.1.6, migración 040006):
+-- `supabase migration list` confirma local == remote, tabla `propiedades` real con 1,177 filas.
+-- Esta línea decía "NO EJECUTADA... requiere confirmación" y era falsa — corregida como parte
+-- de una auditoría completa de encabezados de migración, ver CLAUDE.md para el resto de
+-- hallazgos de esa sesión.
 --
 -- Requiere las extensiones pgvector (1.1.1) y PostGIS ya habilitadas.
 --

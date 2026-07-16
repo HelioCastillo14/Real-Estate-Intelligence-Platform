@@ -2,10 +2,12 @@
 -- Fuente de la decisión: Context-MD/Ajuste_WBS_1_5_2_Esquema_Corregimientos.md §3 (diseño
 -- aprobado 2026-07-15, pendiente de ejecución).
 --
--- NO EJECUTADA CONTRA SUPABASE. Acción sobre infraestructura compartida — requiere confirmación
--- explícita del usuario en el momento de aplicarla (no basta con este archivo existiendo en el
--- repo). Preparada para revisión, no para correr automáticamente. Mismo protocolo que
--- 20260715040000_propiedades_create_table.sql (1.5.1).
+-- APLICADA CONTRA SUPABASE — verificado 2026-07-15 (sesión Feature 3.1.6, migración 040006):
+-- `supabase migration list` confirma local == remote, tabla `corregimientos` real con 9 filas
+-- y las columnas de Zone Health (`zone_health_score`, `desglose_dimensiones`,
+-- `estado_zone_health`) pobladas. Esta línea decía "NO EJECUTADA... requiere confirmación" y
+-- era falsa — corregida como parte de una auditoría completa de encabezados de migración, ver
+-- CLAUDE.md para el resto de hallazgos de esa sesión.
 --
 -- Decisión de fondo (§1): 9 filas, no 5 — las 9 zonas del scope de negocio de REIP, no solo
 -- los 5 corregimientos administrativos oficiales. Ver §1 para la justificación completa.
