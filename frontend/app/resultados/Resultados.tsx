@@ -158,7 +158,7 @@ export function Resultados() {
 
         <div className="p-6">
           <div className="mb-4">
-            <PendingBadge label="Mapa y fotos pendientes — /search/filtros no devuelve lat/lng ni imágenes" />
+            <PendingBadge label="Mapa pendiente — /search/filtros no devuelve lat/lng (geom vacío en la tabla)" />
           </div>
 
           {error ? (

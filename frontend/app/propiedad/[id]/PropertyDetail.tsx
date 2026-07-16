@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { PendingBadge } from "@/components/PendingBadge";
@@ -8,15 +8,18 @@ import type { PropiedadFiltro } from "@/lib/types";
 import { warnOnce } from "@/lib/warnings";
 
 export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
+  const [imgIdx, setImgIdx] = useState(0);
+
   useEffect(() => {
     warnOnce(
       "detalle-solo-filtros",
-      "Detalle de propiedad usa únicamente los 7 campos reales de /search/filtros (no hay GET /propiedades/{id}). " +
-        "Sin fotos, descripción, lat/lng, compatibilidad (M1), semáforo/segmento (M2) ni confiabilidad — " +
+      "Detalle de propiedad usa los 10 campos reales de /search/filtros (no hay GET /propiedades/{id}). " +
+        "Sin dirección, lat/lng, compatibilidad (M1), semáforo/segmento (M2) ni confiabilidad — " +
         "GET /valuation/transparencia y los endpoints de semáforo/zone-health por id no están conectados en esta migración.",
     );
   }, []);
 
+  const imagenes = property.imagenes ?? [];
   const pricePerM2 =
     property.areaM2 && property.areaM2 > 0 ? Math.round(property.priceUsd / property.areaM2) : null;
 
@@ -43,10 +46,10 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
               {property.tipoInmueble} · {property.corregimiento}
             </div>
             <h1 className="font-display text-4xl md:text-5xl text-ink font-medium leading-tight mt-2">
-              Propiedad #{property.listingId}
+              {property.title}
             </h1>
             <div className="mt-3">
-              <PendingBadge label="Título y dirección pendientes — no están en /search/filtros" />
+              <PendingBadge label="Dirección exacta pendiente — no está en /search/filtros" />
             </div>
           </div>
           <div className="text-right shrink-0">
@@ -61,10 +64,40 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
           </div>
         </div>
 
-        {/* Galería — sin imágenes reales */}
-        <div className="mb-10 rounded-2xl border border-dashed border-border bg-canvas aspect-[16/6] flex items-center justify-center">
-          <PendingBadge label="Galería de fotos pendiente — sin campo de imágenes en el backend" />
-        </div>
+        {/* Galería */}
+        {imagenes.length > 0 ? (
+          <div className="grid grid-cols-[1fr_160px] gap-3 mb-10">
+            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-muted">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={imagenes[imgIdx]}
+                alt={property.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full bg-background/90 backdrop-blur text-xs tabular-nums">
+                {imgIdx + 1} / {imagenes.length}
+              </div>
+            </div>
+            <div className="grid grid-rows-4 gap-3 overflow-y-auto max-h-[420px]">
+              {imagenes.map((img, i) => (
+                <button
+                  key={img}
+                  onClick={() => setImgIdx(i)}
+                  className={`relative rounded-xl overflow-hidden bg-muted border-2 transition-all aspect-[4/3] ${
+                    imgIdx === i ? "border-primary" : "border-transparent hover:border-border"
+                  }`}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="mb-10 rounded-2xl border border-dashed border-border bg-canvas aspect-[16/6] flex items-center justify-center">
+            <span className="text-sm text-muted-foreground">Sin fotos disponibles en el anuncio original</span>
+          </div>
+        )}
 
         {/* Datos reales */}
         <div className="grid grid-cols-4 gap-4 mb-12">
@@ -97,6 +130,27 @@ export function PropertyDetail({ property }: { property: PropiedadFiltro }) {
             note="valuacion_quality_scorer no se expone por ningún endpoint todavía."
           />
         </div>
+
+        {/* Descripción original */}
+        <section className="mb-12">
+          <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground mb-3">
+            Descripción original del anuncio
+          </div>
+          <div className="rounded-2xl border border-border bg-canvas p-6">
+            {property.descripcion ? (
+              <>
+                <p className="text-ink leading-relaxed whitespace-pre-line font-display text-lg">
+                  {property.descripcion}
+                </p>
+                <div className="mt-4 text-[11px] text-muted-foreground italic">
+                  Texto sin edición — es el insumo del Quality Scorer.
+                </div>
+              </>
+            ) : (
+              <p className="text-sm text-muted-foreground">Sin descripción disponible en el anuncio original.</p>
+            )}
+          </div>
+        </section>
 
         <div className="rounded-2xl border border-border bg-card p-6 max-w-md">
           <Link

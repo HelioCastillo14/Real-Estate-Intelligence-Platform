@@ -132,7 +132,8 @@ def buscar_propiedades_filtros(
 
     sql_total = f"select count(*) from propiedades where {where_sql}"
     sql_pagina = f"""
-        select listing_id, corregimiento, tipo_inmueble, price_usd, bedrooms, bathrooms, area_m2
+        select listing_id, corregimiento, tipo_inmueble, price_usd, bedrooms, bathrooms, area_m2,
+               title, imagenes, descripcion
         from propiedades
         where {where_sql}
         order by price_usd asc, listing_id asc

@@ -343,6 +343,9 @@ class PropiedadFiltroResponse(BaseModel):
     bedrooms: int | None
     bathrooms: int | None
     area_m2: float | None
+    title: str
+    imagenes: list[str] | None
+    descripcion: str | None
 
 
 class FiltrosBusquedaResponse(BaseModel):
@@ -392,6 +395,9 @@ def search_filtros(request: FiltrosBusquedaRequest) -> FiltrosBusquedaResponse:
                 bedrooms=p["bedrooms"],
                 bathrooms=p["bathrooms"],
                 area_m2=float(p["area_m2"]) if p["area_m2"] is not None else None,
+                title=p["title"],
+                imagenes=p["imagenes"],
+                descripcion=p["descripcion"],
             )
             for p in resultado["propiedades"]
         ],

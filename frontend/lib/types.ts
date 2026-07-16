@@ -15,6 +15,11 @@ export interface PropiedadFiltro {
   bedrooms: number | null;
   bathrooms: number | null;
   areaM2: number | null;
+  title: string;
+  /** null si el anuncio no tiene fotos (1 de 1,177 filas hoy, listing_id=137025) — nunca []. */
+  imagenes: string[] | null;
+  /** null en 9 filas con descripcion_fuente="ninguna" — no confundir con string vacío. */
+  descripcion: string | null;
 }
 
 /**
@@ -56,6 +61,9 @@ interface PropiedadFiltroApi {
   bedrooms: number | null;
   bathrooms: number | null;
   area_m2: number | null;
+  title: string;
+  imagenes: string[] | null;
+  descripcion: string | null;
 }
 
 export interface FiltrosBusquedaResponseApi {
@@ -75,5 +83,8 @@ export function mapPropiedadApi(p: PropiedadFiltroApi): PropiedadFiltro {
     bedrooms: p.bedrooms,
     bathrooms: p.bathrooms,
     areaM2: p.area_m2,
+    title: p.title,
+    imagenes: p.imagenes,
+    descripcion: p.descripcion,
   };
 }
