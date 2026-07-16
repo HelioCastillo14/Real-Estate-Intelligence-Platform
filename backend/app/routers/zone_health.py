@@ -17,17 +17,30 @@ viene resuelto en la tabla. Se expone `heredado=true` (mismo criterio que
 `ubicacion_aproximada` en `propiedades.py`) para que el frontend sepa que ese score no es
 propio de la zona.
 
-`amenidades` no requiere resolución espacial (`ST_Within` contra `corregimientos.geom`): la
-tabla ya tiene una columna directa `corregimiento_asignado`, poblada en la carga
-(`pipeline/zone_health/cruce_espacial_corregimiento.py::asignar_corregimiento()`), que ya
-resuelve los puntos de El Cangrejo/Marbella/Obarrio contra el polígono del padre (Bella
-Vista) porque esos 3 nunca tuvieron polígono propio con el que cruzar — ningún row de
-`amenidades` tiene `corregimiento_asignado` igual a esos 3 nombres. Filtrar amenidades por
-`hereda_de` (si existe) o por el nombre propio (si no) es, por lo tanto, correcto y no
-necesita PostGIS en este endpoint.
+`amenidades` no requiere resolución espacial (`ST_Within` contra `corregimientos.geom`) — se
+filtra por `zona_etiquetada_origen` (la zona del lote de extracción, 6 valores posibles: los
+5 corregimientos oficiales con datos + Costa del Este), no por `corregimiento_asignado`
+(resuelto geométricamente contra el polígono, Feature 1.4.3). Corregido 2026-07-16, sesión de
+Épica 5 frontend — la primera versión de este endpoint usaba `corregimiento_asignado`, lo que
+le regalaba a Parque Lefevre 13 de los 24 POIs de Costa del Este (caen dentro del polígono de
+Parque Lefevre por proximidad geográfica, pero fueron extraídos y etiquetados como Costa del
+Este en origen) y dejaba a Costa del Este con `amenidades: []` pese a tener 24 POIs reales.
+Ya documentado como pendiente antes de esta corrección en
+`Feature_1_4_Zone_Health_Composite_Index_Documentacion_Granular.md` §10 ("Presentación de los
+13 POIs de Costa del Este que caen en Parque Lefevre — Pendiente para Feature 5.3.6").
+Para El Cangrejo/Marbella/Obarrio (heredados de Bella Vista) el resultado no cambia:
+`zona_etiquetada_origen` nunca toma esos 3 nombres (nunca hubo lote de extracción propio para
+ellos), así que sigue resolviendo a `hereda_de` igual que antes.
+
+**Nota de deuda técnica, no resuelta aquí:** 4 POIs físicos están cargados dos veces con `id`
+distinto — una vez desde el lote de Costa del Este (Google Places) y otra desde el lote de
+Parque Lefevre (OSM): Boston School International, Parque Felipe Motta, Este Park, The Casco
+School. Con este fix ya no aparecen duplicados dentro de una misma respuesta (cada uno cae en
+la zona de su propio `zona_etiquetada_origen`), pero siguen siendo 2 filas separadas en la
+tabla — deduplicación pendiente, requiere decisión de qué registro es canónico.
 
 Costa del Este: decisión de esta sesión (no 404) — es una zona real y conocida del scope,
-con amenidades propias reales (11 filas), solo sin composite. Devuelve 200 con
+con amenidades propias reales (24 POIs tras este fix), solo sin composite. Devuelve 200 con
 `zone_health_score`/`desglose_dimensiones` en `NULL` (ya vienen así en la fila) y
 `cobertura_composite_insuficiente=true` explícito, para que el frontend distinga "esta zona
 no tiene composite" de "esta zona no existe". 404 se reserva para nombres que no están en la
@@ -78,7 +91,7 @@ SQL_CORREGIMIENTO = """
 SQL_AMENIDADES = """
     select id, categoria, nombre, ST_Y(geom) as lat, ST_X(geom) as lng, rating
     from amenidades
-    where corregimiento_asignado = %(zona_amenidades)s
+    where zona_etiquetada_origen = %(zona_amenidades)s
     order by categoria, nombre
 """
 
