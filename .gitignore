@@ -263,3 +263,7 @@ __pycache__/
 # Supabase CLI runtime state (project-ref, pooler-url, versiones locales)
 supabase/.temp/
 supabase/supabase/
+
+# Claude Code config local (permisos/allowlist de cada máquina, no de equipo)
+.claude/settings.json
+.claude/settings.local.json
