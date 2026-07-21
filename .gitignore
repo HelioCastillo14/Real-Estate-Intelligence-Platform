@@ -14,8 +14,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -149,6 +149,12 @@ activemq-data/
 
 # Environments
 .env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.*.development
+.env.*.production
 .envrc
 .venv
 env/
@@ -232,3 +238,28 @@ pipeline/data/synthetic/*
 
 # Variables de entorno
 .env
+
+
+# Excepcion: datos de prueba del scraper, evidencia para revision
+!pipeline/data/raw/*.csv
+!pipeline/data/raw/*.json
+
+# Excepcion: artifacts de produccion, vendorizados dentro de backend/ (no en pipeline/,
+# ver Context-MD/Feature_Vendorizacion_Artifacts_Backend.md) — Railway despliega con
+# Root Directory=backend/, pipeline/ (hermano de backend/) nunca llega al build.
+# Solo estos 4, ~97KB total — NO abre el patron *.pkl completo (embeddings de 26-28MB
+# y random_forest de 10MB en pipeline/models/ siguen excluidos, nunca los necesita el
+# backend en runtime).
+!backend/models/knn_semaforo_precio_6_2_4.pkl
+!backend/models/escalador_knn_6_2_4.pkl
+!backend/models/knn_semaforo_precio_6_2_4_listing_ids_train.pkl
+!backend/data/conjunto_test_semaforo_knn_3_5_1.csv
+
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Supabase CLI runtime state (project-ref, pooler-url, versiones locales)
+supabase/.temp/
+supabase/supabase/

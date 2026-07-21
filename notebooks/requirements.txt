@@ -1,0 +1,30 @@
+# --- Entorno oficial de Feature 6.2 (los 7 notebooks de analisis y entrenamiento) ---
+# Ver notebooks/README.md y la primera celda markdown de cada notebook para la
+# convencion de kernel (reip-notebooks) y rutas verificadas.
+
+# EDA / limpieza / dataset (6.2.1, 6.2.2 y base de todos los demas)
+pandas==3.0.3
+numpy==2.5.1
+matplotlib==3.11.0
+seaborn==0.13.2
+
+# Entrenamiento M1/M2 (6.2.3 embeddings+hybrid scorer, 6.2.4 KNN+RF, 6.2.5 KMeans)
+scikit-learn==1.9.0
+scipy==1.18.0
+joblib==1.5.3
+
+# Geometria -- requerido para importar pipeline/zone_health/*.py sin reimplementar
+# su logica (cruce_espacial_corregimiento.py, normalizacion_amenidades.py,
+# normalizacion_walkability.py usan shapely.geometry). Usado desde 6.2.2.
+shapely==2.1.2
+
+# Notebooks Jupyter + kernel dedicado (reip-notebooks)
+jupyter==1.1.1
+ipykernel==7.3.0
+nbformat==5.10.4
+
+# M3 / experimentacion con Gemini (6.2.6 Quality Scorer, 6.2.7 NLP Orchestration).
+# Bloqueado hasta que exista GEMINI_API_KEY (CLAUDE.md) -- se instala ahora para no
+# repetir este setup cuando 6.2.6/6.2.7 arranquen.
+google-genai==2.11.0
+python-dotenv==1.2.2

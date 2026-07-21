@@ -1,0 +1,528 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-07-08T23:45:13Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/833648812",
+        "amenity": "school",
+        "name": "C.E.B.G. Ascanio Villalaz Paz"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4207399,
+              9.0766937
+            ],
+            [
+              -79.419954,
+              9.076103
+            ],
+            [
+              -79.4194605,
+              9.0767361
+            ],
+            [
+              -79.4197501,
+              9.0773691
+            ],
+            [
+              -79.4200452,
+              9.0776048
+            ],
+            [
+              -79.4207399,
+              9.0766937
+            ]
+          ]
+        ]
+      },
+      "id": "way/833648812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/833648814",
+        "amenity": "school",
+        "name": "Escuela Cirilo J. Martínez"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4251082,
+              9.0713977
+            ],
+            [
+              -79.425181,
+              9.0713333
+            ],
+            [
+              -79.4252747,
+              9.0712952
+            ],
+            [
+              -79.4250772,
+              9.0711744
+            ],
+            [
+              -79.4249499,
+              9.071258
+            ],
+            [
+              -79.4247839,
+              9.0713529
+            ],
+            [
+              -79.4247228,
+              9.0712991
+            ],
+            [
+              -79.4245822,
+              9.0710547
+            ],
+            [
+              -79.424146,
+              9.0715838
+            ],
+            [
+              -79.42454,
+              9.0722182
+            ],
+            [
+              -79.4253488,
+              9.0717931
+            ],
+            [
+              -79.4253412,
+              9.0717805
+            ],
+            [
+              -79.4251082,
+              9.0713977
+            ]
+          ]
+        ]
+      },
+      "id": "way/833648814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/833649151",
+        "amenity": "school",
+        "name": "Escuela Narciso Garay"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4365085,
+              9.0769762
+            ],
+            [
+              -79.4363449,
+              9.0768252
+            ],
+            [
+              -79.4361491,
+              9.076608
+            ],
+            [
+              -79.4354839,
+              9.0773496
+            ],
+            [
+              -79.4359559,
+              9.0776992
+            ],
+            [
+              -79.4365085,
+              9.0769762
+            ]
+          ]
+        ]
+      },
+      "id": "way/833649151"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/833649152",
+        "amenity": "school",
+        "name": "Escuela Gran Bretaña"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4301042,
+              9.0618997
+            ],
+            [
+              -79.430182,
+              9.0624554
+            ],
+            [
+              -79.4305466,
+              9.0624326
+            ],
+            [
+              -79.4305926,
+              9.0626511
+            ],
+            [
+              -79.4308722,
+              9.0626389
+            ],
+            [
+              -79.4313323,
+              9.0626808
+            ],
+            [
+              -79.4311766,
+              9.0615729
+            ],
+            [
+              -79.4307076,
+              9.0616201
+            ],
+            [
+              -79.4307678,
+              9.0620534
+            ],
+            [
+              -79.4306439,
+              9.0620552
+            ],
+            [
+              -79.4306209,
+              9.0618542
+            ],
+            [
+              -79.4301042,
+              9.0618997
+            ]
+          ]
+        ]
+      },
+      "id": "way/833649152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/987821565",
+        "leisure": "park"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4569652,
+              9.1068148
+            ],
+            [
+              -79.4570064,
+              9.1068869
+            ],
+            [
+              -79.457068,
+              9.1069429
+            ],
+            [
+              -79.4571442,
+              9.1069773
+            ],
+            [
+              -79.4572274,
+              9.1069868
+            ],
+            [
+              -79.4573096,
+              9.1069704
+            ],
+            [
+              -79.4573826,
+              9.1069298
+            ],
+            [
+              -79.4574393,
+              9.1068689
+            ],
+            [
+              -79.4574741,
+              9.1067937
+            ],
+            [
+              -79.4574838,
+              9.1067115
+            ],
+            [
+              -79.4574672,
+              9.1066305
+            ],
+            [
+              -79.4574261,
+              9.1065584
+            ],
+            [
+              -79.4573644,
+              9.1065024
+            ],
+            [
+              -79.4572882,
+              9.106468
+            ],
+            [
+              -79.457205,
+              9.1064584
+            ],
+            [
+              -79.4571229,
+              9.1064748
+            ],
+            [
+              -79.4570499,
+              9.1065154
+            ],
+            [
+              -79.4569932,
+              9.1065763
+            ],
+            [
+              -79.4569583,
+              9.1066515
+            ],
+            [
+              -79.4569487,
+              9.1067337
+            ],
+            [
+              -79.4569652,
+              9.1068148
+            ]
+          ]
+        ]
+      },
+      "id": "way/987821565"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1210862921",
+        "building": "yes",
+        "name": "Minisuper 38",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4532725,
+              9.0922176
+            ],
+            [
+              -79.4532407,
+              9.0921372
+            ],
+            [
+              -79.4531522,
+              9.0921757
+            ],
+            [
+              -79.4531876,
+              9.0922525
+            ],
+            [
+              -79.4532725,
+              9.0922176
+            ]
+          ]
+        ]
+      },
+      "id": "way/1210862921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1239488904",
+        "leisure": "park",
+        "name": "PARQUE DE SAN JOAQUIN",
+        "opening_hours": "24/7",
+        "operator": "AREA PUBLICA",
+        "operator:type": "public"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4224256,
+              9.0766664
+            ],
+            [
+              -79.4225265,
+              9.0765481
+            ],
+            [
+              -79.4221545,
+              9.0762597
+            ],
+            [
+              -79.4220988,
+              9.0763645
+            ],
+            [
+              -79.4224256,
+              9.0766664
+            ]
+          ]
+        ]
+      },
+      "id": "way/1239488904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1309071174",
+        "leisure": "park",
+        "name": "Parque de las Madres"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.4253412,
+              9.0717805
+            ],
+            [
+              -79.4258163,
+              9.071508
+            ],
+            [
+              -79.4258042,
+              9.0714407
+            ],
+            [
+              -79.4256456,
+              9.0713956
+            ],
+            [
+              -79.4253685,
+              9.0713103
+            ],
+            [
+              -79.4252747,
+              9.0712952
+            ],
+            [
+              -79.425181,
+              9.0713333
+            ],
+            [
+              -79.4251082,
+              9.0713977
+            ],
+            [
+              -79.4253412,
+              9.0717805
+            ]
+          ]
+        ]
+      },
+      "id": "way/1309071174"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3905513576",
+        "addr:street": "Avenida Domingo Díaz",
+        "amenity": "clinic",
+        "name": "Centro Médico",
+        "source": "KG Ground Survey 2015"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4350463,
+          9.0568945
+        ]
+      },
+      "id": "node/3905513576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7782084843",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Centro de Salud de Pedregal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.424322,
+          9.0701047
+        ]
+      },
+      "id": "node/7782084843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10910596086",
+        "contact:email": "cliente@superxtra.com",
+        "contact:facebook": "https://www.facebook.com/SuperXtraPanama",
+        "contact:instagram": "https://instagram.com/superxtrapanama",
+        "contact:linkedin": "https://www.linkedin.com/company/superxtrapanama",
+        "contact:phone": "+507 2909000",
+        "contact:twitter": "https://twitter.com/SuperXtraPanama",
+        "contact:website": "https://www.superxtra.com",
+        "contact:youtube": "https://www.youtube.com/user/SuperXtraPanama",
+        "name": "Xtra",
+        "opening_hours": "Mo-Fr 06:00-21:00; Sa-Su 06:00-20:00",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.444263,
+          9.0860839
+        ]
+      },
+      "id": "node/10910596086"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13664842044",
+        "amenity": "pharmacy",
+        "email": "cliente@superxtra.com",
+        "healthcare": "pharmacy",
+        "name": "Xtra Farma",
+        "opening_hours": "Mo-Fr 06:00-21:00; Sa-Su 06:00-20:00",
+        "phone": "+507 2909000",
+        "website": "https://www.superxtra.com/xtra-farma-sucursales"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4443221,
+          9.0861581
+        ]
+      },
+      "id": "node/13664842044"
+    }
+  ]
+}

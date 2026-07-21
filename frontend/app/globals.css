@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+/*
+ * REIP — Real Estate Intelligence Platform
+ * Paleta en escala de grises en toda la interfaz (restricción no negociable,
+ * ver CLAUDE.md / Acta del Proyecto §1). Única excepción deliberada: los
+ * colores --signal-* del semáforo de precio, porque son información
+ * semántica, no decorativa.
+ * Display: Fraunces (serif). Body: Inter.
+ */
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.99 0 0);
+  --canvas: oklch(0.97 0 0);
+  --foreground: oklch(0.18 0 0);
+  --ink: oklch(0.16 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0 0);
+
+  --primary: oklch(0.2 0 0);
+  --primary-foreground: oklch(0.98 0 0);
+
+  --secondary: oklch(0.93 0 0);
+  --secondary-foreground: oklch(0.22 0 0);
+
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.46 0 0);
+
+  --accent: oklch(0.9 0 0);
+  --accent-foreground: oklch(0.2 0 0);
+
+  --destructive: oklch(0.3 0 0);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.9 0 0);
+  --ring: oklch(0.2 0 0);
+
+  /* Excepción deliberada: semáforo de precio, confiabilidad, etc. */
+  --signal-green: oklch(0.62 0.12 155);
+  --signal-amber: oklch(0.75 0.14 82);
+  --signal-red: oklch(0.6 0.18 30);
+  --signal-neutral: oklch(0.55 0.02 60);
+
+  --shadow-editorial: 0 1px 0 0 oklch(0 0 0 / 0.06), 0 20px 40px -24px oklch(0 0 0 / 0.18);
+  --shadow-soft: 0 1px 2px oklch(0 0 0 / 0.05), 0 8px 24px -12px oklch(0 0 0 / 0.12);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
